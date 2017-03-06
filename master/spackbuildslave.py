@@ -10,7 +10,7 @@ from buildbot.buildslave import BuildSlave
 from buildbot.buildslave.ec2 import EC2LatentBuildSlave
 
 ### BUILDER CLASSES
-class LustreBuilderConfig(util.BuilderConfig):
+class SpackBuilderConfig(util.BuilderConfig):
     @staticmethod
     def nextSlave(builder, slaves):
         availableSlave = None
@@ -33,13 +33,13 @@ class LustreBuilderConfig(util.BuilderConfig):
 
     def __init__(self, mergeRequests=False, nextSlave=None, **kwargs):
         if nextSlave is None:
-            nextSlave = LustreBuilderConfig.nextSlave
+            nextSlave = SpackBuilderConfig.nextSlave
 
         util.BuilderConfig.__init__(self, nextSlave=nextSlave, 
                                     mergeRequests=mergeRequests, **kwargs)
 
 ### BUILD SLAVE CLASSES
-class LustreEC2Slave(EC2LatentBuildSlave):
+class SpackEC2Slave(EC2LatentBuildSlave):
     default_user_data = """#!/bin/bash
 set -e
 set -x
@@ -69,7 +69,7 @@ export BB_PASSWORD='%s'
 export BB_URL='%s'
 
 if [ -z "$BB_URL" ]; then
-    export BB_URL="https://raw.githubusercontent.com/opensfs/lustre-buildbot-config/master/scripts/"
+    export BB_URL="https://raw.githubusercontent.com/kielfriedt/lustre-buildbot-config/tree/cdash/scripts"
 fi
 
 # Get the runurl utility.
@@ -85,7 +85,7 @@ runurl $BB_URL/bb-bootstrap.sh"""
 
     def __init__(self, name, password=None, master='', url='', instance_type="m3.large",
                 identifier=ec2_default_access, secret_identifier=ec2_default_secret,
-                keypair_name=ec2_default_keypair_name, security_name='LustreBuilder',
+                keypair_name=ec2_default_keypair_name, security_name='cdash_spackBuilder',
                 user_data=None, region="us-west-1", placement="b", max_builds=1,
                 build_wait_timeout=60 * 30, spot_instance=True, max_spot_price=.08,
                 price_multiplier=None, **kwargs):
@@ -96,18 +96,18 @@ runurl $BB_URL/bb-bootstrap.sh"""
         if not tags or tags is None:
             tags={
                 "ENV"      : "DEV",
-                "Name"     : "LustreBuilder",
+                "Name"     : "cdash_spackBuilder",
                 "ORG"      : "COMP",
-                "OWNER"    : "Buildbot Admin <buildbot-admin@lustre.org>",
+                "OWNER"    : "Buildbot Admin",
                 "PLATFORM" :  name,
-                "PROJECT"  : "Lustre",
+                "PROJECT"  : "cdash_spack",
             }
 
         if password is None:
-            password = LustreEC2Slave.pass_generator()
+            password = SPackEC2Slave.pass_generator()
 
         if user_data is None:
-            user_data = LustreEC2Slave.default_user_data % (master, name, password, url)
+            user_data = SpackEC2Slave.default_user_data % (master, name, password, url)
 
         EC2LatentBuildSlave.__init__(
             self, name=name, password=password, instance_type=instance_type, 
@@ -117,11 +117,11 @@ runurl $BB_URL/bb-bootstrap.sh"""
             max_spot_price=max_spot_price, placement=placement,
             price_multiplier=price_multiplier, build_wait_timeout=build_wait_timeout, 
             **kwargs)
-
+'''
 class LustreEC2SuseSlave(LustreEC2Slave):
     def __init__(self, name, **kwargs):
         LustreEC2Slave.__init__(self, name, max_spot_price="0.16",
                                      instance_type="m3.large",
                                      product_description="SUSE Linux (Amazon VPC)",
                                      **kwargs)
-
+'''

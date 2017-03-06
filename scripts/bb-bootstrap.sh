@@ -27,7 +27,7 @@ fi
 # calls us.  If they are not there, we set some defaults but they almost
 # certainly will not work.
 if test ! "$BB_MASTER"; then
-    BB_MASTER="build.lustre.org:9989"
+    BB_MASTER="35.163.130.224:9989"
 fi
 if test ! "$BB_NAME"; then
     BB_NAME=$(hostname)
@@ -39,13 +39,13 @@ if test ! "$BB_ADMIN"; then
     BB_ADMIN="Automated Lustre BuildBot slave <buildbot-admin@lustre.org>"
 fi
 if test ! "$BB_DIR"; then
-    BB_DIR="/var/lib/buildbot/slaves/lustre"
+    BB_DIR="/var/lib/buildbot/slaves/cdash_spack"
 fi
 if test ! "$BB_USE_PIP"; then
     BB_USE_PIP=0
 fi
 if test ! "$BB_URL"; then
-    BB_URL="https://raw.githubusercontent.com/opensfs/lustre-buildbot-config/master/scripts/"
+    BB_URL="https://raw.githubusercontent.com/kielfriedt/lustre-buildbot-config/tree/cdash/scripts"
 fi
 
 if test ! -f /etc/buildslave; then
@@ -64,7 +64,8 @@ echo "$0: BB_URL is now $BB_URL"
 set -x
 
 # Magic IP address from where to obtain EC2 metadata
-METAIP="169.254.169.254"
+# Do not need to change it is defined by amazon
+METAIP="169.254.169.254" 
 METAROOT="http://${METAIP}/latest"
 # Don't print 404 error documents. Don't print progress information.
 CURL="curl --fail --silent"
@@ -79,6 +80,7 @@ testbin () {
 }
 
 case "$BB_NAME" in
+'''
 Amazon*)
     yum -y install deltarpm gcc python-pip python-devel
     easy_install --quiet buildbot-slave
@@ -92,7 +94,7 @@ Amazon*)
         sed -i.bak '/secure_path/d' /etc/sudoers
     fi
     ;;
-
+'''
 CentOS*)
     if cat /etc/redhat-release | grep -Eq "6."; then
         # The buildbot-slave package isn't available from a common repo.
@@ -115,7 +117,7 @@ CentOS*)
     sed -i.bak 's/ requiretty/ !requiretty/' /etc/sudoers
     sed -i.bak '/secure_path/d' /etc/sudoers
     ;;
-
+'''
 Debian*)
     apt-get --yes update
 
@@ -170,7 +172,7 @@ Gentoo*)
     # User buildbot needs to be added to sudoers and requiretty disabled.
     echo "buildbot  ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
     ;;
-
+'''
 RHEL*)
     yum -y install deltarpm gcc python-pip python-devel
     easy_install --quiet buildbot-slave
@@ -184,7 +186,7 @@ RHEL*)
         sed -i.bak '/secure_path/d' /etc/sudoers
     fi
     ;;
-
+'''
 SUSE*)
     # SLES appears to not always register their repos properly.
     echo "solver.allowVendorChange = true" >>/etc/zypp/zypp.conf
@@ -234,7 +236,7 @@ OpenSUSE*)
     mkdir "/home/buildbot"
     chown "buildbot:" "/home/buildbot/"
     ;;
-
+'''
 Ubuntu*)
 #    codename=$(lsb_release -c | awk  '{print $2}')
 #    sudo tee /etc/apt/sources.list.d/ddebs.list << EOF
