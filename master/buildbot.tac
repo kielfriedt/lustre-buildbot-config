@@ -3,7 +3,9 @@ import os
 from twisted.application import service
 from buildbot.master import BuildMaster
 
-basedir = '/home/buildbot/cdash_spack/master'
+
+#basedir = '/home/buildbot/cdash_spack/master'
+basedir = '/home/ubuntu/buildbot/lustre-buildbot-config/master'
 rotateLength = 10000000
 maxRotatedFiles = 10
 configfile = 'master.cfg'

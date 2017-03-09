@@ -104,7 +104,7 @@ runurl $BB_URL/bb-bootstrap.sh"""
             }
 
         if password is None:
-            password = SPackEC2Slave.pass_generator()
+            password = SpackEC2Slave.pass_generator()
 
         if user_data is None:
             user_data = SpackEC2Slave.default_user_data % (master, name, password, url)
