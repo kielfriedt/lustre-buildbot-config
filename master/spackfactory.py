@@ -187,10 +187,17 @@ def buildCategory(props):
 def curlCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')
-    args.extend([bb_url + "sendreport.sh"])
+    args.extend([bb_url + "bb-sendreport.sh"])
     return args
 
-def xsdkTestSuiteFactory(git_repo):
+@util.renderer
+def runyamlCommand(props):
+    args = ["runurl"]
+    bb_url = props.getProperty('bburl')
+    args.extend([bb_url + "bb-runspack.sh"])
+    return args
+
+def xsdkTestSuiteFactory(spack_repo):
     """ Generates a build factory for a tarball generating builder.
     Returns:
         BuildFactory: Build factory with steps for generating tarballs.
@@ -199,7 +206,7 @@ def xsdkTestSuiteFactory(git_repo):
     random.seed(random.random())
     # Pull the patch from Gerrit
     bf.addStep(Git(
-        repourl=git_repo,
+        repourl=spack_repo,
         workdir="build/spack",
         mode="full",
         method="fresh",
@@ -210,11 +217,13 @@ def xsdkTestSuiteFactory(git_repo):
         haltOnFailure=True,
         description=["cloning"],
         descriptionDone=["cloned"]))
-    
-    # run spack test suite
-    bf.addStep(ShellCommand(
-        command=['.spack/bin/spack', 'test-suite', 'build/spack/yaml/day' +str(random.randint(1, 7))+ '.yaml'],
+
+      bf.addStep(ShellCommand(
+        command=runyamlCommand,
+        decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
         haltOnFailure=True,
+        logEnviron=False,
+        hideStepIf=hide_if_skipped,
         description=["running test-suite"],
         descriptionDone=["running test-suite"],
         workdir="build/spack"))
@@ -228,7 +237,8 @@ def xsdkTestSuiteFactory(git_repo):
         logEnviron=False,
         hideStepIf=hide_if_skipped,
         description=["Sending output to cdash"],
-        descriptionDone=["Sending output to cdash"]))
+        descriptionDone=["Sending output to cdash"],
+        workdir="build/spack"))
 
     # Cleanup
     bf.addStep(ShellCommand(
