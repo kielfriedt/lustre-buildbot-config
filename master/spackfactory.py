@@ -8,6 +8,8 @@ from buildbot.steps.master import SetProperty
 from buildbot.steps.transfer import FileUpload, FileDownload, DirectoryUpload
 from buildbot.steps.trigger import Trigger
 from buildbot.status.results import SUCCESS, FAILURE, SKIPPED, WARNINGS 
+from buildbot.steps.source.git import Git
+import random
 
 def do_step_if_value(step, name, value):
     props = step.build.getProperties()
@@ -16,17 +18,6 @@ def do_step_if_value(step, name, value):
     else:
         return False
 
-def do_step_zfs(step):
-    return do_step_if_value(step, 'buildzfs', 'yes')
-
-def do_step_installdeps(step):
-    return do_step_if_value(step, 'installdeps', 'yes')
-
-def do_step_collectpacks(step):
-    return do_step_if_value(step, 'buildstyle', 'rpm') or do_step_if_value(step, 'buildstyle', 'deb')
-
-def do_step_buildrepo(step):
-    return do_step_if_value(step, 'buildstyle', 'rpm')
 
 def hide_if_skipped(results, step):
     return results == SKIPPED
@@ -107,23 +98,6 @@ def collectProductsCmd(props):
         args = []
 
     return args
-
-def getChangeDirectory(props):
-    # change directory is dependent on what we are building from
-    category = props.getProperty('category')
-
-    if category == 'patchset':
-        # for patchsets, build products go into changeid/patchsetid
-        change = props.getProperty('event.change.number')
-        patchset = props.getProperty('event.patchSet.number')
-        return ('%s/%s/' % (change, patchset))
-    elif category == 'tag':
-        # for tags, build products go into tags/<tag>
-        tag = props.getProperty('branch')
-        tag = tag.replace('refs/tags/', '')
-        return ('tags/%s/' % (tag))
-
-    return ''
 
 def getBaseUrl(props):
     # generate the base url for build products of a change
@@ -209,23 +183,24 @@ def buildCategory(props):
 
     return ''
 
-def createTarballFactory(gerrit_repo):
+@util.renderer
+def curlCommand(props):
+    args = ["runurl"]
+    bb_url = props.getProperty('bburl')
+    args.extend([bb_url + "sendreport.sh"])
+    return args
+
+def xsdkTestSuiteFactory(git_repo):
     """ Generates a build factory for a tarball generating builder.
     Returns:
         BuildFactory: Build factory with steps for generating tarballs.
     """
     bf = util.BuildFactory()
-
-    # are we building a tag or a patchset?
-    bf.addStep(SetProperty(
-        property='category',
-        value=buildCategory, 
-        hideStepIf=hide_except_error))
-
+    random.seed(random.random())
     # Pull the patch from Gerrit
-    bf.addStep(Gerrit(
-        repourl=gerrit_repo,
-        workdir="build/lustre",
+    bf.addStep(Git(
+        repourl=git_repo,
+        workdir="build/spack",
         mode="full",
         method="fresh",
         retry=[60,60],
@@ -235,45 +210,36 @@ def createTarballFactory(gerrit_repo):
         haltOnFailure=True,
         description=["cloning"],
         descriptionDone=["cloned"]))
-
-    # make tarball
+    
+    # run spack test suite
     bf.addStep(ShellCommand(
-        command=['sh', './autogen.sh'],
+        command=['.spack/bin/spack', 'test-suite', 'build/spack/yaml/day' +str(random.randint(1, 7))+ '.yaml'],
         haltOnFailure=True,
-        description=["autogen"],
-        descriptionDone=["autogen"],
-        workdir="build/lustre"))
+        description=["running test-suite"],
+        descriptionDone=["running test-suite"],
+        workdir="build/spack"))
 
-    bf.addStep(Configure(
-        command=['./configure', '--enable-dist'],
-        workdir="build/lustre"))
 
+    # send reports
     bf.addStep(ShellCommand(
-        command=['make', 'dist'],
+        command=curlCommand,
+        decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
         haltOnFailure=True,
-        description=["making dist"],
-        descriptionDone=["make dist"],
-        workdir="build/lustre"))
+        logEnviron=False,
+        hideStepIf=hide_if_skipped,
+        description=["Sending output to cdash"],
+        descriptionDone=["Sending output to cdash"]))
 
-    # upload it to the master
-    bf.addStep(SetPropertyFromCommand(
-        command=['sh', '-c', 'echo *.tar.gz'],
-        property='tarball',
-        workdir="build/lustre",
-        hideStepIf=hide_except_error,
-        haltOnFailure=True))
-
-    bf.addStep(FileUpload(
-        workdir="build/lustre",
-        slavesrc=util.Interpolate("%(prop:tarball)s"),
-        masterdest=tarballMasterDest,
-        url=tarballUrl))
-
-    # trigger our builders to generate packages
-    bf.addStep(Trigger(
-        schedulerNames=["package-builders"],
-        copy_properties=['tarball', 'category'],
-        waitForFinish=False))
+    # Cleanup
+    bf.addStep(ShellCommand(
+        workdir="build",
+        command=["sh", "-c", "rm -rvf *"],
+        haltOnFailure=True,
+        logEnviron=False,
+        lazylogfiles=True,
+        alwaysRun=True,
+        description=["cleaning up"],
+        descriptionDone=["clean up"]))
 
     return bf
 
@@ -286,12 +252,12 @@ def createPackageBuildFactory():
 
     # download our tarball and extract it
     bf.addStep(FileDownload(
-        workdir="build/lustre",
+        workdir="build/spack",
         slavedest=util.Interpolate("%(prop:tarball)s"),
         mastersrc=tarballMasterDest))
 
     bf.addStep(ShellCommand(
-        workdir="build/lustre",
+        workdir="build/spack",
         command=["tar", "-xvzf", util.Interpolate("%(prop:tarball)s"), "--strip-components=1"],
         haltOnFailure=True,
         logEnviron=False,
@@ -323,7 +289,7 @@ def createPackageBuildFactory():
 
     # Build Lustre 
     bf.addStep(ShellCommand(
-        workdir="build/lustre",
+        workdir="build/spack",
         command=configureCmd,
         haltOnFailure=True,
         logEnviron=False,
@@ -333,7 +299,7 @@ def createPackageBuildFactory():
         descriptionDone=["configure lustre"]))
 
     bf.addStep(ShellCommand(
-        workdir="build/lustre",
+        workdir="build/spack",
         command=makeCmd,
         haltOnFailure=True,
         logEnviron=False,
@@ -344,7 +310,7 @@ def createPackageBuildFactory():
 
     # Build Products
     bf.addStep(ShellCommand(
-        workdir="build/lustre",
+        workdir="build/spack",
         command=collectProductsCmd,
         haltOnFailure=True,
         logEnviron=False,
@@ -356,7 +322,7 @@ def createPackageBuildFactory():
 
     # Build repo
     bf.addStep(ShellCommand(
-        workdir="build/lustre/deliverables",
+        workdir="build/spack/deliverables",
         command=buildRepoCmd,
         haltOnFailure=True,
         logEnviron=False,
@@ -366,25 +332,9 @@ def createPackageBuildFactory():
         description=["building repo"],
         descriptionDone=["build repo"]))
 
-    # Upload repo to master
-    bf.addStep(DirectoryUpload(
-        workdir="build/lustre",
-        doStepIf=do_step_collectpacks,
-        hideStepIf=hide_if_skipped,
-        slavesrc="deliverables",
-        masterdest=repoMasterDest,
-        url=repoUrl))
 
-    # Cleanup
-    bf.addStep(ShellCommand(
-        workdir="build",
-        command=["sh", "-c", "rm -rvf *"],
-        haltOnFailure=True,
-        logEnviron=False,
-        lazylogfiles=True,
-        alwaysRun=True,
-        description=["cleaning up"],
-        descriptionDone=["clean up"]))
+
+    
 
     return bf
 
