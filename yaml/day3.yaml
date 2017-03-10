@@ -48,8 +48,7 @@ packages:
   - gdal:
     - versions: [2.0.2, 2.1.2]
   - geos:
-    - versions: [3.3.3, 3.3.6, 3.3.4, 3.5.0, 3.4.2, 3.3.9,
-  3.4.0, 3.3.8, 3.3.5, 3.3.7, 3.4.1]
+    - versions: [3.3.3, 3.3.6, 3.3.4, 3.5.0, 3.4.2, 3.3.9,3.4.0, 3.3.8, 3.3.5, 3.3.7, 3.4.1]
   - global:
     - versions: [6.5]
   - glog:
@@ -73,8 +72,7 @@ packages:
   - jdk:
     - versions: [8u66-linux-x64, 8u92-linux-x64]
   - julia:
-    - versions: [0.4.5, 0.5.0, 0.4.7, release-0.5, 0.4.3,
-  release-0.4, 0.4.6, master]
+    - versions: [0.4.5, 0.5.0, 0.4.7, release-0.5, 0.4.3,release-0.4, 0.4.6, master]
   - lbxproxy:
     - versions: [1.0.3]
   - libdwarf:
@@ -92,8 +90,7 @@ packages:
   - libxtrap:
     - versions: [1.0.1]
   - llvm:
-    - versions: [3.5.1, 3.9.0, 3.0, 3.8.0, trunk, 3.6.2,
-  3.8.1, 3.7.1, 3.7.0]
+    - versions: [3.5.1, 3.9.0, 3.0, 3.8.0, trunk, 3.6.2,3.8.1, 3.7.1, 3.7.0]
   - luit:
     - versions: [1.1.1]
   - m4:
@@ -105,8 +102,7 @@ packages:
   - mpir:
     - versions: [2.7.0, 2.6.0, develop]
   - netlib-lapack:
-    - versions: [3.6.1, 3.5.0, 3.4.2, 3.4.0, 3.3.1,
-  3.4.1, 3.6.0]
+    - versions: [3.6.1, 3.5.0, 3.4.2, 3.4.0, 3.3.1,3.4.1, 3.6.0]
   - ninja:
     - versions: [1.6.0]
   - node-js:
@@ -144,8 +140,7 @@ packages:
   - py-monotonic:
     - versions: [1.2]
   - py-numpy:
-    - versions: [1.9.1, 1.11.2, 1.11.1, 1.9.2, 1.11.0,
-  1.10.4]
+    - versions: [1.9.1, 1.11.2, 1.11.1, 1.9.2, 1.11.0,1.10.4]
   - py-phonopy:
     - versions: [1.10.0]
   - py-protobuf:
