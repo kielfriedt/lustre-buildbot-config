@@ -218,7 +218,7 @@ def xsdkTestSuiteFactory(spack_repo):
         description=["cloning"],
         descriptionDone=["cloned"]))
 
-      bf.addStep(ShellCommand(
+    bf.addStep(ShellCommand(
         command=runyamlCommand,
         decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
         haltOnFailure=True,
