@@ -3,7 +3,7 @@
 if test -f /etc/buildslave; then
     . /etc/buildslave
 else
-   echo "Missing configuration /etc/buildslave.  Assuming spl and zfs are"
+   echo "Missing configuration /etc/buildslave.  Assuming BB and spack are"
    echo "already installed and this is a persistent buildslave."
    exit 1
 fi

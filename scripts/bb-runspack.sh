@@ -10,5 +10,5 @@ else
 fi
 # generate random number
 num=$(( RANDOM % (7 - 1 + 1 ) + 1 ))
-wget https://raw.githubusercontent.com/kielfriedt/spack-buildbot-config/tree/cdash/scripts/yaml/day$num.yaml .
+wget $BB_URL/yaml/day$num.yaml .
 ./spack/bin/spack test-suite day$num.yaml
