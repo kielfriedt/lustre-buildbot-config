@@ -27,7 +27,7 @@ fi
 # calls us.  If they are not there, we set some defaults but they almost
 # certainly will not work.
 if test ! "$BB_MASTER"; then
-    BB_MASTER="35.163.130.224:9989"
+    BB_MASTER="52.43.76.183:9989"
 fi
 if test ! "$BB_NAME"; then
     BB_NAME=$(hostname)
@@ -36,7 +36,7 @@ if test ! "$BB_PASSWORD"; then
     BB_PASSWORD="password"
 fi
 if test ! "$BB_ADMIN"; then
-    BB_ADMIN="Automated Lustre BuildBot slave <buildbot-admin@lustre.org>"
+    BB_ADMIN="Automated spack BuildBot slave <buildbot-admin@lustre.org>"
 fi
 if test ! "$BB_DIR"; then
     BB_DIR="/var/lib/buildbot/slaves/cdash_spack"
@@ -45,7 +45,7 @@ if test ! "$BB_USE_PIP"; then
     BB_USE_PIP=0
 fi
 if test ! "$BB_URL"; then
-    BB_URL="https://raw.githubusercontent.com/kielfriedt/lustre-buildbot-config/tree/cdash/scripts"
+    BB_URL="https://raw.githubusercontent.com/kielfriedt/spack-buildbot-config/tree/cdash/scripts"
 fi
 
 if test ! -f /etc/buildslave; then

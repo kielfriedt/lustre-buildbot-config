@@ -238,7 +238,7 @@ packages:
 
 compilers:
   - gcc:
-    - versions: [4.9, 4.8, 4.7, 5.0]
+    - versions: [5, 4.7, 4.8, 4.9, 4.4]
   - clang:
     - versions: [3.5, 3.6, 3.7, 3.8]
 

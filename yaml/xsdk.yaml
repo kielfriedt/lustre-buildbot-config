@@ -1,5 +1,5 @@
 ---
-enable: [ xsdk ]
+enable: [ xsdk, xsdktrilinos, trilinos, superlu-mt, superlu-dist, petsc, superlu, hypre, chombo, alquimi ]
 exclusions: []
 
 packages:
@@ -21,12 +21,12 @@ packages:
     - versions: [develop]
   - xsdktrilinos:
     - versions: [12.8.1, 12.6.4, develop]
- 
+  
 compilers:
   - gcc:
-    - versions: [4.2, 6.3, 4.4]
+    - versions: [5, 4.7, 4.8, 4.9, 4.4]
+  - clang:
+    - versions: [3.5, 3.6, 3.7, 3.8]
 
-
-/Users/friedt2/spack/var/spack/repos/builtin/packages/petsc/package.py
 dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
 
