@@ -1,0 +1,163 @@
+---
+enable: [ paraver, r-rpostgresql, libnbc, gtkplus, font-ibm-type1, r-plyr, octave, libxfontcache, bcftools, expat, libemos, xvidtune, glib, jasper, r-registry, py-biopython, lua-jit, charm, xkbutils, py-gnuplot, adol-c, xfwp, r-matrixmodels, tinyxml2, py-mistune, xauth, mpe2, darshan-util, hub, liblbxutil, xwud, r-tidyr, py-jupyter-notebook, r-lubridate, bertini, r-nloptr, triangle, constype, giflib, xinit, py-setuptools, mpibash, r-car, xfindproxy, font-adobe-75dpi, r-caret, magics, py-alabaster, font-cronyx-cyrillic, cleverleaf, libepoxy, libxft, font-bh-type1, py-zmq, cbtf-krell, libpng, r-formatr, py-ipywidgets, fontcacheproto, samrai, bpp-seq, r-curl, py-ply, libx11, beforelight, ncview, cp2k, pidx, r-sandwich, py-ipython-genutils, sparsehash, py-tornado, r-iterators]
+exclusions: []
+
+packages:
+  - adol-c:
+    - versions: [2.6.1, 2.6.2, develop]
+  - bcftools:
+    - versions: [1.3.1]
+  - beforelight:
+    - versions: [1.0.5]
+  - bertini:
+    - versions: [1.5]
+  - bpp-seq:
+    - versions: [2.2.0]
+  - cbtf-krell:
+    - versions: [1.8]
+  - charm:
+    - versions: [6.6.1, 6.5.1, 6.7.1, 6.7.0, 6.6.0]
+  - cleverleaf:
+    - versions: [develop]
+  - constype:
+    - versions: [1.0.4]
+  - cp2k:
+    - versions: [3.0]
+  - darshan-util:
+    - versions: [3.0.0, 3.1.0]
+  - expat:
+    - versions: [2.2.0]
+  - font-adobe-75dpi:
+    - versions: [1.0.3]
+  - font-bh-type1:
+    - versions: [1.0.3]
+  - font-cronyx-cyrillic:
+    - versions: [1.0.3]
+  - font-ibm-type1:
+    - versions: [1.0.3]
+  - fontcacheproto:
+    - versions: [0.1.3]
+  - giflib:
+    - versions: [5.1.4]
+  - glib:
+    - versions: [2.49.4, 2.42.1, 2.48.1]
+  - gtkplus:
+    - versions: [2.24.31, 2.24.25]
+  - hub:
+    - versions: [2.2.2, 2.2.1, head, 2.2.0, 1.12.4, 2.2.3]
+  - jasper:
+    - versions: [1.900.1]
+  - libemos:
+    - versions: [4.4.2]
+  - libepoxy:
+    - versions: [1.3.1]
+  - liblbxutil:
+    - versions: [1.1.0]
+  - libnbc:
+    - versions: [1.1.1]
+  - libpng:
+    - versions: [1.2.57, 1.6.27]
+  - libx11:
+    - versions: [1.6.3]
+  - libxfontcache:
+    - versions: [1.0.5]
+  - libxft:
+    - versions: [2.3.2]
+  - lua-jit:
+    - versions: [2.0.4]
+  - magics:
+    - versions: [2.29.0, 2.29.4]
+  - mpe2:
+    - versions: [1.3.0]
+  - mpibash:
+    - versions: [4.3]
+  - ncview:
+    - versions: [2.1.7]
+  - octave:
+    - versions: [4.0.2, 4.0.0]
+  - paraver:
+    - versions: [4.6.2]
+  - pidx:
+    - versions: [1.0]
+  - py-alabaster:
+    - versions: [0.7.9]
+  - py-biopython:
+    - versions: [1.65]
+  - py-gnuplot:
+    - versions: [1.8]
+  - py-ipython-genutils:
+    - versions: [0.1.0]
+  - py-ipywidgets:
+    - versions: [5.2.2]
+  - py-jupyter-notebook:
+    - versions: [4.0.6, 4.2.2, 4.2.3, 4.1.0, 4.0.3,
+  4.0.4, 4.2.1, 4.0.2, 4.0.5, 4.2.0]
+  - py-mistune:
+    - versions: [0.6, 0.7.1, 0.5, 0.5.1, 0.7]
+  - py-ply:
+    - versions: [3.8]
+  - py-setuptools:
+    - versions: [25.2.0, 11.3.1, 20.6.7, 20.7.0, 19.2,
+  16.0, 20.5, 18.1]
+  - py-tornado:
+    - versions: [4.4.0]
+  - py-zmq:
+    - versions: [16.0.2, 14.7.0]
+  - r-car:
+    - versions: [2.1-2]
+  - r-caret:
+    - versions: [6.0-70]
+  - r-curl:
+    - versions: [1.0, 0.9.7]
+  - r-formatr:
+    - versions: [1.4]
+  - r-iterators:
+    - versions: [1.0.8]
+  - r-lubridate:
+    - versions: [1.5.6]
+  - r-matrixmodels:
+    - versions: [0.4-1]
+  - r-nloptr:
+    - versions: [1.0.4]
+  - r-plyr:
+    - versions: [1.8.4]
+  - r-registry:
+    - versions: [0.3]
+  - r-rpostgresql:
+    - versions: [0.4-1]
+  - r-sandwich:
+    - versions: [2.3-4]
+  - r-tidyr:
+    - versions: [0.5.1]
+  - samrai:
+    - versions: [3.7.2, 3.3.3-beta, 3.3.2-beta, 3.8.0, 3.5.2-beta,
+  3.4.1-beta, 3.5.0-beta, 3.7.3, 3.9.1, 2.4.4, 3.6.3-beta]
+  - sparsehash:
+    - versions: [2.0.3]
+  - tinyxml2:
+    - versions: [4.0.1, 2.1.0, 4.0.0, 2.0.2, 2.2.0, 3.0.0]
+  - triangle:
+    - versions: [1.6]
+  - xauth:
+    - versions: [1.0.9]
+  - xfindproxy:
+    - versions: [1.0.4]
+  - xfwp:
+    - versions: [1.0.3]
+  - xinit:
+    - versions: [1.3.4]
+  - xkbutils:
+    - versions: [1.0.4]
+  - xvidtune:
+    - versions: [1.0.3]
+  - xwud:
+    - versions: [1.0.4]
+
+compilers:
+  - gcc:
+    - versions: [4.9, 4.8, 4.7, 5.0]
+  - clang:
+    - versions: [3.5, 3.6, 3.7, 3.8]
+
+dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
+

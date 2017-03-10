@@ -1,0 +1,140 @@
+---
+enable: [ fastx-toolkit, gconf, pkg-config, dyninst, libgtextutils, go-bootstrap, xdm, everytrace, mariadb, py-imagesize, r-rinside, r-munsell, gl2ps, libhio, libarchive, xscope, fslsfonts, py-prompt-toolkit, mrnet, graphviz, fastqc, font-bh-lucidatypewriter-100dpi, xman, r-influencer, mxml, seqtk, muster, libjson-c, smproxy, py-symengine, xsetroot, py-genshi, r-stanheaders, ape, ompt-openmp, mumps, r-mvtnorm, star-ccm-plus, nmap, kbproto, xcb-util-errors, r-thdata, xrefresh, tbb, cityhash, renderproto, py-py, rendercheck, yaml-cpp, porta, cuda, postgresql, libwindowswm, font-micro-misc, go, libxinerama, libspatialindex, py-epydoc, r-reshape2, swiftsim, armadillo, nfft, r-gistr]
+exclusions: []
+
+packages:
+  - ape:
+    - versions: [2.2.1]
+  - armadillo:
+    - versions: [7.500.0, 7.200.2, 7.200.1]
+  - cityhash:
+    - versions: [2013-07-31, master]
+  - cuda:
+    - versions: [6.5.14, 7.5.18]
+  - dyninst:
+    - versions: [8.1.2, 9.2.0, 9.2.1b, 8.2.1, 8.1.1, 9.1.0]
+  - everytrace:
+    - versions: [0.2.0, develop]
+  - fastqc:
+    - versions: [0.11.5]
+  - fastx-toolkit:
+    - versions: [0.0.14]
+  - font-bh-lucidatypewriter-100dpi:
+    - versions: [1.0.3]
+  - font-micro-misc:
+    - versions: [1.0.3]
+  - fslsfonts:
+    - versions: [1.0.5]
+  - gconf:
+    - versions: [3.2.6]
+  - gl2ps:
+    - versions: [1.3.9]
+  - go:
+    - versions: [1.6.4, 1.7.4]
+  - go-bootstrap:
+    - versions: [1.4-bootstrap-20161024]
+  - graphviz:
+    - versions: [2.38.0]
+  - kbproto:
+    - versions: [1.0.7]
+  - libarchive:
+    - versions: [3.1.0, 3.1.1, 3.1.2, 3.2.1]
+  - libgtextutils:
+    - versions: [0.7]
+  - libhio:
+    - versions: [1.3.0.1]
+  - libjson-c:
+    - versions: [0.11]
+  - libspatialindex:
+    - versions: [1.8.5]
+  - libwindowswm:
+    - versions: [1.0.1]
+  - libxinerama:
+    - versions: [1.1.3]
+  - mariadb:
+    - versions: [10.1.14, 5.5.49]
+  - mrnet:
+    - versions: [5.0.1-2, 5.0.1, 4.1.0, 4.0.0]
+  - mumps:
+    - versions: [5.0.1, 5.0.2]
+  - muster:
+    - versions: [1.0, 1.0.1]
+  - mxml:
+    - versions: [2.7, 2.8, 2.5, 2.6, 2.9]
+  - nfft:
+    - versions: [3.3.2]
+  - nmap:
+    - versions: [7.30, 7.31]
+  - ompt-openmp:
+    - versions: [0.1]
+  - pkg-config:
+    - versions: [0.29.1, 0.28]
+  - porta:
+    - versions: [1.4.1]
+  - postgresql:
+    - versions: [9.5.3, 9.3.4]
+  - py-epydoc:
+    - versions: [3.0.1]
+  - py-genshi:
+    - versions: [0.6, 0.7, 0.6.1]
+  - py-imagesize:
+    - versions: [0.7.1]
+  - py-prompt-toolkit:
+    - versions: [1.0.9]
+  - py-py:
+    - versions: [1.4.31]
+  - py-symengine:
+    - versions: [0.2.0, develop]
+  - r-gistr:
+    - versions: [0.3.6]
+  - r-influencer:
+    - versions: [0.1.0]
+  - r-munsell:
+    - versions: [0.4.3]
+  - r-mvtnorm:
+    - versions: [1.0-5]
+  - r-reshape2:
+    - versions: [1.4.1]
+  - r-rinside:
+    - versions: [0.2.13]
+  - r-stanheaders:
+    - versions: [2.10.0-2]
+  - r-thdata:
+    - versions: [1.0-7]
+  - rendercheck:
+    - versions: [1.5]
+  - renderproto:
+    - versions: [0.11.1]
+  - seqtk:
+    - versions: [1.2, 1.1]
+  - smproxy:
+    - versions: [1.0.6]
+  - star-ccm-plus:
+    - versions: [11.06.010_02]
+  - swiftsim:
+    - versions: [0.3.0]
+  - tbb:
+    - versions: [2017.3, 4.4.3, 4.4.4]
+  - xcb-util-errors:
+    - versions: [1.0]
+  - xdm:
+    - versions: [1.1.11]
+  - xman:
+    - versions: [1.1.4]
+  - xrefresh:
+    - versions: [1.0.5]
+  - xscope:
+    - versions: [1.4.1]
+  - xsetroot:
+    - versions: [1.1.1]
+  - yaml-cpp:
+    - versions: [0.5.3]
+
+compilers:
+  - gcc:
+    - versions: [4.9, 4.8, 4.7, 5.0]
+  - clang:
+    - versions: [3.5, 3.6, 3.7, 3.8]
+
+dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
+

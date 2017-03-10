@@ -80,11 +80,12 @@ testbin () {
 }
 
 case "$BB_NAME" in
-'''
+
 Amazon*)
     yum -y install deltarpm gcc python-pip python-devel
     easy_install --quiet buildbot-slave
     BUILDSLAVE="/usr/local/bin/buildslave"
+    sudo yum -y install compat-gcc-44-*
 
     # User buildbot needs to be added to sudoers and requiretty disabled.
     if ! id -u buildbot >/dev/null 2>&1; then
@@ -94,8 +95,9 @@ Amazon*)
         sed -i.bak '/secure_path/d' /etc/sudoers
     fi
     ;;
-'''
+
 CentOS*)
+    sudo yum -y install compat-gcc-44-*
     if cat /etc/redhat-release | grep -Eq "6."; then
         # The buildbot-slave package isn't available from a common repo.
         BUILDSLAVE_URL="http://build.lustre.org"
@@ -117,10 +119,10 @@ CentOS*)
     sed -i.bak 's/ requiretty/ !requiretty/' /etc/sudoers
     sed -i.bak '/secure_path/d' /etc/sudoers
     ;;
-'''
+
 Debian*)
     apt-get --yes update
-
+    sudo apt-get --yes install gcc-5 gcc-4.7 gcc-4.8 gcc-4.9
     # Relying on the pip version of the buildslave is more portable but
     # slower to bootstrap.  By default prefer the packaged version.
     if test $BB_USE_PIP -ne 0; then
@@ -142,43 +144,12 @@ Debian*)
     sed -i.bak '/secure_path/d' /etc/sudoers
     ;;
 
-Fedora*)
-    # Relying on the pip version of the buildslave is more portable but
-    # slower to bootstrap.  By default prefer the packaged version.
-    if test $BB_USE_PIP -ne 0; then
-        dnf -y install gcc python-pip python-devel
-        easy_install --quiet buildbot-slave
-        BUILDSLAVE="/usr/bin/buildslave"
-    else
-        dnf -y install buildbot-slave
-        BUILDSLAVE="/usr/bin/buildslave"
-    fi
-
-    # User buildbot needs to be added to sudoers and requiretty disabled.
-    if ! id -u buildbot >/dev/null 2>&1; then
-        adduser buildbot
-    fi
-
-    echo "buildbot  ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-    sed -i.bak 's/ requiretty/ !requiretty/' /etc/sudoers
-    sed -i.bak '/secure_path/d' /etc/sudoers
-    ;;
-
-Gentoo*)
-    emerge-webrsync
-    emerge app-admin/sudo dev-util/buildbot-slave
-    BUILDSLAVE="/usr/bin/buildslave"
-
-    # User buildbot needs to be added to sudoers and requiretty disabled.
-    echo "buildbot  ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-    ;;
-'''
 RHEL*)
-    yum -y install deltarpm gcc python-pip python-devel
+    sudo yum -y install deltarpm gcc python-pip python-devel
     easy_install --quiet buildbot-slave
     BUILDSLAVE="/usr/bin/buildslave"
-
     # User buildbot needs to be added to sudoers and requiretty disabled.
+    yum -y install compat-gcc-44-*
     if ! id -u buildbot >/dev/null 2>&1; then
         adduser buildbot
         echo "buildbot  ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
@@ -186,57 +157,7 @@ RHEL*)
         sed -i.bak '/secure_path/d' /etc/sudoers
     fi
     ;;
-'''
-SUSE*)
-    # SLES appears to not always register their repos properly.
-    echo "solver.allowVendorChange = true" >>/etc/zypp/zypp.conf
-    # while ! zypper --non-interactive up; do sleep 10; done
-    while ! /usr/sbin/registercloudguest --force-new; do sleep 10; done
-	# may need to kexec to reload kernel, need to some how do an up?
 
-    # Zypper auto-refreshes on boot retry to avoid spurious failures.
-    zypper --non-interactive install gcc python-devel python-pip
-    easy_install --quiet buildbot-slave
-    BUILDSLAVE="/usr/bin/buildslave"
-
-    # User buildbot needs to be added to sudoers and requiretty disabled.
-    if ! id -u buildbot >/dev/null 2>&1; then
-        groupadd buildbot
-        useradd buildbot
-        echo "buildbot  ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-        sed -i.bak 's/ requiretty/ !requiretty/' /etc/sudoers
-        sed -i.bak '/secure_path/d' /etc/sudoers
-    fi
-
-    mkdir "/home/buildbot"
-    chown "buildbot:" "/home/buildbot/"
-    ;;
-
-OpenSUSE*)
-    # SLES appears to not always register their repos properly.
-    echo "solver.allowVendorChange = true" >>/etc/zypp/zypp.conf
-    # while ! zypper --non-interactive up; do sleep 10; done
-    while ! /usr/sbin/registercloudguest --force-new; do sleep 10; done
-	# may need to kexec to reload kernel, need to some how do an up?
-
-    # Zypper auto-refreshes on boot retry to avoid spurious failures.
-    zypper --non-interactive install gcc python-devel python-pip
-    easy_install --quiet buildbot-slave
-    BUILDSLAVE="/usr/bin/buildslave"
-
-    # User buildbot needs to be added to sudoers and requiretty disabled.
-    if ! id -u buildbot >/dev/null 2>&1; then
-        groupadd buildbot
-        useradd buildbot
-        echo "buildbot  ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-        sed -i.bak 's/ requiretty/ !requiretty/' /etc/sudoers
-        sed -i.bak '/secure_path/d' /etc/sudoers
-    fi
-
-    mkdir "/home/buildbot"
-    chown "buildbot:" "/home/buildbot/"
-    ;;
-'''
 Ubuntu*)
 #    codename=$(lsb_release -c | awk  '{print $2}')
 #    sudo tee /etc/apt/sources.list.d/ddebs.list << EOF
@@ -248,7 +169,7 @@ Ubuntu*)
 
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ECDCAD72428D7C01
     sudo apt-get --yes update
-
+    sudo apt-get --yes install gcc-5 gcc-4.7 gcc-4.8 gcc-4.9
     # Relying on the pip version of the buildslave is more portable but
     # slower to bootstrap.  By default prefer the packaged version.
     if test $BB_USE_PIP -ne 0; then
