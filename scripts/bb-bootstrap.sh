@@ -55,7 +55,7 @@ fi
 
 if test ! -f /etc/buildslave; then
     echo "SPACK_URL=\"$SPACK_URL\""      > /etc/buildslave
-    echo "BB_MASTER=\"$BB_MASTER\""      > /etc/buildslave
+    echo "BB_MASTER=\"$BB_MASTER\""     >> /etc/buildslave
     echo "BB_NAME=\"$BB_NAME\""         >> /etc/buildslave
     echo "BB_PASSWORD=\"$BB_PASSWORD\"" >> /etc/buildslave
     echo "BB_ADMIN=\"$BB_ADMIN\""       >> /etc/buildslave
