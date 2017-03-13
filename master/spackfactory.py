@@ -38,6 +38,12 @@ def runyamlCommand(props):
     bb_url = props.getProperty('bburl')
     args.extend([bb_url + "bb-runspack.sh"])
     return args
+@util.renderer
+def dependencyCommand(props):
+    args = ["runurl"]
+    bb_url = props.getProperty('bburl')
+    args.extend([bb_url + "bb-dependencies.sh"])
+    return args
 
 def xsdkTestSuiteFactory(spack_repo):
     """ Generates a build factory for a tarball generating builder.
@@ -45,7 +51,18 @@ def xsdkTestSuiteFactory(spack_repo):
         BuildFactory: Build factory with steps for generating tarballs.
     """
     bf = util.BuildFactory()
-    random.seed(random.random())
+
+    # update dependencies
+    bf.addStep(ShellCommand(
+        command=dependencyCommand,
+        decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
+        haltOnFailure=True,
+        logEnviron=False,
+        doStepIf=do_step_installdeps,
+        hideStepIf=hide_if_skipped,
+        description=["installing dependencies"],
+        descriptionDone=["installed dependencies"]))
+
     # Pull the patch from Gerrit
     bf.addStep(Git(
         repourl=spack_repo,

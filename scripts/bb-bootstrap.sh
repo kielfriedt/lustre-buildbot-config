@@ -103,6 +103,7 @@ Amazon*)
     ;;
 
 CentOS*)
+    sudo yum install git
     sudo yum group install "Development Tools"
     sudo yum -y install compat-gcc-44-* 
     if cat /etc/redhat-release | grep -Eq "6."; then
