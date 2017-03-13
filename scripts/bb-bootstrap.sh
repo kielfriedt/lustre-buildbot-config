@@ -170,14 +170,15 @@ Ubuntu*)
     apt-get --yes install python-pip python-dev gcc-5 gcc-4.7 gcc-4.8 gcc-4.9
     # Relying on the pip version of the buildslave is more portable but
     # slower to bootstrap.  By default prefer the packaged version.
+    while [ -s /var/lib/dpkg/lock ]; do sleep 1; done
     if test $BB_USE_PIP -ne 0; then
-        pip --quiet install buildbot-slave
+        sudo pip --quiet install buildbot-slave
         BUILDSLAVE="/usr/local/bin/buildslave"
     else
         apt-get --yes install buildbot-slave
         BUILDSLAVE="/usr/bin/buildslave"
     fi
-
+    while [ -s /var/lib/dpkg/lock ]; do sleep 1; done
     # Install the latest kernel to reboot on to.
     if test "$BB_MODE" = "TEST" -o "$BB_MODE" = "PERF"; then
         apt-get --yes install --only-upgrade linux-image-generic
