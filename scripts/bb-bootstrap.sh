@@ -103,8 +103,8 @@ Amazon*)
     ;;
 
 CentOS*)
-    sudo yum -y install compat-gcc-44-* 
     sudo yum group install "Development Tools"
+    sudo yum -y install compat-gcc-44-* 
     if cat /etc/redhat-release | grep -Eq "6."; then
         # The buildbot-slave package isn't available from a common repo.
         BUILDSLAVE_URL="http://build.lustre.org"
