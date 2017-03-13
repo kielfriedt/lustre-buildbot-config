@@ -173,11 +173,14 @@ Ubuntu*)
 #deb http://ddebs.ubuntu.com/ ${codename}-proposed main restricted universe multiverse
 #EOF
 
-    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ECDCAD72428D7C01
+    #sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ECDCAD72428D7C01
+    echo "apt-get UPDATE $$$$$$$$$"
     sudo apt-get --yes update
+    echo "apt-get install GCC $$$$$$$$$"
     sudo apt-get --yes install gcc-5 gcc-4.7 gcc-4.8 gcc-4.9
     # Relying on the pip version of the buildslave is more portable but
     # slower to bootstrap.  By default prefer the packaged version.
+    echo "apt-get USING PIP $$$$$$$$$"
     if test $BB_USE_PIP -ne 0; then
         apt-get --yes install gcc python-pip python-dev
         pip --quiet install buildbot-slave
