@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Check for a local cached configuration.
 if test -f /etc/buildslave; then
@@ -17,5 +18,7 @@ do
   sleep 1
 done
 ls -al
+cat day$num.yaml
 ./bin/spack install bzip2
 ./bin/spack test-suite day$num.yaml
+echo "returning"
