@@ -16,7 +16,7 @@
 #  along with this program; if not, write to the Free Software
 #  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-set -e
+#set -e
 
 # Check for a local cached configuration.
 if test -f /etc/buildslave; then
@@ -27,7 +27,7 @@ fi
 # calls us.  If they are not there, we set some defaults but they almost
 # certainly will not work.
 if test ! "$BB_MASTER"; then
-    BB_MASTER="172.31.18.139:9989"
+    BB_MASTER="35.167.244.38:9989"
 fi
 if test ! "$BB_NAME"; then
     BB_NAME=$(hostname)
@@ -165,28 +165,18 @@ RHEL*)
     ;;
 
 Ubuntu*)
-#    codename=$(lsb_release -c | awk  '{print $2}')
-#    sudo tee /etc/apt/sources.list.d/ddebs.list << EOF
-#deb http://ddebs.ubuntu.com/ ${codename}      main restricted universe multiverse
-#deb http://ddebs.ubuntu.com/ ${codename}-security main restricted universe multiverse
-#deb http://ddebs.ubuntu.com/ ${codename}-updates  main restricted universe multiverse
-#deb http://ddebs.ubuntu.com/ ${codename}-proposed main restricted universe multiverse
-#EOF
-
+    while [ -s /var/lib/dpkg/lock ]; do sleep 1; done
     #sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ECDCAD72428D7C01
-    echo "apt-get UPDATE $$$$$$$$$"
     sudo apt-get --yes update
-    echo "apt-get install GCC $$$$$$$$$"
     sudo apt-get --yes install gcc-5 gcc-4.7 gcc-4.8 gcc-4.9
     # Relying on the pip version of the buildslave is more portable but
     # slower to bootstrap.  By default prefer the packaged version.
-    echo "apt-get USING PIP $$$$$$$$$"
     if test $BB_USE_PIP -ne 0; then
-        apt-get --yes install gcc python-pip python-dev
-        pip --quiet install buildbot-slave
+        sudo apt-get --yes install gcc python-pip python-dev
+        sudo pip --quiet install buildbot-slave
         BUILDSLAVE="/usr/local/bin/buildslave"
     else
-        apt-get --yes install buildbot-slave
+        sudo apt-get --yes install buildbot-slave
         BUILDSLAVE="/usr/bin/buildslave"
     fi
 
