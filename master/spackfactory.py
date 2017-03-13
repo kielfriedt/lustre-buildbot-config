@@ -61,15 +61,6 @@ def xsdkTestSuiteFactory(spack_repo):
         descriptionDone=["cloned"]))
 
     bf.addStep(ShellCommand(
-        workdir="build/spack",
-        command=["./spack/bin/spack", "install", "bzip2"],
-        haltOnFailure=True,
-        logEnviron=False,
-        lazylogfiles=True,
-        description=["running spack"],
-        descriptionDone=["running spack"]))
-    '''
-    bf.addStep(ShellCommand(
         command=runyamlCommand,
         decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
         haltOnFailure=True,
@@ -90,7 +81,7 @@ def xsdkTestSuiteFactory(spack_repo):
         description=["Sending output to cdash"],
         descriptionDone=["Sending output to cdash"],
         workdir="build/spack"))
-    '''
+
     # Cleanup
     bf.addStep(ShellCommand(
         workdir="build",
