@@ -103,15 +103,16 @@ Amazon*)
     ;;
 
 CentOS*)
-    sudo yum -y install compat-gcc-44-*
+    sudo yum -y install compat-gcc-44-* 
+    sudo yum group install "Development Tools"
     if cat /etc/redhat-release | grep -Eq "6."; then
         # The buildbot-slave package isn't available from a common repo.
         BUILDSLAVE_URL="http://build.lustre.org"
         BUILDSLAVE_RPM="buildbot-slave-0.8.8-2.el6.noarch.rpm"
-        yum -y install $BUILDSLAVE_URL/$BUILDSLAVE_RPM
+        sudo yum -y install $BUILDSLAVE_URL/$BUILDSLAVE_RPM
         BUILDSLAVE="/usr/bin/buildslave"
     else
-        yum -y install deltarpm gcc python-pip python-devel
+        sudo yum -y install deltarpm gcc python-pip python-devel
         easy_install --quiet buildbot-slave
         BUILDSLAVE="/usr/bin/buildslave"
     fi
