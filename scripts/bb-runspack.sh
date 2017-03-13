@@ -10,6 +10,10 @@ else
 fi
 # generate random number
 num=$(( RANDOM % (7 - 1 + 1 ) + 1 ))
-wget $BB_URL/yaml/day$num.yaml
+while [ ! -f day$num.yaml ]
+do
+  wget $BB_URL/yaml/day$num.yaml
+  sleep 1
+done
 ls -al
 ./bin/spack test-suite day$num.yaml
