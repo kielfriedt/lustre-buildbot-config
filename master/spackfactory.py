@@ -11,14 +11,6 @@ from buildbot.status.results import SUCCESS, FAILURE, SKIPPED, WARNINGS
 from buildbot.steps.source.git import Git
 import random
 
-def do_step_if_value(step, name, value):
-    props = step.build.getProperties()
-    if props.hasProperty(name) and props[name] == value:
-        return True
-    else:
-        return False
-
-
 def hide_if_skipped(results, step):
     return results == SKIPPED
 
@@ -58,10 +50,10 @@ def xsdkTestSuiteFactory(spack_repo):
         decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
         haltOnFailure=True,
         logEnviron=False,
-        doStepIf=do_step_installdeps,
         hideStepIf=hide_if_skipped,
         description=["installing dependencies"],
-        descriptionDone=["installed dependencies"]))
+        descriptionDone=["installed dependencies"],
+        workdir="build/spack"))
 
     # Pull the patch from Gerrit
     bf.addStep(Git(
