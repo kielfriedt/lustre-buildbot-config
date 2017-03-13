@@ -12,8 +12,10 @@ fi
 num=$(( RANDOM % (7 - 1 + 1 ) + 1 ))
 while [ ! -f day$num.yaml ]
 do
+  echo "yaml file missing, trying again."
   wget $BB_URL/yaml/day$num.yaml
   sleep 1
 done
 ls -al
+./bin/spack install bzip2
 ./bin/spack test-suite day$num.yaml
