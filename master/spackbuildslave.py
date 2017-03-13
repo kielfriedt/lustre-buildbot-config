@@ -69,7 +69,7 @@ export BB_PASSWORD='%s'
 export BB_URL='%s'
 
 if [ -z "$BB_URL" ]; then
-    export BB_URL="https://raw.githubusercontent.com/kielfriedt/spack-buildbot-config/tree/cdash/scripts"
+    export BB_URL="https://raw.githubusercontent.com/kielfriedt/spack-buildbot-config/master/scripts"
 fi
 
 # Get the runurl utility.

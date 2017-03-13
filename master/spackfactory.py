@@ -26,15 +26,6 @@ def hide_except_error(results, step):
     return results in (SUCCESS, SKIPPED)
 
 @util.renderer
-def dependencyCommand(props):
-    args = ["runurl"]
-    bb_url = props.getProperty('bburl')
-    args.extend([bb_url + "bb-dependencies.sh"])
-    return args
-
-
-
-@util.renderer
 def curlCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')

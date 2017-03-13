@@ -27,7 +27,7 @@ fi
 # calls us.  If they are not there, we set some defaults but they almost
 # certainly will not work.
 if test ! "$BB_MASTER"; then
-    BB_MASTER="52.43.76.183:9989"
+    BB_MASTER="172.31.18.139:9989"
 fi
 if test ! "$BB_NAME"; then
     BB_NAME=$(hostname)
@@ -45,7 +45,7 @@ if test ! "$BB_USE_PIP"; then
     BB_USE_PIP=0
 fi
 if test ! "$BB_URL"; then
-    BB_URL="https://raw.githubusercontent.com/kielfriedt/spack-buildbot-config/tree/cdash/scripts"
+    BB_URL="https://raw.githubusercontent.com/kielfriedt/spack-buildbot-config/master/scripts"
 fi
 if test ! "$SPACK_URL"; then
     SPACK_URL="https://spack.io/cdash/submit.php?project=spack"
