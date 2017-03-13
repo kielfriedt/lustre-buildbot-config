@@ -12,5 +12,5 @@ fi
 num=$(( RANDOM % (7 - 1 + 1 ) + 1 ))
 wget $BB_URLyaml/day$num.yaml
 ls -al
-./bin/spack install bzip2
+./bin/spack test-suite
 ./bin/spack test-suite day$num.yaml
