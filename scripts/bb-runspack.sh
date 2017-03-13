@@ -10,7 +10,8 @@ else
 fi
 # generate random number
 num=$(( RANDOM % (7 - 1 + 1 ) + 1 ))
-./bin/spack install bzip2
 wget $BB_URL/yaml/day$num.yaml
+./bin/spack install bzip2
+
 ls
 ./bin/spack test-suite day$num.yaml
