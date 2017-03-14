@@ -7,4 +7,4 @@ else
    echo "already installed and this is a persistent buildslave."
    exit 1
 fi
-for x in `ls ./var/spack/cdash$1`; do curl -d \@$x $SPACK_URL; rm $x; done
+for x in `ls ./var/spack/cdash$1`; do curl -d --insecure \@$x $SPACK_URL; done
