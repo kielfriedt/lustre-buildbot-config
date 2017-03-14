@@ -165,6 +165,7 @@ RHEL*)
     ;;
 
 Ubuntu*)
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ECDCAD72428D7C01
     while [ -s /var/lib/dpkg/lock ]; do sleep 1; done
     sudo apt-get --yes update
     # Relying on the pip version of the buildslave is more portable but
