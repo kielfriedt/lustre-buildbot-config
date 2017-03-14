@@ -41,6 +41,14 @@ def runyamlCommand(props):
     bb_url = props.getProperty('bburl')
     args.extend([bb_url + "bb-runspack.sh"])
     return args
+
+@util.renderer
+def runyamlxsdkCommand(props):
+    args = ["runurl"]
+    bb_url = props.getProperty('bburl')
+    args.extend([bb_url + "bb-runspack-xsdk.sh"])
+    return args
+
 @util.renderer
 def dependencyCommand(props):
     args = ["runurl"]
@@ -86,6 +94,7 @@ def nightlyFactory(spack_repo):
         decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
         haltOnFailure=True,
         logEnviron=False,
+        timeout=10800,
         hideStepIf=hide_if_skipped,
         description=["running test-suite"],
         descriptionDone=["running test-suite"],
@@ -152,15 +161,15 @@ def xsdkTestSuiteFactory(spack_repo):
         descriptionDone=["cloned"]))
 
     bf.addStep(ShellCommand(
-        command=runyamlCommand,
+        command=runyamlxsdkCommand,
         decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
         haltOnFailure=True,
         logEnviron=False,
+        timeout=10800,
         hideStepIf=hide_if_skipped,
-        description=["running test-suite"],
-        descriptionDone=["running test-suite"],
+        description=["running xsdk test-suite"],
+        descriptionDone=["running xsdk test-suite"],
         workdir="build/spack"))
-
 
     # send reports
     bf.addStep(ShellCommand(
