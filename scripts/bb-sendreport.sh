@@ -1,10 +1,22 @@
 #!/bin/bash
 # Check for a local cached configuration.
-if test -f /etc/buildslave; then
-    . /etc/buildslave
-else
-   echo "Missing configuration /etc/buildslave.  Assuming BB and spack are"
-   echo "already installed and this is a persistent buildslave."
-   exit 1
-fi
-for x in `ls var/spack/cdash/$1`; do curl -k -d \@$x $SPACK_URL; done
+python << END
+import requests
+import os
+import glob
+path = "var/spack/cdash/"
+#path = "/Users/friedt2/Desktop/good_files/"
+files = [name for name in glob.glob(os.path.join(path,'*.*')) if os.path.isfile(os.path.join(path,name))]
+for f in files:
+        if "dstore" not in f:
+                with open(f) as fh:
+                        mydata = fh.read()
+                        response = requests.put('https://spack.io/cdash/submit.php?project=spack',#&FileName=build-bzip2-1.0.6-gh6bktroppxbca4kxgmrjfezzrknb6he.xml',
+                                data=mydata,
+                                auth=('omer', 'b01ad0ce'),
+                                headers={'content-type':'text/plain'},
+                                params={'file': path+f}
+                                )
+                        print f
+                        print response.status_code
+END
