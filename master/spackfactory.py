@@ -86,7 +86,8 @@ def xsdkTestSuiteFactory(spack_repo):
         decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
         haltOnFailure=True,
         logEnviron=False,
-        hideStepIf=hide_if_skipped,
+        lazylogfiles=True,
+        alwaysRun=True,
         description=["Sending output to cdash"],
         descriptionDone=["Sending output to cdash"],
         workdir="build/spack"))
