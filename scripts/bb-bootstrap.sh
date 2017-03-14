@@ -42,7 +42,7 @@ if test ! "$BB_DIR"; then
     BB_DIR="/var/lib/buildbot/slaves/cdash_spack"
 fi
 if test ! "$BB_USE_PIP"; then
-    BB_USE_PIP=0
+    BB_USE_PIP=1
 fi
 if test ! "$BB_URL"; then
     BB_URL="https://raw.githubusercontent.com/kielfriedt/spack-buildbot-config/master/scripts/"
@@ -171,7 +171,7 @@ Ubuntu*)
     # slower to bootstrap.  By default prefer the packaged version.
     if test $BB_USE_PIP -ne 0; then
         sudo apt-get --yes install python-pip python-dev
-        sudo pip --quiet install buildbot-slave
+        sudo pip --quiet install buildbot-slave requests
         BUILDSLAVE="/usr/local/bin/buildslave"
     else
         apt-get --yes install buildbot-slave
