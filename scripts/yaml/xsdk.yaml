@@ -1,5 +1,5 @@
 ---
-enable: [ xsdk, xsdktrilinos, trilinos, superlu-mt, superlu-dist, petsc, superlu, hypre, chombo, alquimi ]
+enable: [ xsdk, xsdktrilinos, trilinos, superlu-mt, superlu-dist, petsc, superlu, hypre, alquimia ]
 exclusions: []
 
 packages:
