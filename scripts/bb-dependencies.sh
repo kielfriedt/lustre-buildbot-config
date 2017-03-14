@@ -119,7 +119,10 @@ SUSE*)
 Ubuntu*)
     # Required development tools.
     $SUDO apt-get --yes install build-essential autoconf libtool gdb
-
+    $SUDO apt-get --yes install gcc-5 
+    $SUDO apt-get --yes install gcc-4.7 
+    $SUDO apt-get --yes install gcc-4.8 
+    $SUDO apt-get --yes install gcc-4.9
     # Required utilities.
     $SUDO apt-get --yes install git alien fakeroot wget curl bc fio acl \
         sysstat mdadm lsscsi parted gdebi attr dbench watchdog ksh \
