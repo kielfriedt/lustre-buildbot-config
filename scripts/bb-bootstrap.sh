@@ -166,9 +166,9 @@ RHEL*)
 
 Ubuntu*)
     while [ -s /var/lib/dpkg/lock ]; do sleep 1; done
-    apt-get --yes update
+    sudo apt-get --yes update
     while [ -s /var/lib/dpkg/lock ]; do sleep 1; done
-    apt-get --yes install python-pip python-dev gcc-5 gcc-4.7 gcc-4.8 gcc-4.9
+    sudo apt-get --yes install python-pip python-dev gcc-5 gcc-4.7 gcc-4.8 gcc-4.9
     # Relying on the pip version of the buildslave is more portable but
     # slower to bootstrap.  By default prefer the packaged version.
     while [ -s /var/lib/dpkg/lock ]; do sleep 1; done
