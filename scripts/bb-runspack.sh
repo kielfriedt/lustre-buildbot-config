@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -e -x
 
 # Check for a local cached configuration.
 if test -f /etc/buildslave; then
