@@ -20,5 +20,6 @@ done
 ls -al
 cat day$num.yaml
 sleep 2
+./bin/spack test-suite
 ./bin/spack test-suite day$num.yaml
 echo "returning"
