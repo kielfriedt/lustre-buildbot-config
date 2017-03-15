@@ -17,6 +17,7 @@ do
 done
 ls -al
 cat xsdk.yaml
-./bin/spack test-suite
+sleep 2
+./bin/spack install bzip2
 ./bin/spack test-suite xsdk.yaml
 echo "returning"

@@ -20,6 +20,6 @@ done
 ls -al
 cat day$num.yaml
 sleep 2
-./bin/spack test-suite
-./bin/spack test-suite day$num.yaml
+./bin/spack install bzip2
+./bin/spack test-suite xsdk.yaml
 echo "returning"
