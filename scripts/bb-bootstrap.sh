@@ -50,7 +50,9 @@ fi
 if test ! "$SPACK_URL"; then
     SPACK_URL="https://spack.io/cdash/submit.php?project=spack"
 fi
-
+if test ! "$XSDK_URL"; then
+    SPACK_URL="https://spack.io/cdash/submit.php?project=xsdk"
+fi
 
 
 if test ! -f /etc/buildslave; then

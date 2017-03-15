@@ -36,6 +36,13 @@ def curlCommand(props):
     return args
 
 @util.renderer
+def curlxsdkCommand(props):
+    args = ["runurl"]
+    bb_url = props.getProperty('bburl')
+    args.extend([bb_url + "bb-sendreport-xsdk.sh"])
+    return args
+
+@util.renderer
 def runyamlCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')
@@ -173,7 +180,7 @@ def xsdkTestSuiteFactory(spack_repo):
 
     # send reports
     bf.addStep(ShellCommand(
-        command=curlCommand,
+        command=curlxsdkCommand,
         decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
         haltOnFailure=True,
         logEnviron=False,
