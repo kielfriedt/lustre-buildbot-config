@@ -19,7 +19,5 @@ do
 done
 ls -al
 cat day$num.yaml
-sleep 2
-./bin/spack install bzip2
 ./bin/spack test-suite xsdk.yaml
 echo "returning"
