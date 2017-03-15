@@ -9,6 +9,7 @@ else
    echo "already installed and this is a persistent buildslave."
    exit 1
 fi
+./bin/spack compilers
 # generate random number
 num=$(( RANDOM % (7 - 1 + 1 ) + 1 ))
 while [ ! -f day$num.yaml ]
