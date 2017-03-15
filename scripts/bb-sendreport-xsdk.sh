@@ -7,4 +7,5 @@ else
    echo "already installed and this is a persistent buildslave."
    exit 1
 fi
+echo $XSDK_URL
 for x in `ls var/spack/cdash/$1`; do curl -k -d @var/spack/cdash/$x $XSDK_URL; done
