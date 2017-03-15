@@ -19,6 +19,6 @@ do
 done
 ls -al
 cat day$num.yaml
-./bin/spack install bzip2
+sleep 2
 ./bin/spack test-suite day$num.yaml
 echo "returning"
