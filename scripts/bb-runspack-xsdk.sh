@@ -17,5 +17,6 @@ do
 done
 ls -al
 cat xsdk.yaml
+./bin/spack test-suite
 ./bin/spack test-suite xsdk.yaml
 echo "returning"
