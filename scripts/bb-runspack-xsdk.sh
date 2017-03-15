@@ -9,6 +9,7 @@ else
    echo "already installed and this is a persistent buildslave."
    exit 1
 fi
+./bin/spack compilers
 while [ ! -f xsdk.yaml ]
 do
   echo "yaml file missing, trying again."
@@ -17,5 +18,6 @@ do
 done
 ls -al
 cat xsdk.yaml
+./bin/spack install bzip2
 ./bin/spack test-suite xsdk.yaml
 echo "returning"
