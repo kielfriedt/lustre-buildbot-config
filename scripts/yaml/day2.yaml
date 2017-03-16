@@ -1,6 +1,6 @@
 ---
 enable: [ cblas, glew, xcalc, liboldx, py-emcee, libmonitor, xcb-util-keysyms, encodings, py-macs2, xgc, xkbprint, py-sphinx, py-yapf, r-class, libxaw, py-networkx, gflags, xf86dgaproto, py-iminuit, rgb, libxv, cereal, py-prettytable, py-pygtk, xfs, r, xsetpointer, py-ptyprocess, hdf5-blosc, py-proj, bpp-suite, libxxf86misc, r-openssl, geant4, r-rjson, lua, ncdu, spark, cmor, stat, py-ordereddict, arpack, r-pbkrtest, trilinos, py-pexpect, py-virtualenv, r-xlconnect, pflotran, unixodbc, py-openpyxl, font-bh-ttf, bowtie2, superlu-mt, ipp, superlu, alquimia, xmodmap, visit, h5hut, jpeg, r-ggplot2, pixman, font-misc-meltho, py-ipykernel, meep, xsm, dri2proto, automake, gdk-pixbuf, exodusii, ppl, font-xfree86-type1, libfs, lua-luaposix, proxymngr, cbtf-argonavis, libjpeg-turbo, py-nestle, heppdt, subversion, python, py-ipython, r-rstudioapi, cairo, automaded, py-basemap, catch, py-dbf, xtrans, r-cubature, vizglow, r-devtools, r-np, conduit, libxxf86dga, hpctoolkit, netgauge, libxxf86vm, r-jsonlite, xrootd, py-rpy2, r-ncdf4, jemalloc, hepmc, xkbcomp, r-rgooglemaps, cfitsio, binutils, piranha, flint, py-mpi4py, openssl, sessreg, osu-micro-benchmarks, r-nnet, lmod, libapplewm, polymake, sbt, cantera, rose, r-rcolorbrewer, ipopt, py-py2cairo, parallel, editres, randrproto, xinput, asciidoc, mpfr, py-meep, ibmisc, r-rsqlite, slepc, harfbuzz]
-exclusions: []
+exclusions: [openssl]
 
 packages:
   - alquimia:
@@ -277,9 +277,9 @@ packages:
 
 compilers:
   - gcc:
-    - versions: [4.8.5,4.4.7,5.4.0,4.9.3,4.8,4.7]
+    - versions: [4.8.5,4.4.7,5.4.0,4.9.3]
   - clang:
     - versions: [3.4.2]
 
-dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
+dashboard: []
 

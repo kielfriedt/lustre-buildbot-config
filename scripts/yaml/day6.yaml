@@ -156,5 +156,5 @@ compilers:
   - clang:
     - versions: [3.4.2]
 
-dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
+dashboard: []
 
