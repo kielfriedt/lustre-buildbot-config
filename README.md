@@ -1,36 +1,17 @@
-# The Lustre Buildbot Configuration
+# The Spack Buildbot Configuration
 
 Welcome, this is the buildbot configuration and infrastructure used by the
-Lustre Buildbot at http://build.lustre.org.  It's used to automate the process
-of testing patch sets submitted to Lustre project on 
-[Gerrit] (http://review.whamcloud.com).  If you would like to
+Spack Buildbot at http://spack.io.  It's used to automate the process
+of testing packages to Spack project. if you would like to
 contribute to improving our testing infrastructure please open a pull request
 against this Github repository. If you have any questions or feedback, feel
-free to contact us at <buildbot-admin@lustre.org>.
+free to contact us at <buildbot-admin@Spack.org>.
 
 ## Build and Test Strategy
 
-### Patch Sets
-
-The Lustre project relies on Gerrit to track proposed changes.  Changes
-submitted to Gerrit are called patch sets. Each patch set submitted will 
-be automatically tested by the buildbot.  As you fix the code and push
-new changes to Gerrit, each patch set is queued to be built. Results of
-the build are submitted to Gerrit once a build completes. Build products
-(tarball, srpm, rpms) of a successful build will be available for
-two weeks.
-
-### Tags
-
-The Lustre project is periodically tagged. The Lustre git repository
-is polled every hour for new or modified tags. If a new/modified tag
-is found, a change is submitted to the build master and a full build
-is performed. Once a tag is successfully built, build products 
-(tarball, srpm, rpms) will be available indefinitely.
-
 ### Builder Types
 
-When a new patch set is submitted, it is queued up for testing on all 
+Nightly,Weekly and specific package groups are tested. This is queued up for testing on all 
 of the available builders.  There is currently only one type of builder:
 
 * BUILD: These builders are responsible for verifying that a change
@@ -52,7 +33,7 @@ of the available builders.  There is currently only one type of builder:
 
 ### Build Steps and the `runurl` Utility
 
-The Lustre Buildbot makes extensive use of the `runurl`
+The Spack Buildbot makes extensive use of the `runurl`
 utility.  This small script takes the URL of a script to execute as its first 
 argument followed by all arguments to pass to the script. This allows us to
 configure a build step which references a trusted URL with the desired script.
@@ -84,26 +65,26 @@ This means the logic for a particular build step can be separated from the
 
 ### Important Files
 
-The Lustre Buildbot configuration is broken out in a few different files.
+The Spack Buildbot configuration is broken out in a few different files.
 Below is a list of important files and a brief description of what is
 contained within them:
 
-* `master/master.cfg` - Core configuration file for the Lustre Buildbot.
+* `master/master.cfg` - Core configuration file for the Spack Buildbot.
 
 * `master/password.py.sample` - Sample credentials file used to create
   a `master/password.py` file. This file contains build slave passwords,
   various user passwords, and EC2 credentials.
 
-* `master/lustrebuildslave.py` - Contains custom BuilderConfig and
-  EC2LatentBuildSlave classes used by the Lustre Buildbot. If new types
+* `master/Spackbuildslave.py` - Contains custom BuilderConfig and
+  EC2LatentBuildSlave classes used by the Spack Buildbot. If new types
   of build slaves need to be created, please define them in this file.
 
-* `master/lustrefactory.py` - Contains core and supporting functions that 
-  construct BuildFactories for Lustre Buildbot builders. If new types of
+* `master/Spackfactory.py` - Contains core and supporting functions that 
+  construct BuildFactories for Spack Buildbot builders. If new types of
   build factories need to be created, please define them in this file.
 
-* `master/lustregittagpoller.py` - Contains a subclass of buildbot's
-  GitPoller class called LustreTagPoller. The class is designed to
+* `master/Spackgittagpoller.py` - Contains a subclass of buildbot's
+  GitPoller class called SpackTagPoller. The class is designed to
   poll a git repository for changes in tags. If a new or modified tag
   is found, a change is then submitted to the build master. 
 
@@ -133,7 +114,7 @@ how to add various types of slaves.
 * Linux based m3.large EC2 slave
 ```
 newslaves = [                                                                                     
-     LustreEC2Slave(
+     SpackEC2Slave(
          name="slavename",
          ami="ami-xxxxxxxx"
      ),
@@ -144,7 +125,7 @@ newslaves = [
 * Suse based m3.large EC2 slave
 ```
 newslaves = [                                                                                     
-     LustreEC2SuseSlave(
+     SpackEC2SuseSlave(
          name="slavename",
          ami="ami-xxxxxxxx"
      ),
@@ -154,7 +135,7 @@ newslaves = [
 
 Now that your build slaves have been added, a builder needs to be created which
 owns them.  Jump down to the the BUILDERS section and add a
-`LustreBuilderConfig` entry to the appropriate list.  Each builder must
+`SpackBuilderConfig` entry to the appropriate list.  Each builder must
 have a unique `name`. Set the `factory` to `build_factory` for the builder.
 Then set `properties` and `tags` options as appropriate.
 
@@ -173,8 +154,8 @@ buildbot will need to be restarted to pick up the change.
 
 ### Running a Private Master
 
-The official Lustre Buildbot can be accessed by everyone at
-http://build.lustre.org/ and it leverages Gerrit's stream-events functionality
+The official Spack Buildbot can be accessed by everyone at
+http://build.Spack.org/ and it leverages Gerrit's stream-events functionality
 to queue changes to test. Developers are encouraged to use this infrastructure
 when working on a change. However, this code can be used as a basis for
 building a private build and test environment.  This may be useful when working
