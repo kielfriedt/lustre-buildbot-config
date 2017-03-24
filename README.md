@@ -5,7 +5,7 @@ Spack Buildbot at http://spack.io.  It's used to automate the process
 of testing packages to Spack project. if you would like to
 contribute to improving our testing infrastructure please open a pull request
 against this Github repository. If you have any questions or feedback, feel
-free to contact us at <buildbot-admin@Spack.org>.
+free to contact us at <FIXME@Spack.io>.
 
 ## Build and Test Strategy
 
@@ -155,13 +155,10 @@ buildbot will need to be restarted to pick up the change.
 ### Running a Private Master
 
 The official Spack Buildbot can be accessed by everyone at
-http://build.Spack.org/ and it leverages Gerrit's stream-events functionality
-to queue changes to test. Developers are encouraged to use this infrastructure
+http://Spack.io/. Developers are encouraged to use this infrastructure
 when working on a change. However, this code can be used as a basis for
 building a private build and test environment.  This may be useful when working
-on extending the testing infrastructure itself. We also maintain our own fork of
-the open source Buildbot project which can be found at
-https://github.com/opensfs/buildbot.
+on extending the testing infrastructure itself.
 
 Generally speaking to do this you will need to create a `password.py` file
 with your credentials, then list your builders in the `master.cfg` file, and
