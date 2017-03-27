@@ -8,4 +8,5 @@ else
    exit 1
 fi
 echo $XSDK_URL
-for x in `ls var/spack/cdash/$1`; do curl -k -d @var/spack/cdash/$x $XSDK_URL; done
+datetime=`date "+%Y-%m-%d"`
+for x in `ls spack-test-$datetime`; do curl -k -d @spack-test-$datetime/$x $XSDK_URL; done

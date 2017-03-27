@@ -16,8 +16,6 @@ do
   wget $BB_URL/yaml/xsdk.yaml
   sleep 1
 done
-ls -al
 cat xsdk.yaml
-./bin/spack install bzip2
 ./bin/spack test-suite xsdk.yaml
 echo "returning"
