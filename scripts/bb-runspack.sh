@@ -18,8 +18,6 @@ do
   wget $BB_URL/yaml/day$num.yaml
   sleep 1
 done
-ls -al
 cat day$num.yaml
-./bin/spack install bzip2
 ./bin/spack test-suite day$num.yaml
 echo "returning"
