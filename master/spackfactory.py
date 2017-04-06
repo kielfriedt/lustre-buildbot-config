@@ -43,17 +43,21 @@ def curlxsdkCommand(props):
     return args
 
 @util.renderer
-def runyamlCommand(props):
+def TestSuiteCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')
-    args.extend([bb_url + "bb-runspack.sh"])
+    gcc = props.getProperty('gcc')
+    yaml = str(random.randint(1,7)) + gcc + ".yaml"
+    args.extend([bb_url + "bb-runspack.sh", yaml])
     return args
 
 @util.renderer
-def runyamlxsdkCommand(props):
+def XSDKTestSuiteCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')
-    args.extend([bb_url + "bb-runspack-xsdk.sh"])
+    gcc = props.getProperty('gcc')
+    yaml = str(random.randint(1,7)) + gcc + ".yaml"
+    args.extend([bb_url + "bb-runspack-xsdk.sh", yaml])
     return args
 
 @util.renderer
@@ -97,11 +101,12 @@ def nightlyFactory(spack_repo):
         descriptionDone=["cloned"]))
 
     bf.addStep(ShellCommand(
-        command=runyamlCommand,
+        command=TestSuiteCommand,
         decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
         haltOnFailure=True,
         logEnviron=False,
         timeout=3600,
+        maxTime=21600,# 6 hours
         hideStepIf=hide_if_skipped,
         description=["running test-suite"],
         descriptionDone=["running test-suite"],
@@ -168,11 +173,12 @@ def xsdkTestSuiteFactory(spack_repo):
         descriptionDone=["cloned"]))
 
     bf.addStep(ShellCommand(
-        command=runyamlxsdkCommand,
+        command=XSDKTestSuiteCommand,
         decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
         haltOnFailure=True,
         logEnviron=False,
         timeout=3600,
+        maxTime=21600,# 6 hours
         hideStepIf=hide_if_skipped,
         description=["running xsdk test-suite"],
         descriptionDone=["running xsdk test-suite"],

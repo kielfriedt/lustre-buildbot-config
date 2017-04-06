@@ -9,15 +9,17 @@ else
    echo "already installed and this is a persistent buildslave."
    exit 1
 fi
-./bin/spack compilers
-# generate random number
-num=$(( RANDOM % (7 - 1 + 1 ) + 1 ))
-while [ ! -f day$num.yaml ]
+if [ -n "$1" ]; then
+	yaml="$1"
+fi
+
+while [ ! -f "$yaml.yaml" ]
 do
   echo "yaml file missing, trying again."
-  wget $BB_URL/yaml/day$num.yaml
+  wget "$BB_URL/yaml/$yaml.yaml"
   sleep 1
 done
-cat day$num.yaml
-./bin/spack test-suite day$num.yaml
+cat "$yaml.yaml"
+./bin/spack test-suite "$yaml.yaml"
 echo "returning"
+fi

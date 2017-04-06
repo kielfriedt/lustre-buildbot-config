@@ -53,10 +53,13 @@ fi
 if test ! "$XSDK_URL"; then
     XSDK_URL="https://spack.io/cdash/submit.php?project=xsdk"
 fi
-
+if test ! "$WEEKLY_URL"; then
+    XSDK_URL="https://spack.io/cdash/submit.php?project=weekly"
+fi
 
 if test ! -f /etc/buildslave; then
     echo "SPACK_URL=\"$SPACK_URL\""      > /etc/buildslave
+    echo "WEEKLY_URL=\"$WEEKLY_URL\""   >> /etc/buildslave
     echo "XSDK_URL=\"$XSDK_URL\""       >> /etc/buildslave
     echo "BB_MASTER=\"$BB_MASTER\""     >> /etc/buildslave
     echo "BB_NAME=\"$BB_NAME\""         >> /etc/buildslave
