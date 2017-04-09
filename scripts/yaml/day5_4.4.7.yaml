@@ -1,0 +1,185 @@
+---
+test-suite:
+    include: [ tar, util-macros, lcms, heppdt, tetgen, py-basemap, py-astropy, font-dec-misc, scotch, libtiff, twm, libxt, py-lockfile, pfft, py-monotonic, r-doparallel, font-schumacher-misc, superlu-dist, py-rpy2, py-decorator, r-pbkrtest, xextproto, xdpyinfo, gmake, py-genders, h5hut, cmake, r-vcd, piranha, evieext, py-ipython-genutils, perl, r-foreach, mvapich2, r-thdata, py-jupyter-core, curl, luit, r-gridbase, flint, py-pygments, r-reshape2, r-influencer, bowtie2, papi, libvterm, xprop, libxdamage, r-httpuv, gts, lua, environment-modules, bliss, giflib, atlas, r-deoptim, apex, mercurial, swig, ppl, r-nloptr, zsh, uberftp, wannier90, jasper, compiz, py-mx, zfp, moab, xlsatoms, go, videoproto, dealii, abinit, xlsclients, bigreqsproto, r-rjson, xf86rushproto, tau, xwd, py-ipdb, py-docutils, adol-c, r-gtools, clhep, subversion]
+
+    packages:
+        abinit:
+            versions: [8.0.8b]
+        adol-c:
+            versions: [2.6.1, 2.6.2, develop]
+        apex:
+            versions: [0.1]
+        atlas:
+            versions: [3.10.3, 3.10.2, 3.11.34]
+        bigreqsproto:
+            versions: [1.1.2]
+        bliss:
+            versions: [0.73]
+        bowtie2:
+            versions: [2.2.5]
+        clhep:
+            versions: [2.3.2.2, 2.2.0.4, 2.2.0.8, 2.3.1.1, 2.3.0.0, 2.2.0.5, 2.3.1.0]
+        cmake:
+            versions: [3.5.1, 3.0.2, 3.6.1, 3.5.0, 3.1.0, 2.8.10.2, 3.7.1, 3.3.1, 3.4.3, 3.4.0, 3.5.2, 3.6.0]
+        compiz:
+            versions: [0.7.8]
+        curl:
+            versions: [7.46.0, 7.50.1, 7.49.1, 7.45.0, 7.47.1, 7.44.0, 7.42.1, 7.43.0, 7.50.2, 7.50.3]
+        dealii:
+            versions: [8.4.1, 8.3.0, 8.4.0, 8.2.1, develop, 8.1.0, 8.4.2]
+        environment-modules:
+            versions: [3.2.10]
+        evieext:
+            versions: [1.1.1]
+        flint:
+            versions: [2.5.2, 2.4.5, develop]
+        font-dec-misc:
+            versions: [1.0.3]
+        font-schumacher-misc:
+            versions: [1.1.2]
+        giflib:
+            versions: [5.1.4]
+        gmake:
+            versions: [4.0]
+        go:
+            versions: [1.6.4, 1.7.4]
+        gts:
+            versions: [121130]
+        h5hut:
+            versions: [1.99.13]
+        heppdt:
+            versions: [3.03.02, 2.06.01, 3.04.00, 3.03.01, 3.04.01, 3.03.00]
+        jasper:
+            versions: [1.900.1]
+        lcms:
+            versions: [2.6]
+        libtiff:
+            versions: [4.0.3, 4.0.6]
+        libvterm:
+            versions: [681]
+        libxdamage:
+            versions: [1.1.4]
+        libxt:
+            versions: [1.1.5]
+        lua:
+            versions: [5.3.1, 5.2.3, 5.3.0, 5.2.2, 5.2.4, 5.2.0, 5.1.5, 5.2.1, 5.3.2, 5.1.4, 5.1.3]
+        luit:
+            versions: [1.1.1]
+        mercurial:
+            versions: [3.8.4, 3.8.1, 3.9, 3.8.2, 3.9.1, 3.8.3]
+        moab:
+            versions: [4.8.2, 4.9.1, 4.9.0]
+        mvapich2:
+            versions: [2.0, 1.9, 2.1, 2.2]
+        papi:
+            versions: [5.4.3, 5.5.0, 5.3.0, 5.4.1]
+        perl:
+            versions: [5.22.2, 5.20.3, 5.24.0]
+        pfft:
+            versions: [1.0.8-alpha]
+        piranha:
+            versions: [0.5, develop]
+        ppl:
+            versions: [1.1]
+        py-astropy:
+            versions: [1.1.post1, 1.1.2]
+        py-basemap:
+            versions: [1.0.7]
+        py-decorator:
+            versions: [4.0.9]
+        py-docutils:
+            versions: [0.12]
+        py-genders:
+            versions: [1.22]
+        py-ipdb:
+            versions: [0.10.1]
+        py-ipython-genutils:
+            versions: [0.1.0]
+        py-jupyter-core:
+            versions: [4.0.1, 4.0.4, 4.1.0, 4.0.3, 4.0.6, 4.0.2, 4.2.0, 4.0.5, 4.1.1, 4.0]
+        py-lockfile:
+            versions: [0.10.2]
+        py-monotonic:
+            versions: [1.2]
+        py-mx:
+            versions: [3.2.8]
+        py-pygments:
+            versions: [2.0.2, 2.1.3, 2.0.1]
+        py-rpy2:
+            versions: [2.5.4, 2.5.6]
+        r-deoptim:
+            versions: [2.2-3]
+        r-doparallel:
+            versions: [1.0.10]
+        r-foreach:
+            versions: [1.4.3]
+        r-gridbase:
+            versions: [0.4-7]
+        r-gtools:
+            versions: [3.5.0]
+        r-httpuv:
+            versions: [1.3.3]
+        r-influencer:
+            versions: [0.1.0]
+        r-nloptr:
+            versions: [1.0.4]
+        r-pbkrtest:
+            versions: [0.4-6]
+        r-reshape2:
+            versions: [1.4.1]
+        r-rjson:
+            versions: [0.2.15]
+        r-thdata:
+            versions: [1.0-7]
+        r-vcd:
+            versions: [1.4-1]
+        scotch:
+            versions: [6.0.3, 6.0.0, 5.1.10b, 6.0.4]
+        subversion:
+            versions: [1.9.3, 1.8.13]
+        superlu-dist:
+            versions: [3.3, 5.0.0, 5.1.1, develop, 5.1.0, 4.3, xsdk-0.2.0, 4.2, 4.1, 4.0]
+        swig:
+            versions: [3.0.2, 2.0.2, 2.0.12, 3.0.8, 1.3.40, 3.0.10]
+        tar:
+            versions: [1.29, 1.28]
+        tau:
+            versions: [2.24, 2.25, 2.24.1, 2.23.1]
+        tetgen:
+            versions: [1.5.0, 1.4.3]
+        twm:
+            versions: [1.0.9]
+        uberftp:
+            versions: [2_7, 2_8, 2_6]
+        util-macros:
+            versions: [1.19.0]
+        videoproto:
+            versions: [2.3.3]
+        wannier90:
+            versions: [2.0.1]
+        xdpyinfo:
+            versions: [1.3.2]
+        xextproto:
+            versions: [7.3.0]
+        xf86rushproto:
+            versions: [1.1.2]
+        xlsatoms:
+            versions: [1.1.2]
+        xlsclients:
+            versions: [1.1.3]
+        xprop:
+            versions: [1.2.2]
+        xwd:
+            versions: [1.0.6]
+        zfp:
+            versions: [0.5.0]
+        zsh:
+            versions: [5.1.1]
+
+    compilers:
+        gcc:
+            versions: [4.4.7]
+        clang:
+            versions: [3.5, 3.6, 3.7, 3.8, 8.0]
+
+    dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
