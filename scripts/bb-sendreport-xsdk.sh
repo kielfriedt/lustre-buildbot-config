@@ -7,6 +7,7 @@ else
    echo "already installed and this is a persistent buildslave."
    exit 1
 fi
+
 echo $XSDK_URL
 datetime=`date "+%Y-%m-%d"`
 for x in `ls spack-test-$datetime`; do curl -k -d @spack-test-$datetime/$x $XSDK_URL; done
