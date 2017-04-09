@@ -1,0 +1,159 @@
+---
+test-suite:
+    include: [ otf, py-backports-shutil-get-terminal-size, py-3to2, r-survey, r-magic, porta, lz4, ccache, magics, hadoop, daal, graphviz, numdiff, constype, arpack, xkbprint, liblbxutil, r-gistr, openmpi, prank, automaded, opari2, lua-luaposix, libxprintapputil, libedit, r-glmnet, netlib-lapack, libevent, libxprintutil, py-prettytable, py-mistune, everytrace, dri2proto, font-bh-ttf, libxv, etsf-io, viewres, py-nestle, py-sphinx, judy, bcftools, lwgrp, ghostscript, r-xts, r-threejs, r-png, netcdf, xtrap, czmq, harfbuzz, xauth, r-dt, py-ordereddict, fontconfig, r-gdata, ilmbase, hoomd-blue, libwindowswm, py-imagesize, opium, damageproto, mpir, gnu-prolog, libuuid, font-cronyx-cyrillic, pidx, py-unittest2py3k, tmuxinator, xsetpointer, xorg-docs, py-protobuf, nasm, r-markdown]
+
+    packages:
+        arpack:
+            versions: [96]
+        automaded:
+            versions: [1.0]
+        bcftools:
+            versions: [1.3.1]
+        ccache:
+            versions: [3.3.3, 3.3.1, 3.3.2, 3.3, 3.2.9]
+        constype:
+            versions: [1.0.4]
+        czmq:
+            versions: [3.0.2]
+        daal:
+            versions: [2016.3.210, 2016.2.181]
+        damageproto:
+            versions: [1.2.1]
+        dri2proto:
+            versions: [2.8]
+        etsf-io:
+            versions: [1.0.4]
+        everytrace:
+            versions: [0.2.0, develop]
+        font-bh-ttf:
+            versions: [1.0.3]
+        font-cronyx-cyrillic:
+            versions: [1.0.3]
+        fontconfig:
+            versions: [2.11.1]
+        ghostscript:
+            versions: [9.18]
+        gnu-prolog:
+            versions: [1.4.4]
+        graphviz:
+            versions: [2.38.0]
+        hadoop:
+            versions: [2.6.4]
+        harfbuzz:
+            versions: [0.9.37]
+        hoomd-blue:
+            versions: [1.3.3]
+        ilmbase:
+            versions: [1.0.2, 2.1.0, 0.9.0, 2.0.1, 2.2.0]
+        judy:
+            versions: [1.0.5]
+        libedit:
+            versions: [3.1]
+        libevent:
+            versions: [2.0.13, 2.0.17, 2.0.12, 2.0.21, 2.0.16, 2.0.15, 2.0.20, 2.0.19, 2.0.14, 2.0.18]
+        liblbxutil:
+            versions: [1.1.0]
+        libuuid:
+            versions: [1.0.3]
+        libwindowswm:
+            versions: [1.0.1]
+        libxprintapputil:
+            versions: [1.0.1]
+        libxprintutil:
+            versions: [1.0.1]
+        libxv:
+            versions: [1.0.10]
+        lua-luaposix:
+            versions: [33.4.0]
+        lwgrp:
+            versions: [1.0.2]
+        lz4:
+            versions: [131]
+        magics:
+            versions: [2.29.0, 2.29.4]
+        mpir:
+            versions: [2.7.0, 2.6.0, develop]
+        nasm:
+            versions: [2.11.06]
+        netcdf:
+            versions: [4.4.0, 4.4.1, 4.3.3, 4.3.3.1]
+        netlib-lapack:
+            versions: [3.6.1, 3.5.0, 3.4.2, 3.4.0, 3.3.1, 3.4.1, 3.6.0]
+        numdiff:
+            versions: [5.8.1]
+        opari2:
+            versions: [2.0, 1.1.4, 1.1.2]
+        openmpi:
+            versions: [1.6.5, 1.10.0, 1.8.8, 1.10.1, 1.10.2, 2.0.1, 1.10.3, 2.0.0]
+        opium:
+            versions: [3.8]
+        otf:
+            versions: [1.12.5salmon]
+        pidx:
+            versions: [1.0]
+        porta:
+            versions: [1.4.1]
+        prank:
+            versions: [150803]
+        py-3to2:
+            versions: [1.1.1]
+        py-backports-shutil-get-terminal-size:
+            versions: [1.0.0]
+        py-imagesize:
+            versions: [0.7.1]
+        py-mistune:
+            versions: [0.6, 0.7.1, 0.5, 0.5.1, 0.7]
+        py-nestle:
+            versions: [0.1.1]
+        py-ordereddict:
+            versions: [1.1]
+        py-prettytable:
+            versions: [0.7.2]
+        py-protobuf:
+            versions: [2.5.0, 3.0.0b2, 2.4.1, 2.6.1, 2.3.0]
+        py-sphinx:
+            versions: [1.3.1, 1.4.5]
+        py-unittest2py3k:
+            versions: [0.5.1]
+        r-dt:
+            versions: [0.1]
+        r-gdata:
+            versions: [2.17.0]
+        r-gistr:
+            versions: [0.3.6]
+        r-glmnet:
+            versions: [2.0-5]
+        r-magic:
+            versions: [1.5-6]
+        r-markdown:
+            versions: [0.7.7]
+        r-png:
+            versions: [0.1-7]
+        r-survey:
+            versions: [3.30-3]
+        r-threejs:
+            versions: [0.2.2]
+        r-xts:
+            versions: [0.9-7]
+        tmuxinator:
+            versions: [0.6.11]
+        viewres:
+            versions: [1.0.4]
+        xauth:
+            versions: [1.0.9]
+        xkbprint:
+            versions: [1.0.4]
+        xorg-docs:
+            versions: [1.7.1]
+        xsetpointer:
+            versions: [1.0.1]
+        xtrap:
+            versions: [1.0.2]
+
+    compilers:
+        gcc:
+            versions: [4.8.5, 4.4.7, 4.6.1, 4.8.5, 4.8.4, 4.9.2, 5.4.0, 5.3.0, 6.0.0, 6.2.0]
+        clang:
+            versions: [3.5, 3.6, 3.7, 3.8, 8.0]
+
+    dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
