@@ -56,6 +56,9 @@ def WeeklyTestSuiteCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')
     gcc = props.getProperty('gcc')
+    distro = props.getProperty('gcc')
+    if ""
+    if distro
     yaml = "all_" + gcc + ".yaml"
     args.extend([bb_url + "bb-runspack.sh", yaml])
     return args
@@ -76,7 +79,7 @@ def dependencyCommand(props):
     args.extend([bb_url + "bb-dependencies.sh"])
     return args
 
-def nightlyFactory(spack_repo):
+def nightlyTestSuiteFactory(spack_repo):
     """ Generates a build factory for a tarball generating builder.
     Returns:
         BuildFactory: Build factory with steps for generating tarballs.
@@ -147,7 +150,7 @@ def nightlyFactory(spack_repo):
 
     return bf
 
-def weeklyFactory(spack_repo):
+def weeklyTestSuiteFactory(spack_repo):
     """ Generates a build factory for a tarball generating builder.
     Returns:
         BuildFactory: Build factory with steps for generating tarballs.
