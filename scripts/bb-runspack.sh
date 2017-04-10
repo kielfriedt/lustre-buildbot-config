@@ -20,6 +20,10 @@ do
   sleep 1
 done
 cat "$yaml" 
-./bin/spack test-suite --log-format=cdash-simple "$yaml"
-echo "returning"
+if [ -n "$=2" ]; then
+	site="$2"
+	./bin/spack test-suite --log-format=cdash-simple --site="$site" "$yaml"
+else
+	./bin/spack test-suite --log-format=cdash-simple "$yaml"
 fi
+echo "returning"

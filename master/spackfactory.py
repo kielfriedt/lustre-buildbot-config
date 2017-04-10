@@ -47,8 +47,10 @@ def NightlyTestSuiteCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')
     gcc = props.getProperty('gcc')
+    distro = props.getProperty('distro')
+    version = props.getProperty('distrover')
     yaml = "day" + str(random.randint(1,7)) + "_" + gcc + ".yaml"
-    args.extend([bb_url + "bb-runspack.sh", yaml])
+    args.extend([bb_url + "bb-runspack.sh", yaml, distro + version + "AWS"])
     return args
 
 @util.renderer
@@ -56,9 +58,10 @@ def WeeklyTestSuiteCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')
     gcc = props.getProperty('gcc')
-    distro = props.getProperty('gcc')
+    distro = props.getProperty('distro')
+    version = props.getProperty('distrover')
     yaml = "all_" + gcc + ".yaml"
-    args.extend([bb_url + "bb-runspack.sh", yaml])
+    args.extend([bb_url + "bb-runspack.sh", yaml, distro + version + "AWS"])
     return args
 
 @util.renderer
@@ -66,8 +69,10 @@ def XSDKNightlyTestSuiteCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')
     gcc = props.getProperty('gcc')
+    distro = props.getProperty('distro')
+    version = props.getProperty('distrover')
     yaml = "xsdk_" + gcc + ".yaml"
-    args.extend([bb_url + "bb-runspack.sh", yaml])
+    args.extend([bb_url + "bb-runspack.sh", yaml, distro + version + "AWS"])
     return args
 
 @util.renderer
