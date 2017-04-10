@@ -57,8 +57,6 @@ def WeeklyTestSuiteCommand(props):
     bb_url = props.getProperty('bburl')
     gcc = props.getProperty('gcc')
     distro = props.getProperty('gcc')
-    if ""
-    if distro
     yaml = "all_" + gcc + ".yaml"
     args.extend([bb_url + "bb-runspack.sh", yaml])
     return args
