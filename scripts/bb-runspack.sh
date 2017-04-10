@@ -19,7 +19,7 @@ do
   wget "$BB_URL/yaml/$yaml"
   sleep 1
 done
-cat "$yaml.yaml"
+cat "$yaml"
 ./bin/spack test-suite "$yaml"
 echo "returning"
 fi
