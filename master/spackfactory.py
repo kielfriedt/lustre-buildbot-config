@@ -47,7 +47,7 @@ def NightlyTestSuiteCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')
     gcc = props.getProperty('gcc')
-    yaml = "day" + str(random.randint(1,7)) + "_" + gcc
+    yaml = "day" + str(random.randint(1,7)) + "_" + gcc + ".yaml"
     args.extend([bb_url + "bb-runspack.sh", yaml])
     return args
 
