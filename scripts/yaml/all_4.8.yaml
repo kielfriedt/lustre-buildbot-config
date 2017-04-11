@@ -1,0 +1,12 @@
+---
+test-suite:
+
+    packages: all
+
+    compilers:
+        gcc:
+            versions: [4.8]
+        clang:
+            versions: [3.5, 3.6, 3.7, 3.8, 8.0]
+
+    dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
