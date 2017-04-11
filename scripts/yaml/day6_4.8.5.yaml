@@ -152,7 +152,7 @@ test-suite:
 
     compilers:
         gcc:
-            versions: [4.8.5]
+            versions: [4.8]
         clang:
             versions: [3.5, 3.6, 3.7, 3.8, 8.0]
 

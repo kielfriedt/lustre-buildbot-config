@@ -192,7 +192,7 @@ def weeklyTestSuiteFactory(spack_repo):
         haltOnFailure=True,
         logEnviron=False,
         timeout=3600,
-        maxTime=64800,# 6 hours
+        maxTime=64800,# 18 hours
         hideStepIf=hide_if_skipped,
         description=["running weekly test-suite"],
         descriptionDone=["running weekly test-suite"],
