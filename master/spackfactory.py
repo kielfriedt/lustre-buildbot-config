@@ -121,7 +121,7 @@ def nightlyTestSuiteFactory(spack_repo):
         haltOnFailure=True,
         logEnviron=False,
         timeout=3600,
-        maxTime=21600,# 6 hours
+        maxTime=28800,# 8 hours
         hideStepIf=hide_if_skipped,
         description=["running nightly test-suite"],
         descriptionDone=["running nightly test-suite"],
@@ -263,7 +263,7 @@ def xsdkTestSuiteFactory(spack_repo):
         haltOnFailure=True,
         logEnviron=False,
         timeout=3600,
-        maxTime=21600,# 6 hours
+        maxTime=28800,# 8 hours
         hideStepIf=hide_if_skipped,
         description=["running xsdk test-suite"],
         descriptionDone=["running xsdk test-suite"],
