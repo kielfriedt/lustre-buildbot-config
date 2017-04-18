@@ -2,7 +2,8 @@
 test-suite:
     include: [ bash, xsdk, r-rpostgresql, pango, r-nmf, libxfont2, otf2, bamtools, r-colorspace, dbus, apr, libctl, r-dbi, mariadb, mpc, r-base64enc, r-irdisplay, ndiff, inputproto, libxkbfile, atop, py-urwid, r-datatable, icu4c, xwud, launchmon, py-py, font-misc-meltho, stat, elpa, globus-toolkit, py-nose, yaml-cpp, m4, unison, kdiff3, xmessage, encodings, isl, git, hdf5, py-terminado, py-tornado, r-mapproj, py-babel, xmodmap, makedepend, zlib, py-periodictable, allinea-forge, xinit, muparser, r-bh, font-sony-misc, py-snowballstemmer, py-phonopy, pcre2, py-simplegeneric, r-zoo, xorg-cf-files, openspeedshop, jdk, font-daewoo-misc]
 
-    packages:
+    matrix:
+    - packages:
         allinea-forge:
             versions: [6.0.4]
         apr:
@@ -130,10 +131,8 @@ test-suite:
         zlib:
             versions: [1.2.10, 1.2.8]
 
-    compilers:
+    - compilers:
         gcc:
             versions: [5.4.0]
-        clang:
-            versions: [3.5, 3.6, 3.7, 3.8, 8.0]
 
-    dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
+    cdash: ["https://spack.io/cdash/submit.php?project=spack"]

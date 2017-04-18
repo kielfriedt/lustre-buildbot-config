@@ -1,12 +1,11 @@
 ---
 test-suite:
 
-    packages: all
+    matrix:
+    - packages: all
 
-    compilers:
+    - compilers:
         gcc:
             versions: [4.7]
-        clang:
-            versions: [3.5, 3.6, 3.7, 3.8, 8.0]
 
-    dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
+    cdash: ["https://spack.io/cdash/submit.php?project=spack"]

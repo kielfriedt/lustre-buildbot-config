@@ -2,7 +2,8 @@
 test-suite:
     include: [ r-roxygen2, ghostscript-fonts, r-class, xkbevd, cmocka, py-ipython, muster, parmgridgen, py-sqlalchemy, r-c50, libemos, trapproto, exodusii, r-catools, cppad, windowswmproto, presentproto, font-adobe-utopia-type1, libiconv, parallel-netcdf, libxaw3d, nettle, allinea-reports, pgi, beforelight, r-formatr, r-iterators, r-sp, xsetmode, lbxproxy, catch, xdbedizzy, libxshmfence, py-mock, triangle, r-e1071, py-scikit-learn, xorg-sgml-doctools, py-pil, sbt, espressopp, r-plyr, cbtf-lanl, r-inline, pkg-config, octave-splines, ncview, tinyxml, xwininfo, xproxymanagementprotocol, py-pytz, py-wcwidth, py-pmw, libpng, gflags, py-backports-ssl-match-hostname, asciidoc, r-crayon, r-quantmod, proj, font-arabic-misc, nfft, lzma, r-minqa, llvm-lld, lulesh, libxfixes, libatomic-ops, libspatialindex, cram, cgns, node-js, xorg-gtest, netlib-scalapack, tbb, font-bh-type1, paraver, xvidtune, py-jupyter-console, xf86bigfontproto, font-ibm-type1, petsc, exuberant-ctags, patchelf, xman, arpack-ng, py-ipykernel, libxvmc, r-repr, libdrm, bison, libcerf, automake, vim, cnmem, util-linux, glpk, ipp, r-rjsonio, py-argcomplete, bdw-gc, libxtst, font-micro-misc, kbproto, proxymngr, mafft, cuda, imake, libgcrypt, py-scientificpython, msgpack-c, py-configparser, xgamma, listres, libxaw, mkfontscale, nag, itstool, armadillo, py-sip, py-jupyter-client, smproxy, gcc, appres, py-numpy, libxscrnsaver, py-astroid, libxau, cgm, help2man, r-randomforest, sowing, ninja, pflotran, llvm, py-traitlets, setxkbmap, xcb-demo, py-pandas, paraview, r-geosphere, maven, py-pygobject, libxslt, r-rsnns, plumed, cbtf-krell, xbitmaps, font-bitstream-75dpi, ibmisc, libx11, xdriinfo, uuid, r-np, readline, font-isas-misc, r-httr, mpibash, pexsi]
 
-    packages:
+    matrix:
+    - packages:
         allinea-reports:
             versions: [6.0.4]
         appres:
@@ -322,10 +323,8 @@ test-suite:
         xwininfo:
             versions: [1.1.3]
 
-    compilers:
+    - compilers:
         gcc:
             versions: [4.9.3]
-        clang:
-            versions: [3.5, 3.6, 3.7, 3.8, 8.0]
 
-    dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
+    cdash: ["https://spack.io/cdash/submit.php?project=spack"]

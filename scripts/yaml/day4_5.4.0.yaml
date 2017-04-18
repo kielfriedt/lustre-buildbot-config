@@ -2,7 +2,8 @@
 test-suite:
     include: [ mxml, xkbutils, datamash, font-winitzki-cyrillic, bdftopcf, r-rsqlite, libxinerama, xz, jpeg, r-quantreg, fish, py-sncosmo, global, alquimia, r-filehash, r-sparsem, r-xlconnect, gource, r-mime, r-formula, scrnsaverproto, r-rmarkdown, nccmp, autoconf, r-mgcv, gl2ps, py-iminuit, xload, opencoarrays, libtool, openexr, xsm, py-dask, grandr, pngwriter, libxstream, image-magick, py-symengine, py-pexpect, sympol, spot, libxxf86vm, gnutls, bitmap, libice, py-futures, py-pychecker, py-coverage, docbook-xsl, py-jupyter-notebook, r-bitops, py-cython, pixman, py-nbformat, ravel, zeromq, font-bh-lucidatypewriter-75dpi, boost, r-rcolorbrewer, silo, hepmc, font-bitstream-100dpi, jsoncpp, py-tappy, dmxproto, py-openpyxl, font-adobe-75dpi, mfem, py-pyyaml, r-rcpp, likwid, py-pyparsing, xf86driproto, astra, libtermkey, py-autopep8, r-packrat, nextflow, gmp, ocaml, libfs, elfutils, cdd, xpr, mumps, parmetis, hwloc, r-gridextra, seqtk, r-nnet, the-silver-searcher, geos, rose, adios, cppcheck, r-networkd3, xcmiscproto, r-hexbin, xlogo, lndir]
 
-    packages:
+    matrix:
+    - packages:
         adios:
             versions: [1.9.0, 1.10.0, develop]
         alquimia:
@@ -204,10 +205,8 @@ test-suite:
         zeromq:
             versions: [4.1.2, 4.0.7, 4.1.4, 4.1.1, 4.0.5, 4.0.6]
 
-    compilers:
+    - compilers:
         gcc:
             versions: [5.4.0]
-        clang:
-            versions: [3.5, 3.6, 3.7, 3.8, 8.0]
 
-    dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
+    cdash: ["https://spack.io/cdash/submit.php?project=spack"]

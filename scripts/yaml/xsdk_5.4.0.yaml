@@ -2,7 +2,8 @@
 test-suite:
     include: [ xsdk, xsdktrilinos, trilinos, superlu-mt, superlu-dist, petsc, superlu, hypre, alquimia ]
 
-    packages:
+    matrix:
+    - packages:
         alquimia:
             versions: [develop]
         hypre:
@@ -22,11 +23,9 @@ test-suite:
         xsdktrilinos:
             versions: [12.8.1, 12.6.4, develop]
   
-    compilers:
+    - compilers:
         gcc:
             versions: [5.4.0]
-        clang:
-            versions: [3.5, 3.6, 3.7, 3.8, 8.0]
 
-    dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
+    cdash: ["https://spack.io/cdash/submit.php?project=spack"]
 

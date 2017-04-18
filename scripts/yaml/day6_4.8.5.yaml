@@ -2,7 +2,8 @@
 test-suite:
     include: [ otf, py-backports-shutil-get-terminal-size, py-3to2, r-survey, r-magic, porta, lz4, ccache, magics, hadoop, daal, graphviz, numdiff, constype, arpack, xkbprint, liblbxutil, r-gistr, openmpi, prank, automaded, opari2, lua-luaposix, libxprintapputil, libedit, r-glmnet, netlib-lapack, libevent, libxprintutil, py-prettytable, py-mistune, everytrace, dri2proto, font-bh-ttf, libxv, etsf-io, viewres, py-nestle, py-sphinx, judy, bcftools, lwgrp, ghostscript, r-xts, r-threejs, r-png, netcdf, xtrap, czmq, harfbuzz, xauth, r-dt, py-ordereddict, fontconfig, r-gdata, ilmbase, hoomd-blue, libwindowswm, py-imagesize, opium, damageproto, mpir, gnu-prolog, libuuid, font-cronyx-cyrillic, pidx, py-unittest2py3k, tmuxinator, xsetpointer, xorg-docs, py-protobuf, nasm, r-markdown]
 
-    packages:
+    matrix:
+    - packages:
         arpack:
             versions: [96]
         automaded:
@@ -150,10 +151,8 @@ test-suite:
         xtrap:
             versions: [1.0.2]
 
-    compilers:
+    - compilers:
         gcc:
             versions: [4.8.5]
-        clang:
-            versions: [3.5, 3.6, 3.7, 3.8, 8.0]
 
-    dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
+    cdash: ["https://spack.io/cdash/submit.php?project=spack"]

@@ -2,7 +2,8 @@
 test-suite:
     include: [ trilinos, bear, r-partykit, gasnet, py-pyside, randrproto, r-ncdf4, printproto, texinfo, r-matrixmodels, r-xtable, py-backports-abc, hdf, the-platinum-searcher, xcb-util-image, fontcacheproto, py-unittest2, cdo, libapplewm, xclipboard, resourceproto, tinyxml2, libquo, py-wheel, r-pkgmaker, xcb-util, meep, r-maps, py-pillow, r-brew, py-rtree, font-mutt-misc, oclock, xmag, glog, font-adobe-utopia-75dpi, gccmakedep, py-beautifulsoup4, r-rjava, py-pycparser, py-nbconvert, superlu, libpthread-stubs, r-xgboost, xkill, py-restview, mbedtls, cryptopp, r-rodbc, gdb, py-shiboken, gperftools, bash-completion, intltool, wxpropgrid, r-lme4, snappy, intel-parallel-studio, lrzip, py-pypar, xhost, libxml2, r-xlsx, libsm, libxcomposite, r-rngtools, r-stringi, superlu-mt, xrefresh, py-ply, cityhash, r-testthat, flux, emacs, font-bh-75dpi, libuv, dri3proto, hpl, py-mccabe, ant, xcalc, xrootd, r-tidyr, xedit, r-igraph, scons, font-bitstream-type1, rust-bindgen, libxsmm, xrandr, rstart, libarchive, fastx-toolkit, r-labeling, font-misc-cyrillic, rsync, py-scipy, spindle, ncl, everytrace-example, r-diagrammer, glib, py-pip, font-sun-misc, cleverleaf, r-irkernel, mpfr, ack, py-alabaster, apr-util, kripke, py-epydoc, paradiseo, libxfont, r-rbokeh, xkbcomp]
 
-    packages:
+    matrix:
+    - packages:
         ack:
             versions: [2.14]
         ant:
@@ -236,10 +237,8 @@ test-suite:
         xrootd:
             versions: [4.3.0]
 
-    compilers:
+    - compilers:
         gcc:
             versions: [5.4.0]
-        clang:
-            versions: [3.5, 3.6, 3.7, 3.8, 8.0]
 
-    dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
+    cdash: ["https://spack.io/cdash/submit.php?project=spack"]

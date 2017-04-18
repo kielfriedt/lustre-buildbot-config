@@ -2,7 +2,8 @@
 test-suite:
     include: [ tar, util-macros, lcms, heppdt, tetgen, py-basemap, py-astropy, font-dec-misc, scotch, libtiff, twm, libxt, py-lockfile, pfft, py-monotonic, r-doparallel, font-schumacher-misc, superlu-dist, py-rpy2, py-decorator, r-pbkrtest, xextproto, xdpyinfo, gmake, py-genders, h5hut, cmake, r-vcd, piranha, evieext, py-ipython-genutils, perl, r-foreach, mvapich2, r-thdata, py-jupyter-core, curl, luit, r-gridbase, flint, py-pygments, r-reshape2, r-influencer, bowtie2, papi, libvterm, xprop, libxdamage, r-httpuv, gts, lua, environment-modules, bliss, giflib, atlas, r-deoptim, apex, mercurial, swig, ppl, r-nloptr, zsh, uberftp, wannier90, jasper, compiz, py-mx, zfp, moab, xlsatoms, go, videoproto, dealii, abinit, xlsclients, bigreqsproto, r-rjson, xf86rushproto, tau, xwd, py-ipdb, py-docutils, adol-c, r-gtools, clhep, subversion]
 
-    packages:
+    matrix:
+    - packages:
         abinit:
             versions: [8.0.8b]
         adol-c:
@@ -176,10 +177,8 @@ test-suite:
         zsh:
             versions: [5.1.1]
 
-    compilers:
+    - compilers:
         gcc:
             versions: [4.9.3]
-        clang:
-            versions: [3.5, 3.6, 3.7, 3.8, 8.0]
 
-    dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
+    cdash: ["https://spack.io/cdash/submit.php?project=spack"]

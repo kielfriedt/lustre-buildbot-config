@@ -2,7 +2,8 @@
 test-suite:
     include: [ gsl, py-cclib, libsodium, libsplash, openscenegraph, libepoxy, libmonitor, tk, font-adobe-utopia-100dpi, hpctoolkit-externals, libunistring, xmlto, scorep, py-xlrd, glew, py-ipywidgets, grib-api, leveldb, patch, bpp-phyl, boxlib, docbook-xml, star-ccm-plus, hypre, py-enum34, scr, uncrustify, tree, sundials, elk, libxi, font-misc-misc, glproto, py-prompt-toolkit, py-pickleshare, py-six, scripts, xcb-proto, showfont, xcb-util-wm, damselfly, bwa, ompt-openmp, font-misc-ethiopic, py-wcsaxes, r-dichromat, r-googlevis, py-networkx, r-assertthat, r-ggplot2, exonerate, xcb-util-errors, fltk, zoltan, expat, cube, py-matplotlib, r-mass, callpath, renderproto, r-proto, metis, libxcb, openssl, py-pycodestyle, xfs, binutils, font-cursor-misc, r-munsell, libxres, samrai, xproto, raja, udunits2, r-car, qt-creator, xfwp, transset, r-git2r, py-pygtk, rust, iceauth, r-rstudioapi, py-certifi, py-meep, py-logilab-common, openjpeg, libxrender, r-xlconnectjars, libaio, libnbc, py-entrypoints, r-stanheaders, py-pytables, cscope, fstobdf, slepc, hmmer, libpciaccess, xcursorgen, atompaw, darshan-runtime, font-xfree86-type1, cantera, bpp-seq, szip, ape, task, mpip, py-cycler, cblas, yasm, r-foreign, fenics, samtools, qthreads, polymake, netcdf-cxx, tethex, lua-jit, xcursor-themes, r-ggvis, py-virtualenv, qrupdate, r-sandwich, font-jis-misc, py-yapf, r-tibble, r-biocgenerics, xclock, py-pbr, r-codetools, cloog, intel-gpu-tools, netcdf-fortran, py-pyflakes]
 
-    packages:
+    matrix:
+    - packages:
         ape:
             versions: [2.2.1]
         atompaw:
@@ -276,10 +277,8 @@ test-suite:
         zoltan:
             versions: [3.8, 3.83, 3.6, 3.3]
 
-    compilers:
+    - compilers:
         gcc:
             versions: [5.4.0]
-        clang:
-            versions: [3.5, 3.6, 3.7, 3.8, 8.0]
 
-    dashboard: ["https://spack.io/cdash/submit.php?project=spack"]
+    cdash: ["https://spack.io/cdash/submit.php?project=spack"]
