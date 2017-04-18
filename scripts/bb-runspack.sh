@@ -22,8 +22,8 @@ done
 cat "$yaml" 
 if [ -n "$=2" ]; then
 	site="$2"
-	./bin/spack test-suite --log-format=cdash-simple --site="$site" "$yaml"
+	./bin/spack test-suite  --site="$site" "$yaml"
 else
-	./bin/spack test-suite --log-format=cdash-simple "$yaml"
+	./bin/spack test-suite "$yaml"
 fi
 echo "returning"
