@@ -16,10 +16,14 @@ fi
 while [ ! -f "$yaml" ]
 do
   echo "yaml file missing, trying again."
-  wget "$BB_URLyaml/$yaml"
+  wget "$BB_URL/yaml/$yaml"
   sleep 1
 done
-cat "$yaml"
-./bin/spack test-suite "$yaml"
-echo "returning"
+cat "$yaml" 
+if [ -n "$=2" ]; then
+	site="$2"
+	./bin/spack test-suite  --site="$site" "$yaml"
+else
+	./bin/spack test-suite "$yaml"
 fi
+echo "returning"
