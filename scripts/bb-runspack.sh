@@ -13,13 +13,13 @@ if [ -n "$1" ]; then
 	yaml="$1"
 fi
 
-while [ ! -f "$yaml.yaml" ]
+while [ ! -f "$yaml" ]
 do
   echo "yaml file missing, trying again."
-  wget "$BB_URL/yaml/$yaml.yaml"
+  wget "$BB_URLyaml/$yaml"
   sleep 1
 done
-cat "$yaml.yaml"
-./bin/spack test-suite "$yaml.yaml"
+cat "$yaml"
+./bin/spack test-suite "$yaml"
 echo "returning"
 fi

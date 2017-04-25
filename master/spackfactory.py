@@ -66,7 +66,6 @@ def WeeklyTestSuiteCommand(props):
 def XSDKNightlyTestSuiteCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')
-    gcc = props.getProperty('gcc')
     distro = props.getProperty('distro')
     version = props.getProperty('distrover')
     yaml = "xsdk.yaml"
