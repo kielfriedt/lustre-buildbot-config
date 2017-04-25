@@ -54,7 +54,7 @@ if test ! "$XSDK_URL"; then
     XSDK_URL="https://spack.io/cdash/submit.php?project=xsdk"
 fi
 if test ! "$WEEKLY_URL"; then
-    XSDK_URL="https://spack.io/cdash/submit.php?project=weekly"
+    WEEKLY_URL="https://spack.io/cdash/submit.php?project=weekly"
 fi
 
 if test ! -f /etc/buildslave; then
