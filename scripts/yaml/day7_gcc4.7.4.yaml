@@ -1,0 +1,983 @@
+test-suite:
+  cdash:
+  - https://spack.io/cdash/submit.php?project=spack
+  include:
+  - icet
+  - py-petsc4py
+  - intel-mkl
+  - py-pathspec
+  - r-mlbench
+  - py-doxypypy
+  - numdiff
+  - root
+  - xwd
+  - py-pynn
+  - osu-micro-benchmarks
+  - ffmpeg
+  - tree
+  - atop
+  - readline
+  - pcre2
+  - hdf5-blosc
+  - py-mpmath
+  - r-ggmap
+  - mawk
+  - perl-module-build
+  - r-httr
+  - bcftools
+  - oniguruma
+  - dakota
+  - mpc
+  - libxprintutil
+  - py-dev
+  - py-mx
+  - py-appnope
+  - libxinerama
+  - py-sncosmo
+  - gdal
+  - r-brew
+  - jasper
+  - coreutils
+  - jmol
+  - xrefresh
+  - ncl
+  - libxaw
+  - libxi
+  - octopus
+  - opencv
+  - mercurial
+  - screen
+  - r-stringr
+  - libfs
+  - xfwp
+  - py-alabaster
+  - r-nnet
+  - py-sympy
+  - extrae
+  - intel-ipp
+  - r-foreach
+  - libemos
+  - libxml2
+  - snappy
+  - etsf-io
+  - nccl
+  - porta
+  - py-functools32
+  - googletest
+  - seqtk
+  - r-boot
+  - xtrap
+  - r-markdown
+  - py-dask
+  - astra
+  - dmxproto
+  - adios
+  - bazel
+  - r-ncdf4
+  - r-class
+  - jansson
+  - blitz
+  - moab
+  - r-visnetwork
+  - r-rpart
+  - intel-gpu-tools
+  - py-symengine
+  - libxtst
+  - mosh
+  - py-macs2
+  - esmf
+  - xset
+  - viewres
+  - r-numderiv
+  - libfontenc
+  - staden-io-lib
+  - httpie
+  - r-gridbase
+  - py-setuptools
+  - libzip
+  - font-winitzki-cyrillic
+  - parpack
+  - scorec-core
+  - ape
+  - fixesproto
+  - r-rcolorbrewer
+  - pfft
+  - htop
+  - r-formatr
+  - tbb
+  - pixman
+  - ravel
+  - xsetroot
+  - exmcutils
+  - ocaml
+  - py-python-daemon
+  - bedtools2
+  - py-storm
+  - libcerf
+  - libtool
+  - py-mistune
+  - texinfo
+  - protobuf
+  - miniconda3
+  - piranha
+  - setxkbmap
+  - eigen
+  - libxcb
+  - r-xlconnect
+  - py-certifi
+  - lwm2
+  - r-threejs
+  - py-guiqwt
+  - cleverleaf
+  - scotch
+  - libquo
+  - nwchem
+  - py-flake8
+  - charm
+  - sqlite
+  - py-pytest-cov
+  - font-screen-cyrillic
+  - blaze
+  - xterm
+  - py-wheel
+  - r-pkgmaker
+  - antlr
+  - libedit
+  - resourceproto
+  - pocl
+  - boostmplcartesianproduct
+  - py-rope
+  - dia
+  - r-quantmod
+  - hydra
+  - mpibash
+  - r-formula
+  - xfontsel
+  - py-pylint
+  - xsetmode
+  - libcanberra
+  - openjpeg
+  - xfd
+  - r-matrix
+  - spindle
+  - r-deoptim
+  - libunistring
+  - libxp
+  - xcb-util
+  - font-bitstream-100dpi
+  - py-decorator
+  - swig
+  - likwid
+  - rust
+  - py-nbconvert
+  - atk
+  - libxmu
+  - openmpi
+  - py-bleach
+  - random123
+  - py-numpy
+  - r-pls
+  - py-virtualenv
+  - gflags
+  - xproxymanagementprotocol
+  - czmq
+  - docbook-xml
+  - py-networkx
+  - py-pytz
+  - r-geosphere
+  - caffe
+  - py-pkgconfig
+  - r-xlconnectjars
+  - r-ipred
+  - py-pyyaml
+  - font-arabic-misc
+  - libxv
+  - evieext
+  - r-pbdzmq
+  - libxstream
+  - elpa
+  - cppunit
+  - py-pygtk
+  - lua-luaposix
+  - xorg-docs
+  - libgpg-error
+  - py-pip
+  matrix:
+  - packages:
+      adios:
+        versions:
+        - 1.9.0
+        - 1.10.0
+        - 1.11.1
+        - develop
+      antlr:
+        versions:
+        - 2.7.7
+      ape:
+        versions:
+        - 2.2.1
+      astra:
+        versions:
+        - '2016-11-30'
+      atk:
+        versions:
+        - 2.20.0
+        - 2.14.0
+      atop:
+        versions:
+        - 2.2-3
+      bazel:
+        versions:
+        - 0.3.0
+        - 0.4.4
+        - 0.3.1
+        - 0.2.3
+        - 0.2.2b
+        - 0.2.2
+      bcftools:
+        versions:
+        - 1.3.1
+        - '1.4'
+      bedtools2:
+        versions:
+        - 2.25.0
+        - 2.26.0
+      blaze:
+        versions:
+        - '1.2'
+        - '2.5'
+        - '2.6'
+        - '2.0'
+        - '3.0'
+        - '3.1'
+        - '2.1'
+        - '2.4'
+        - '1.5'
+        - '1.3'
+        - '2.3'
+        - '1.4'
+        - '2.2'
+        - '1.0'
+        - '1.1'
+      blitz:
+        versions:
+        - 1.0.0
+      boostmplcartesianproduct:
+        versions:
+        - '20161205'
+      caffe:
+        versions:
+        - rc5
+      charm:
+        versions:
+        - 6.6.1
+        - 6.5.1
+        - 6.7.1
+        - 6.7.0
+        - 6.6.0
+      cleverleaf:
+        versions:
+        - develop
+      coreutils:
+        versions:
+        - '8.26'
+        - '8.23'
+      cppunit:
+        versions:
+        - 1.13.2
+      czmq:
+        versions:
+        - 3.0.2
+      dakota:
+        versions:
+        - '6.3'
+      dia:
+        versions:
+        - 0.97.3
+      dmxproto:
+        versions:
+        - 2.3.1
+      docbook-xml:
+        versions:
+        - '4.5'
+      eigen:
+        versions:
+        - 3.2.8
+        - 3.3.1
+        - 3.2.9
+        - 3.2.10
+        - 3.2.7
+      elpa:
+        versions:
+        - 2016.11.001.pre
+        - 2016.05.004
+        - 2016.05.003
+        - 2015.11.001
+      esmf:
+        versions:
+        - 7.0.1
+      etsf-io:
+        versions:
+        - 1.0.4
+      evieext:
+        versions:
+        - 1.1.1
+      exmcutils:
+        versions:
+        - 0.5.3
+      extrae:
+        versions:
+        - 3.4.1
+      ffmpeg:
+        versions:
+        - 3.2.4
+      fixesproto:
+        versions:
+        - '5.0'
+      font-arabic-misc:
+        versions:
+        - 1.0.3
+      font-bitstream-100dpi:
+        versions:
+        - 1.0.3
+      font-screen-cyrillic:
+        versions:
+        - 1.0.4
+      font-winitzki-cyrillic:
+        versions:
+        - 1.0.3
+      gdal:
+        versions:
+        - 2.0.2
+        - 2.1.2
+      gflags:
+        versions:
+        - 2.1.2
+      googletest:
+        versions:
+        - 1.8.0
+        - 1.6.0
+        - 1.7.0
+      hdf5-blosc:
+        versions:
+        - master
+      htop:
+        versions:
+        - 2.0.2
+      httpie:
+        versions:
+        - 0.9.8
+      hydra:
+        versions:
+        - '3.2'
+      icet:
+        versions:
+        - 2.1.1
+        - develop
+      intel-gpu-tools:
+        versions:
+        - '1.16'
+      intel-ipp:
+        versions:
+        - 9.0.3.210
+        - 2017.0.098
+      intel-mkl:
+        versions:
+        - 2017.2.174
+        - 2017.0.098
+        - 11.3.3.210
+        - 11.3.2.181
+      jansson:
+        versions:
+        - '2.9'
+      jasper:
+        versions:
+        - 1.900.1
+      jmol:
+        versions:
+        - 14.8.0
+      libcanberra:
+        versions:
+        - '0.30'
+      libcerf:
+        versions:
+        - '1.3'
+      libedit:
+        versions:
+        - 3.1-20150325
+        - 3.1-20160903
+        - 3.1-20170329
+      libemos:
+        versions:
+        - 4.4.2
+      libfontenc:
+        versions:
+        - 1.1.3
+      libfs:
+        versions:
+        - 1.0.7
+      libgpg-error:
+        versions:
+        - '1.18'
+        - '1.21'
+      libquo:
+        versions:
+        - 1.2.9
+      libtool:
+        versions:
+        - 2.4.6
+        - 2.4.2
+      libunistring:
+        versions:
+        - 0.9.7
+        - 0.9.6
+      libxaw:
+        versions:
+        - 1.0.13
+      libxcb:
+        versions:
+        - '1.11'
+        - 1.11.1
+        - '1.12'
+      libxi:
+        versions:
+        - 1.7.6
+      libxinerama:
+        versions:
+        - 1.1.3
+      libxml2:
+        versions:
+        - 2.9.4
+        - 2.9.2
+      libxmu:
+        versions:
+        - 1.1.2
+      libxp:
+        versions:
+        - 1.0.3
+      libxprintutil:
+        versions:
+        - 1.0.1
+      libxstream:
+        versions:
+        - 0.9.0
+      libxtst:
+        versions:
+        - 1.2.2
+      libxv:
+        versions:
+        - 1.0.10
+      libzip:
+        versions:
+        - 1.2.0
+      likwid:
+        versions:
+        - 4.1.2
+      lua-luaposix:
+        versions:
+        - 33.4.0
+      lwm2:
+        versions:
+        - torus
+      mawk:
+        versions:
+        - 1.3.4
+      mercurial:
+        versions:
+        - 3.8.4
+        - 4.1.2
+        - 3.8.1
+        - '3.9'
+        - 3.8.2
+        - 3.9.1
+        - 3.8.3
+      miniconda3:
+        versions:
+        - 4.3.11
+      moab:
+        versions:
+        - 4.8.2
+        - 4.9.1
+        - 4.9.0
+      mosh:
+        versions:
+        - 1.3.0
+        - 1.2.6
+      mpc:
+        versions:
+        - 1.0.3
+        - 1.0.2
+      mpibash:
+        versions:
+        - '4.3'
+      nccl:
+        versions:
+        - 1.3.0-1
+        - 1.3.4-1
+      ncl:
+        versions:
+        - 6.4.0
+      numdiff:
+        versions:
+        - 5.8.1
+        - 5.9.0
+      nwchem:
+        versions:
+        - '6.6'
+      ocaml:
+        versions:
+        - 4.03.0
+      octopus:
+        versions:
+        - 5.0.1
+        - '6.0'
+      oniguruma:
+        versions:
+        - 6.1.3
+      opencv:
+        versions:
+        - 3.1.0
+      openjpeg:
+        versions:
+        - '2.0'
+        - '2.1'
+        - 1.5.2
+        - 2.0.1
+        - 1.5.1
+      openmpi:
+        versions:
+        - 1.6.5
+        - 1.10.0
+        - 2.1.0
+        - 1.10.5
+        - 1.8.8
+        - 1.10.1
+        - 2.0.2
+        - 1.10.6
+        - 1.10.2
+        - 2.0.1
+        - 1.10.3
+        - 2.0.0
+        - 1.10.4
+      osu-micro-benchmarks:
+        versions:
+        - '5.3'
+      parpack:
+        versions:
+        - '96'
+      pcre2:
+        versions:
+        - '10.20'
+      perl-module-build:
+        versions:
+        - '0.4220'
+      pfft:
+        versions:
+        - 1.0.8-alpha
+      piranha:
+        versions:
+        - '0.5'
+        - develop
+      pixman:
+        versions:
+        - 0.34.0
+        - 0.32.6
+      pocl:
+        versions:
+        - '0.14'
+        - '0.13'
+        - '0.12'
+        - '0.11'
+        - '0.10'
+        - master
+      porta:
+        versions:
+        - 1.4.1
+      protobuf:
+        versions:
+        - 3.2.0
+        - 3.0.2
+        - 3.1.0
+        - 2.5.0
+      py-alabaster:
+        versions:
+        - 0.7.9
+      py-appnope:
+        versions:
+        - 0.1.0
+      py-bleach:
+        versions:
+        - 1.5.0
+      py-certifi:
+        versions:
+        - 2017.1.23
+        - 2016.02.28
+      py-dask:
+        versions:
+        - 0.8.1
+      py-decorator:
+        versions:
+        - 4.0.9
+      py-dev:
+        versions:
+        - 0.4.0
+      py-doxypypy:
+        versions:
+        - 0.8.8.6
+      py-flake8:
+        versions:
+        - 2.5.4
+        - 3.0.4
+      py-functools32:
+        versions:
+        - 3.2.3-2
+      py-guiqwt:
+        versions:
+        - 3.0.2
+      py-macs2:
+        versions:
+        - 2.1.1.20160309
+      py-mistune:
+        versions:
+        - '0.6'
+        - 0.7.1
+        - '0.5'
+        - 0.5.1
+        - '0.7'
+      py-mpmath:
+        versions:
+        - '0.19'
+      py-mx:
+        versions:
+        - 3.2.8
+      py-nbconvert:
+        versions:
+        - 4.2.0
+        - 4.1.0
+        - 4.0.0
+      py-networkx:
+        versions:
+        - '1.11'
+      py-numpy:
+        versions:
+        - 1.9.1
+        - 1.12.0
+        - 1.11.2
+        - 1.12.1
+        - 1.11.1
+        - 1.9.2
+        - 1.11.0
+        - 1.10.4
+      py-pathspec:
+        versions:
+        - 0.3.4
+      py-petsc4py:
+        versions:
+        - 3.7.0
+      py-pip:
+        versions:
+        - 9.0.1
+      py-pkgconfig:
+        versions:
+        - 1.2.2
+      py-pygtk:
+        versions:
+        - 2.24.0
+      py-pylint:
+        versions:
+        - 1.4.1
+        - 1.4.3
+      py-pynn:
+        versions:
+        - 0.8.1
+        - 0.8beta
+        - 0.8.3
+        - 0.7.5
+      py-pytest-cov:
+        versions:
+        - 2.3.1
+      py-python-daemon:
+        versions:
+        - 2.0.5
+      py-pytz:
+        versions:
+        - '2015.4'
+        - '2016.3'
+        - '2014.10'
+        - '2016.10'
+        - 2016.6.1
+      py-pyyaml:
+        versions:
+        - '3.11'
+      py-rope:
+        versions:
+        - 0.10.5
+      py-setuptools:
+        versions:
+        - 25.2.0
+        - 11.3.1
+        - 20.6.7
+        - 34.2.0
+        - 20.7.0
+        - '19.2'
+        - '16.0'
+        - '20.5'
+        - 34.4.1
+        - '18.1'
+      py-sncosmo:
+        versions:
+        - 1.2.0
+      py-storm:
+        versions:
+        - '0.20'
+      py-symengine:
+        versions:
+        - 0.2.0
+        - develop
+      py-sympy:
+        versions:
+        - 0.7.6
+        - '1.0'
+      py-virtualenv:
+        versions:
+        - 1.11.6
+        - 13.0.1
+        - 15.0.1
+        - 15.1.0
+      py-wheel:
+        versions:
+        - 0.26.0
+        - 0.29.0
+      r-boot:
+        versions:
+        - 1.3-18
+      r-brew:
+        versions:
+        - 1.0-6
+      r-class:
+        versions:
+        - 7.3-14
+      r-deoptim:
+        versions:
+        - 2.2-3
+      r-foreach:
+        versions:
+        - 1.4.3
+      r-formatr:
+        versions:
+        - '1.4'
+      r-formula:
+        versions:
+        - 1.2-1
+      r-geosphere:
+        versions:
+        - 1.5-5
+      r-ggmap:
+        versions:
+        - 2.6.1
+      r-gridbase:
+        versions:
+        - 0.4-7
+      r-httr:
+        versions:
+        - 1.2.1
+        - 1.1.0
+      r-ipred:
+        versions:
+        - 0.9-5
+      r-markdown:
+        versions:
+        - 0.7.7
+      r-matrix:
+        versions:
+        - 1.2-8
+        - 1.2-6
+      r-mlbench:
+        versions:
+        - 2.1-1
+      r-ncdf4:
+        versions:
+        - '1.15'
+      r-nnet:
+        versions:
+        - 7.3-12
+      r-numderiv:
+        versions:
+        - 2016.8-1
+      r-pbdzmq:
+        versions:
+        - 0.2-4
+      r-pkgmaker:
+        versions:
+        - '0.22'
+      r-pls:
+        versions:
+        - 2.6-0
+      r-quantmod:
+        versions:
+        - 0.4-5
+      r-rcolorbrewer:
+        versions:
+        - 1.1-2
+      r-rpart:
+        versions:
+        - 4.1-10
+      r-stringr:
+        versions:
+        - 1.0.0
+        - 1.1.0
+      r-threejs:
+        versions:
+        - 0.2.2
+      r-visnetwork:
+        versions:
+        - 1.0.1
+      r-xlconnect:
+        versions:
+        - 0.2-11
+        - 0.2-12
+      r-xlconnectjars:
+        versions:
+        - 0.2-9
+        - 0.2-12
+      random123:
+        versions:
+        - '1.09'
+      ravel:
+        versions:
+        - 1.0.0
+      readline:
+        versions:
+        - '6.3'
+        - '7.0'
+      resourceproto:
+        versions:
+        - 1.2.0
+      root:
+        versions:
+        - 6.06.02
+        - 6.06.04
+        - 6.06.06
+      rust:
+        versions:
+        - 1.8.0
+      scorec-core:
+        versions:
+        - develop
+      scotch:
+        versions:
+        - 6.0.3
+        - 6.0.0
+        - 5.1.10b
+        - 6.0.4
+      screen:
+        versions:
+        - 4.3.1
+        - 3.9.11
+        - 3.7.6
+        - 3.9.15
+        - 3.9.4
+        - 3.9.10
+        - 4.2.1
+        - 4.0.3
+        - 3.7.2
+        - 3.9.9
+        - 4.2.0
+        - 3.7.1
+        - 4.0.2
+        - 3.7.4
+        - 3.9.8
+        - 4.3.0
+      seqtk:
+        versions:
+        - '1.2'
+        - '1.1'
+      setxkbmap:
+        versions:
+        - 1.3.1
+      snappy:
+        versions:
+        - 1.1.3
+      spindle:
+        versions:
+        - 0.8.1
+      sqlite:
+        versions:
+        - 3.18.0
+        - 3.8.5
+      staden-io-lib:
+        versions:
+        - 1.14.8
+      swig:
+        versions:
+        - 3.0.2
+        - 2.0.2
+        - 3.0.12
+        - 2.0.12
+        - 3.0.8
+        - 1.3.40
+        - 3.0.10
+        - 3.0.11
+      tbb:
+        versions:
+        - '2017.5'
+        - '2017.3'
+        - 4.4.3
+        - 4.4.4
+      texinfo:
+        versions:
+        - '6.3'
+        - '5.1'
+        - '5.2'
+        - '6.0'
+        - '5.0'
+      tree:
+        versions:
+        - 1.7.0
+      viewres:
+        versions:
+        - 1.0.4
+      xcb-util:
+        versions:
+        - 0.4.0
+      xfd:
+        versions:
+        - 1.1.2
+      xfontsel:
+        versions:
+        - 1.0.5
+      xfwp:
+        versions:
+        - 1.0.3
+      xorg-docs:
+        versions:
+        - 1.7.1
+      xproxymanagementprotocol:
+        versions:
+        - 1.0.3
+      xrefresh:
+        versions:
+        - 1.0.5
+      xset:
+        versions:
+        - 1.2.3
+      xsetmode:
+        versions:
+        - 1.0.0
+      xsetroot:
+        versions:
+        - 1.1.1
+      xterm:
+        versions:
+        - '327'
+      xtrap:
+        versions:
+        - 1.0.2
+      xwd:
+        versions:
+        - 1.0.6
+  - compilers:
+      gcc:
+        versions:
+        - 4.7.4
+
