@@ -28,7 +28,7 @@ do
   sleep 1
 done
 cat "$yaml" 
-if [ -n "$=3" ]; then
+if [ -n "$3" ]; then
 	site="$3"
 	./bin/spack test-suite  --site="$site" "$performance" "$yaml"
 else

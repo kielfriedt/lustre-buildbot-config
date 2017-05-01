@@ -9,8 +9,11 @@ from buildbot.plugins import util
 from buildbot.buildslave import BuildSlave
 from buildbot.buildslave.ec2 import EC2LatentBuildSlave
 
-### BUILDER CLASSES
+# BUILDER CLASSES
+
+
 class SpackBuilderConfig(util.BuilderConfig):
+
     @staticmethod
     def nextSlave(builder, slaves):
         availableSlave = None
@@ -35,10 +38,12 @@ class SpackBuilderConfig(util.BuilderConfig):
         if nextSlave is None:
             nextSlave = SpackBuilderConfig.nextSlave
 
-        util.BuilderConfig.__init__(self, nextSlave=nextSlave, 
+        util.BuilderConfig.__init__(self, nextSlave=nextSlave,
                                     mergeRequests=mergeRequests, **kwargs)
 
-### BUILD SLAVE CLASSES
+# BUILD SLAVE CLASSES
+
+
 class SpackEC2Slave(EC2LatentBuildSlave):
     default_user_data = """#!/bin/bash
 set -e
@@ -91,38 +96,40 @@ runurl $BB_URL/bb-bootstrap.sh"""
                 build_wait_timeout=60*10, spot_instance=True, max_spot_price=.10,
                 price_multiplier=None, **kwargs):
 '''
+
     def __init__(self, name, password=None, master='', url='', instance_type="m3.large",
-                identifier=ec2_default_access, secret_identifier=ec2_default_secret,
-                keypair_name=ec2_default_keypair_name, security_name='cdash_spackBuilder',
-                user_data=None, region="us-west-2", placement="a", max_builds=1,
-                build_wait_timeout=60*10, spot_instance=True, max_spot_price=.10,
-                price_multiplier=None, **kwargs):
+                 identifier=ec2_default_access, secret_identifier=ec2_default_secret,
+                 keypair_name=ec2_default_keypair_name, security_name='cdash_spackBuilder',
+                 user_data=None, region="us-west-2", placement="a", max_builds=1,
+                 build_wait_timeout=60 * 10, spot_instance=True, max_spot_price=.10,
+                 price_multiplier=None, **kwargs):
 
         self.name = name
         tags = kwargs.get('tags')
         if not tags or tags is None:
-            tags={
-                "ENV"      : "DEV",
-                "Name"     : "cdash_spackBuilder",
-                "ORG"      : "COMP",
-                "OWNER"    : "Buildbot Admin",
-                "PLATFORM" :  name,
-                "PROJECT"  : "cdash_spack",
+            tags = {
+                "ENV": "DEV",
+                "Name": "cdash_spackBuilder",
+                "ORG": "COMP",
+                "OWNER": "Buildbot Admin",
+                "PLATFORM":  name,
+                "PROJECT": "cdash_spack",
             }
 
         if password is None:
             password = SpackEC2Slave.pass_generator()
 
         if user_data is None:
-            user_data = SpackEC2Slave.default_user_data % (master, name, password, url)
+            user_data = SpackEC2Slave.default_user_data % (
+                master, name, password, url)
 
         EC2LatentBuildSlave.__init__(
-            self, name=name, password=password, instance_type=instance_type, 
+            self, name=name, password=password, instance_type=instance_type,
             identifier=identifier, secret_identifier=secret_identifier, region=region,
             user_data=user_data, keypair_name=keypair_name, security_name=security_name,
             max_builds=max_builds, spot_instance=spot_instance, tags=tags,
             max_spot_price=max_spot_price, placement=placement,
-            price_multiplier=price_multiplier, build_wait_timeout=build_wait_timeout, 
+            price_multiplier=price_multiplier, build_wait_timeout=build_wait_timeout,
             **kwargs)
 '''
 class LustreEC2SuseSlave(LustreEC2Slave):
