@@ -9,6 +9,9 @@ else
    echo "already installed and this is a persistent buildslave."
    exit 1
 fi
+#checking for missing comilers
+./bin/spack compiler add
+
 if [ -n "$1" ]; then
 	if [ "$1" -eq "1" ]; then
 		performance="-p"
