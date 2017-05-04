@@ -1407,32 +1407,24 @@ test-suite:
   - packages:
       abinit:
         versions:
-        - 8.0.8b
         - 8.2.2
       ack:
         versions:
         - '2.16'
-        - '2.14'
       activeharmony:
         versions:
         - '4.5'
       adept-utils:
         versions:
-        - '1.0'
         - 1.0.1
       adios:
         versions:
-        - 1.9.0
-        - 1.10.0
-        - 1.11.1
         - develop
       adlbx:
         versions:
         - 0.8.0
       adol-c:
         versions:
-        - 2.6.1
-        - 2.6.2
         - develop
       allinea-forge:
         versions:
@@ -1442,13 +1434,10 @@ test-suite:
         - 6.0.4
       alquimia:
         versions:
-        - xsdk-0.2.0
         - develop
       ant:
         versions:
-        - 1.9.8
         - 1.9.9
-        - 1.9.7
       antlr:
         versions:
         - 2.7.7
@@ -1476,14 +1465,11 @@ test-suite:
       armadillo:
         versions:
         - 7.500.0
-        - 7.200.2
-        - 7.200.1
       arpack:
         versions:
         - '96'
       arpack-ng:
         versions:
-        - 3.3.0
         - 3.4.0
       asciidoc:
         versions:
@@ -1493,20 +1479,15 @@ test-suite:
         - '2016-11-30'
       astyle:
         versions:
-        - '2.04'
         - 2.05.1
       atk:
         versions:
         - 2.20.0
-        - 2.14.0
       atlas:
         versions:
-        - 3.10.3
-        - 3.10.2
         - 3.11.34
       atompaw:
         versions:
-        - 3.1.0.3
         - 4.0.0.13
       atop:
         versions:
@@ -1514,9 +1495,6 @@ test-suite:
       autoconf:
         versions:
         - '2.69'
-        - '2.62'
-        - '2.59'
-        - '2.13'
       autogen:
         versions:
         - 5.18.12
@@ -1525,40 +1503,27 @@ test-suite:
         - '1.0'
       automake:
         versions:
-        - 1.11.6
-        - 1.14.1
         - '1.15'
       bamtools:
         versions:
-        - 2.4.0
         - 2.4.1
-        - 2.2.3
-        - 2.3.0
       bash:
         versions:
         - '4.4'
-        - '4.3'
       bash-completion:
         versions:
-        - '2.3'
         - develop
       bats:
         versions:
         - 0.4.0
       bazel:
         versions:
-        - 0.3.0
         - 0.4.4
-        - 0.3.1
-        - 0.2.3
-        - 0.2.2b
-        - 0.2.2
       bbcp:
         versions:
         - git
       bcftools:
         versions:
-        - 1.3.1
         - '1.4'
       bdftopcf:
         versions:
@@ -1566,14 +1531,11 @@ test-suite:
       bdw-gc:
         versions:
         - 7.6.0
-        - 7.4.4
       bear:
         versions:
-        - 2.0.4
         - 2.2.0
       bedtools2:
         versions:
-        - 2.25.0
         - 2.26.0
       beforelight:
         versions:
@@ -1590,15 +1552,8 @@ test-suite:
       binutils:
         versions:
         - '2.28'
-        - 2.20.1
-        - '2.25'
-        - 2.23.2
-        - '2.24'
-        - '2.27'
-        - '2.26'
       bison:
         versions:
-        - '2.7'
         - 3.0.4
       bitmap:
         versions:
@@ -1606,27 +1561,12 @@ test-suite:
       blast-plus:
         versions:
         - 2.6.0
-        - 2.2.30
       blat:
         versions:
         - '35'
       blaze:
         versions:
-        - '1.2'
-        - '2.5'
-        - '2.6'
-        - '2.0'
-        - '3.0'
         - '3.1'
-        - '2.1'
-        - '2.4'
-        - '1.5'
-        - '1.3'
-        - '2.3'
-        - '1.4'
-        - '2.2'
-        - '1.0'
-        - '1.1'
       bliss:
         versions:
         - '0.73'
@@ -1636,37 +1576,6 @@ test-suite:
       boost:
         versions:
         - 1.63.0
-        - 1.44.0
-        - 1.53.0
-        - 1.58.0
-        - 1.47.0
-        - 1.48.0
-        - 1.37.0
-        - 1.42.0
-        - 1.51.0
-        - 1.62.0
-        - 1.35.0
-        - 1.52.0
-        - 1.57.0
-        - 1.46.0
-        - 1.55.0
-        - 1.36.0
-        - 1.46.1
-        - 1.41.0
-        - 1.50.0
-        - 1.39.0
-        - 1.61.0
-        - 1.34.0
-        - 1.56.0
-        - 1.34.1
-        - 1.45.0
-        - 1.54.0
-        - 1.59.0
-        - 1.40.0
-        - 1.49.0
-        - 1.38.0
-        - 1.43.0
-        - 1.60.0
       boostmplcartesianproduct:
         versions:
         - '20161205'
@@ -1675,7 +1584,6 @@ test-suite:
         - '1.2'
       bowtie2:
         versions:
-        - 2.2.5
         - 2.3.1
       boxlib:
         versions:
@@ -1694,11 +1602,7 @@ test-suite:
         - 2.2.0
       brigand:
         versions:
-        - 1.0.0
-        - 1.1.0
-        - 1.2.0
         - 1.3.0
-        - master
       bwa:
         versions:
         - 0.7.15
@@ -1707,43 +1611,28 @@ test-suite:
         - 1.0.6
       c-blosc:
         versions:
-        - 1.9.1
-        - 1.9.0
-        - 1.9.2
-        - 1.8.0
         - 1.11.1
-        - 1.8.1
       caffe:
         versions:
         - rc5
       cairo:
         versions:
         - 1.14.8
-        - 1.14.0
       caliper:
         versions:
         - master
       callpath:
         versions:
         - 1.0.2
-        - 1.0.1
       cantera:
         versions:
         - 2.2.1
       cask:
         versions:
-        - 0.7.4
         - 0.8.1
       catch:
         versions:
-        - 1.4.0
-        - 1.5.0
         - 1.7.0
-        - 1.3.5
-        - 1.3.0
-        - 1.6.0
-        - 1.6.1
-        - 1.5.9
       cblas:
         versions:
         - '2015-06-06'
@@ -1761,12 +1650,7 @@ test-suite:
         - '1.8'
       ccache:
         versions:
-        - 3.3.3
-        - '3.3'
-        - 3.3.2
-        - 3.3.1
         - 3.3.4
-        - 3.2.9
       cdd:
         versions:
         - 0.61a
@@ -1776,85 +1660,45 @@ test-suite:
       cdo:
         versions:
         - 1.7.2
-        - 1.6.9
       cereal:
         versions:
-        - 1.2.1
-        - 1.1.0
         - 1.2.2
-        - 0.9.1
-        - 1.1.2
-        - 1.0.0
-        - 1.2.0
-        - 1.1.1
       cfitsio:
         versions:
         - '3.410'
-        - '3.370'
       cgal:
         versions:
-        - 4.6.3
-        - '4.7'
         - '4.9'
       cgm:
         versions:
-        - '13.1'
-        - 13.1.0
         - 13.1.1
       cgns:
         versions:
         - 3.3.0
       charm:
         versions:
-        - 6.6.1
-        - 6.5.1
         - 6.7.1
-        - 6.7.0
-        - 6.6.0
       cityhash:
         versions:
         - '2013-07-31'
-        - master
       cleverleaf:
         versions:
         - develop
       clhep:
         versions:
         - 2.3.2.2
-        - 2.2.0.4
-        - 2.2.0.8
-        - 2.3.1.1
-        - 2.3.0.0
-        - 2.2.0.5
-        - 2.3.1.0
       cloog:
         versions:
-        - 0.18.0
         - 0.18.1
-        - 0.17.0
       cmake:
         versions:
-        - 3.5.1
-        - 3.0.2
-        - 3.7.2
-        - 3.5.0
         - 3.8.0
-        - 3.1.0
-        - 3.4.3
-        - 2.8.10.2
-        - 3.4.0
-        - 3.3.1
-        - 3.6.1
-        - 3.7.1
-        - 3.5.2
-        - 3.6.0
       cmocka:
         versions:
         - 1.0.1
       cmor:
         versions:
         - 3.2.0
-        - 3.1.2
       cnmem:
         versions:
         - git
@@ -1866,9 +1710,7 @@ test-suite:
         - 0.4.2
       conduit:
         versions:
-        - 0.2.0
         - 0.2.1
-        - master
       constype:
         versions:
         - 1.0.4
@@ -1878,23 +1720,18 @@ test-suite:
       coreutils:
         versions:
         - '8.26'
-        - '8.23'
       cosmomc:
         versions:
-        - '2016.06'
         - '2016.11'
       cp2k:
         versions:
-        - '3.0'
         - '4.1'
       cppad:
         versions:
-        - '20170114'
         - develop
       cppcheck:
         versions:
         - '1.72'
-        - '1.68'
       cppunit:
         versions:
         - 1.13.2
@@ -1903,8 +1740,6 @@ test-suite:
         - 1.0.1
       cryptopp:
         versions:
-        - 5.6.2
-        - 5.6.1
         - 5.6.3
       cscope:
         versions:
@@ -1912,39 +1747,21 @@ test-suite:
       cub:
         versions:
         - 1.6.4
-        - 1.4.1
       cube:
         versions:
         - 4.3.4
-        - 4.2.3
-        - 4.3.3
       cuda:
         versions:
         - 8.0.61
-        - 6.5.14
-        - 7.5.18
-        - 8.0.44
       cuda-memtest:
         versions:
         - master
       cudnn:
         versions:
-        - '5.1'
         - '6.0'
       curl:
         versions:
-        - 7.46.0
-        - 7.52.1
-        - 7.50.1
-        - 7.49.1
-        - 7.45.0
         - 7.53.1
-        - 7.47.1
-        - 7.44.0
-        - 7.42.1
-        - 7.43.0
-        - 7.50.2
-        - 7.50.3
       cvs:
         versions:
         - 1.12.13
@@ -1962,39 +1779,21 @@ test-suite:
         - '1.0'
       darshan-runtime:
         versions:
-        - 3.0.0
         - 3.1.0
       darshan-util:
         versions:
-        - 3.0.0
         - 3.1.0
       datamash:
         versions:
         - 1.1.0
-        - 1.0.5
-        - 1.0.7
-        - 1.0.6
       dbus:
         versions:
-        - 1.8.2
-        - 1.8.8
-        - 1.9.0
-        - 1.8.4
         - 1.11.2
-        - 1.8.6
       dealii:
         versions:
-        - 8.4.1
-        - 8.3.0
-        - 8.4.0
-        - 8.2.1
-        - 8.5.0
         - develop
-        - 8.1.0
-        - 8.4.2
       dejagnu:
         versions:
-        - 1.4.4
         - '1.6'
       dia:
         versions:
@@ -2013,15 +1812,9 @@ test-suite:
         - 1.79.1
       double-conversion:
         versions:
-        - 1.1.3
         - 2.0.1
-        - 2.0.0
-        - 1.1.5
-        - 1.1.4
       doxygen:
         versions:
-        - 1.8.11
-        - 1.8.10
         - 1.8.12
       dri2proto:
         versions:
@@ -2034,12 +1827,7 @@ test-suite:
         - 1.0.3
       dyninst:
         versions:
-        - 8.1.2
         - 9.3.0
-        - 9.2.0
-        - 8.2.1
-        - 9.1.0
-        - 8.1.1
       easybuild:
         versions:
         - 3.1.2
@@ -2048,18 +1836,12 @@ test-suite:
         - 1.0.6
       eigen:
         versions:
-        - 3.2.8
         - 3.3.1
-        - 3.2.9
-        - 3.2.10
-        - 3.2.7
       elemental:
         versions:
         - 0.87.7
-        - 0.87.6
       elfutils:
         versions:
-        - '0.163'
         - '0.168'
       elk:
         versions:
@@ -2067,12 +1849,8 @@ test-suite:
       elpa:
         versions:
         - 2016.11.001.pre
-        - 2016.05.004
-        - 2016.05.003
-        - 2015.11.001
       emacs:
         versions:
-        - '24.5'
         - '25.1'
       encodings:
         versions:
@@ -2089,19 +1867,14 @@ test-suite:
       espresso:
         versions:
         - 6.1.0
-        - 5.4.0
-        - 5.3.0
       espressopp:
         versions:
-        - 1.9.4.1
-        - 1.9.4
         - develop
       etsf-io:
         versions:
         - 1.0.4
       everytrace:
         versions:
-        - 0.2.0
         - develop
       everytrace-example:
         versions:
@@ -2145,8 +1918,6 @@ test-suite:
       fenics:
         versions:
         - 2016.1.0
-        - 1.5.0
-        - 1.6.0
       ferret:
         versions:
         - '6.96'
@@ -2156,9 +1927,6 @@ test-suite:
       fftw:
         versions:
         - 3.3.6-pl2
-        - 3.3.4
-        - 3.3.5
-        - 2.1.5
       fio:
         versions:
         - '2.19'
@@ -2170,8 +1938,6 @@ test-suite:
         - '5.0'
       flac:
         versions:
-        - 1.3.0
-        - 1.3.1
         - 1.3.2
       flash:
         versions:
@@ -2181,14 +1947,9 @@ test-suite:
         - develop
       flex:
         versions:
-        - 2.6.0
-        - 2.6.1
-        - 2.5.39
         - 2.6.3
       flint:
         versions:
-        - 2.5.2
-        - 2.4.5
         - develop
       fltk:
         versions:
@@ -2196,12 +1957,8 @@ test-suite:
       flux:
         versions:
         - 0.6.0
-        - master
       foam-extend:
         versions:
-        - '3.0'
-        - '3.2'
-        - '3.1'
         - '4.0'
       font-adobe-100dpi:
         versions:
@@ -2329,7 +2086,6 @@ test-suite:
       freetype:
         versions:
         - '2.7'
-        - 2.5.3
       fslsfonts:
         versions:
         - 1.0.5
@@ -2338,100 +2094,52 @@ test-suite:
         - 1.0.6
       funhpc:
         versions:
-        - 1.1.0
-        - 0.1.1
-        - 1.0.0
         - develop
-        - 1.1.1
-        - 0.1.0
       gasnet:
         versions:
-        - 1.24.0
-        - 1.28.0
         - 1.28.2
       gawk:
         versions:
         - 4.1.4
       gbenchmark:
         versions:
-        - 1.0.0
         - 1.1.0
       gcc:
         versions:
-        - 5.4.0
-        - 6.2.0
-        - 5.3.0
-        - 4.6.4
         - 6.3.0
-        - 4.9.3
-        - 4.9.1
-        - 5.2.0
-        - 4.9.2
-        - 4.5.4
-        - 6.1.0
-        - 4.8.5
-        - 4.8.4
-        - 4.7.4
-        - 4.9.4
-        - 5.1.0
       gccmakedep:
         versions:
         - 1.0.3
       gccxml:
         versions:
-        - latest
         - develop
       gconf:
         versions:
         - 3.2.6
       gdal:
         versions:
-        - 2.0.2
         - 2.1.2
       gdb:
         versions:
-        - 7.9.1
-        - 7.10.1
-        - '7.10'
         - '7.11'
-        - 7.8.2
-        - '7.9'
       gdbm:
         versions:
-        - 1.9.1
-        - '1.12'
         - '1.13'
-        - '1.9'
-        - '1.10'
-        - '1.11'
       gdk-pixbuf:
         versions:
         - 2.31.2
       geant4:
         versions:
         - 10.02.p02
-        - 10.02.p01
-        - 10.01.p03
       gemmlowp:
         versions:
         - a6f29d9ac
       geos:
         versions:
-        - 3.3.3
-        - 3.3.6
-        - 3.3.4
         - 3.5.0
-        - 3.4.2
-        - 3.3.9
-        - 3.4.0
-        - 3.3.8
-        - 3.3.5
-        - 3.3.7
-        - 3.4.1
       gettext:
         versions:
         - 0.19.8.1
-        - 0.19.7
       gflags:
         versions:
         - 2.1.2
@@ -2446,26 +2154,10 @@ test-suite:
         - 5.1.4
       git:
         versions:
-        - 2.7.1
         - 2.12.1
-        - 2.9.0
-        - 2.11.1
-        - 2.12.0
-        - 2.8.3
-        - 2.9.2
-        - 2.7.3
-        - 2.8.2
-        - 2.11.0
-        - 2.9.3
-        - 2.8.4
-        - 2.9.1
-        - 2.8.1
-        - 2.8.0
       git-lfs:
         versions:
         - 2.0.2
-        - 1.4.1
-        - 1.3.1
       gl2ps:
         versions:
         - 1.3.9
@@ -2474,10 +2166,7 @@ test-suite:
         - 2.0.0
       glib:
         versions:
-        - 2.49.4
         - 2.49.7
-        - 2.42.1
-        - 2.48.1
       glm:
         versions:
         - 0.9.7.1
@@ -2489,7 +2178,6 @@ test-suite:
         - 6.0.1470089956
       glog:
         versions:
-        - 0.3.3
         - 0.3.4
       glpk:
         versions:
@@ -2505,49 +2193,31 @@ test-suite:
         - 2.6.23
       gmp:
         versions:
-        - 6.1.0
-        - 6.0.0a
         - 6.1.2
-        - 6.1.1
-        - 6.0.0
       gmsh:
         versions:
         - 3.0.1
-        - 2.15.0
-        - 2.16.0
-        - 2.11.0
-        - 2.12.0
       gnu-prolog:
         versions:
         - 1.4.4
       gnuplot:
         versions:
-        - 5.0.1
         - 5.0.5
       gnutls:
         versions:
-        - 3.5.9
         - 3.5.10
-        - 3.3.9
       go:
         versions:
-        - '1.8'
-        - 1.7.4
-        - 1.7.5
-        - 1.6.4
         - 1.8.1
       go-bootstrap:
         versions:
         - 1.4-bootstrap-20161024
       gobject-introspection:
         versions:
-        - 1.48.0
         - 1.49.2
       googletest:
         versions:
         - 1.8.0
-        - 1.6.0
-        - 1.7.0
       gource:
         versions:
         - '0.44'
@@ -2556,91 +2226,40 @@ test-suite:
         - 3.0.4
       gperftools:
         versions:
-        - '2.3'
         - '2.4'
       grackle:
         versions:
-        - 2.0.1
         - '2.2'
       gradle:
         versions:
-        - '1.3'
-        - '3.0'
-        - '2.8'
-        - '2.1'
-        - 2.14.1
-        - '2.12'
-        - '2.5'
-        - '1.11'
-        - '1.2'
-        - '2.14'
-        - '3.3'
-        - '2.9'
-        - '1.5'
-        - '2.13'
-        - '2.2'
-        - '1.10'
-        - '1.1'
-        - '3.2'
-        - '2.6'
-        - 3.2.1
-        - 0.9.1
-        - '1.4'
-        - '2.10'
-        - 0.9.2
-        - '2.3'
-        - '1.9'
-        - '1.0'
-        - '0.8'
-        - '2.7'
-        - '1.12'
-        - 2.2.1
-        - '3.1'
-        - '2.11'
-        - '2.0'
-        - '1.8'
-        - '0.9'
-        - '0.7'
         - '3.4'
-        - '2.4'
       grandr:
         versions:
         - '0.1'
       graphlib:
         versions:
         - 3.0.0
-        - 2.0.0
       graphviz:
         versions:
         - 2.38.0
       grib-api:
         versions:
-        - 1.16.0
         - 1.17.0
       gromacs:
         versions:
-        - 5.1.4
         - '2016.3'
-        - 5.1.2
       gsl:
         versions:
-        - 2.2.1
-        - '2.0'
-        - '1.16'
         - '2.3'
-        - '2.1'
       gtkplus:
         versions:
         - 2.24.31
-        - 2.24.25
       gts:
         versions:
         - '121130'
       guile:
         versions:
         - 2.2.0
-        - 2.0.11
-        - 2.0.14
       h5hut:
         versions:
         - 1.99.13
@@ -2659,18 +2278,9 @@ test-suite:
       hdf:
         versions:
         - 4.2.12
-        - 4.2.11
       hdf5:
         versions:
-        - 1.8.16
-        - 1.10.0
-        - 1.8.12
         - 1.10.0-patch1
-        - 1.8.17
-        - 1.8.13
-        - 1.8.18
-        - 1.8.14
-        - 1.8.15
       hdf5-blosc:
         versions:
         - master
@@ -2679,32 +2289,18 @@ test-suite:
         - 1.47.4
       hepmc:
         versions:
-        - 2.06.05
-        - 2.06.06
-        - 2.06.07
-        - 2.06.08
         - 2.06.09
       heppdt:
         versions:
-        - 3.03.02
-        - 2.06.01
-        - 3.04.00
-        - 3.03.01
         - 3.04.01
-        - 3.03.00
       highwayhash:
         versions:
         - dfcb97
       hmmer:
         versions:
-        - '3.0'
-        - 2.4i
-        - 2.3.2
-        - 2.3.1
         - 3.1b2
       hoomd-blue:
         versions:
-        - 2.1.6
         - develop
       hpctoolkit:
         versions:
@@ -2717,13 +2313,7 @@ test-suite:
         - '2.2'
       hpx5:
         versions:
-        - 1.1.0
         - 4.0.0
-        - 1.0.0
-        - 3.1.0
-        - 1.3.0
-        - 1.2.0
-        - 2.0.0
       hsakmt:
         versions:
         - 1.0.0
@@ -2735,42 +2325,25 @@ test-suite:
         - 2.0.2
       htslib:
         versions:
-        - 1.3.1
         - '1.4'
       httpie:
         versions:
         - 0.9.8
       hub:
         versions:
-        - 2.2.2
-        - 2.2.1
-        - head
-        - 2.2.0
-        - 1.12.4
         - 2.2.3
       hunspell:
         versions:
         - 1.6.0
       hwloc:
         versions:
-        - 1.11.3
-        - 1.11.2
         - 1.11.6
-        - 1.11.1
-        - '1.9'
-        - 1.11.5
-        - 1.11.4
       hydra:
         versions:
         - '3.2'
       hypre:
         versions:
-        - 2.11.1
-        - 2.11.2
-        - 2.10.0b
         - develop
-        - 2.10.1
-        - xsdk-0.2.0
       ibmisc:
         versions:
         - 0.1.0
@@ -2779,28 +2352,21 @@ test-suite:
         - 1.0.7
       icet:
         versions:
-        - 2.1.1
         - develop
       ico:
         versions:
         - 1.0.4
       icu4c:
         versions:
-        - '57.1'
         - '58.2'
       id3lib:
         versions:
         - 3.8.3
       ilmbase:
         versions:
-        - 1.0.2
-        - 2.1.0
-        - 0.9.0
-        - 2.0.1
         - 2.2.0
       image-magick:
         versions:
-        - 7.0.2-6
         - 7.0.2-7
       imake:
         versions:
@@ -2810,53 +2376,22 @@ test-suite:
         - 2.3.2
       intel:
         versions:
-        - 16.0.4
         - 17.0.2
-        - 16.0.3
-        - 16.0.2
-        - 17.0.0
-        - 17.0.1
       intel-daal:
         versions:
         - 2017.0.098
-        - 2016.3.210
-        - 2016.2.181
       intel-gpu-tools:
         versions:
         - '1.16'
       intel-ipp:
         versions:
-        - 9.0.3.210
         - 2017.0.098
       intel-mkl:
         versions:
         - 2017.2.174
-        - 2017.0.098
-        - 11.3.3.210
-        - 11.3.2.181
       intel-parallel-studio:
         versions:
-        - composer.2015.6
-        - professional.2017.1
-        - cluster.2015.6
-        - cluster.2016.3
-        - composer.2016.3
-        - professional.2017.0
-        - cluster.2017.1
         - professional.2017.2
-        - professional.2016.4
-        - professional.2016.2
-        - professional.2015.6
-        - composer.2017.0
-        - cluster.2017.0
-        - cluster.2016.4
-        - professional.2016.3
-        - composer.2017.2
-        - composer.2017.1
-        - composer.2016.2
-        - cluster.2016.2
-        - cluster.2017.2
-        - composer.2016.4
       intltool:
         versions:
         - 0.51.0
@@ -2869,30 +2404,18 @@ test-suite:
       ipopt:
         versions:
         - 3.12.4
-        - 3.12.3
-        - 3.12.2
-        - 3.12.1
-        - 3.12.0
       isaac:
         versions:
-        - 1.3.0
         - develop
-        - master
       isaac-server:
         versions:
-        - 1.3.0
         - develop
-        - master
       isl:
         versions:
-        - '0.14'
         - '0.18'
       itstool:
         versions:
-        - 1.2.0
         - 2.0.2
-        - 2.0.0
-        - 2.0.1
       jansson:
         versions:
         - '2.9'
@@ -2901,23 +2424,15 @@ test-suite:
         - 1.900.1
       jdk:
         versions:
-        - 8u66
         - 8u92
       jemalloc:
         versions:
-        - 4.3.1
-        - 4.4.0
-        - 4.2.1
         - 4.5.0
-        - 4.0.4
-        - 4.1.0
-        - 4.2.0
       jmol:
         versions:
         - 14.8.0
       jpeg:
         versions:
-        - 9a
         - 9b
       jq:
         versions:
@@ -2925,7 +2440,6 @@ test-suite:
       json-c:
         versions:
         - 0.12.1
-        - '0.11'
       jsoncpp:
         versions:
         - 1.7.3
@@ -2934,18 +2448,9 @@ test-suite:
         - 1.0.5
       julia:
         versions:
-        - 0.4.5
-        - 0.5.0
         - 0.5.1
-        - 0.4.7
-        - release-0.5
-        - 0.4.3
-        - release-0.4
-        - 0.4.6
-        - master
       kaldi:
         versions:
-        - c024e8
         - master
       kbproto:
         versions:
@@ -2967,7 +2472,6 @@ test-suite:
         - 1.0.2
       lbann:
         versions:
-        - '0.91'
         - develop
       lbxproxy:
         versions:
@@ -2977,11 +2481,9 @@ test-suite:
         - '2.6'
       legion:
         versions:
-        - 17.02.0
         - develop
       leveldb:
         versions:
-        - '1.18'
         - '1.20'
       libaio:
         versions:
@@ -2991,9 +2493,6 @@ test-suite:
         - 1.4.1
       libarchive:
         versions:
-        - 3.1.0
-        - 3.1.1
-        - 3.1.2
         - 3.2.1
       libatomic-ops:
         versions:
@@ -3001,7 +2500,6 @@ test-suite:
       libbson:
         versions:
         - 1.6.2
-        - 1.6.1
       libcanberra:
         versions:
         - '0.30'
@@ -3022,24 +2520,16 @@ test-suite:
         - 1.1.3
       libdrm:
         versions:
-        - 2.4.59
-        - 2.4.33
         - 2.4.70
       libdwarf:
         versions:
-        - '20130207'
         - '20160507'
-        - '20130126'
-        - '20130729'
       libedit:
         versions:
-        - 3.1-20150325
-        - 3.1-20160903
         - 3.1-20170329
       libelf:
         versions:
         - 0.8.13
-        - 0.8.12
       libemos:
         versions:
         - 4.4.2
@@ -3048,16 +2538,7 @@ test-suite:
         - 1.3.1
       libevent:
         versions:
-        - 2.0.13
-        - 2.0.17
-        - 2.0.12
         - 2.0.21
-        - 2.0.16
-        - 2.0.15
-        - 2.0.20
-        - 2.0.19
-        - 2.0.14
-        - 2.0.18
       libffi:
         versions:
         - 3.2.1
@@ -3072,21 +2553,16 @@ test-suite:
         - 1.6.2
       libgd:
         versions:
-        - 2.2.3
         - 2.2.4
-        - 2.1.1
       libgit2:
         versions:
         - 0.24.2
       libgpg-error:
         versions:
-        - '1.18'
         - '1.21'
       libgpuarray:
         versions:
         - 0.6.2
-        - 0.6.0
-        - 0.6.1
       libgtextutils:
         versions:
         - '0.7'
@@ -3098,17 +2574,12 @@ test-suite:
         - 1.0.9
       libiconv:
         versions:
-        - '1.14'
         - '1.15'
       libint:
         versions:
-        - 1.1.6
-        - 2.1.0
-        - 1.1.5
         - 2.2.0
       libjpeg-turbo:
         versions:
-        - 1.3.1
         - 1.5.0
       liblbxutil:
         versions:
@@ -3122,7 +2593,6 @@ test-suite:
       libmongoc:
         versions:
         - 1.6.2
-        - 1.6.1
       libmonitor:
         versions:
         - '20130218'
@@ -3143,7 +2613,6 @@ test-suite:
         - 4.8.0
       libpng:
         versions:
-        - 1.2.57
         - 1.6.27
       libpthread-stubs:
         versions:
@@ -3154,54 +2623,33 @@ test-suite:
       libsigsegv:
         versions:
         - '2.11'
-        - '2.10'
       libsm:
         versions:
         - 1.2.2
       libsodium:
         versions:
-        - 1.0.3
-        - 1.0.10
-        - 1.0.0
         - 1.0.11
-        - 0.7.1
-        - 1.0.1
-        - 1.0.2
       libspatialindex:
         versions:
         - 1.8.5
       libsplash:
         versions:
-        - 1.4.0
-        - 1.2.4
-        - 1.3.1
-        - 1.5.0
         - 1.6.0
-        - dev
-        - master
       libssh2:
         versions:
-        - 1.4.3
         - 1.7.0
       libtermkey:
         versions:
-        - '0.17'
-        - '0.14'
-        - '0.16'
         - '0.18'
-        - 0.15b
       libtiff:
         versions:
-        - 4.0.3
         - 4.0.6
       libtool:
         versions:
         - 2.4.6
-        - 2.4.2
       libunistring:
         versions:
         - 0.9.7
-        - 0.9.6
       libunwind:
         versions:
         - '1.1'
@@ -3219,9 +2667,7 @@ test-suite:
         - '681'
       libwebsockets:
         versions:
-        - 1.7.9
         - 2.1.0
-        - 2.0.3
       libwindowswm:
         versions:
         - 1.0.1
@@ -3239,13 +2685,9 @@ test-suite:
         - 1.6.2
       libxc:
         versions:
-        - 2.2.1
-        - 2.2.2
         - 3.0.0
       libxcb:
         versions:
-        - '1.11'
-        - 1.11.1
         - '1.12'
       libxcomposite:
         versions:
@@ -3295,7 +2737,6 @@ test-suite:
       libxml2:
         versions:
         - 2.9.4
-        - 2.9.2
       libxmu:
         versions:
         - 1.1.2
@@ -3304,11 +2745,7 @@ test-suite:
         - 1.0.3
       libxpm:
         versions:
-        - 3.5.9
-        - 3.5.10
         - 3.5.11
-        - 3.5.7
-        - 3.5.8
       libxpresent:
         versions:
         - 1.0.0
@@ -3335,29 +2772,10 @@ test-suite:
         - '1.2'
       libxslt:
         versions:
-        - 1.1.28
         - 1.1.29
       libxsmm:
         versions:
-        - 1.6.5
-        - 1.6.3
-        - 1.6.2
-        - 1.5.1
-        - 1.7.1
-        - 1.6.1
-        - 1.5.2
-        - 1.4.4
         - develop
-        - '1.5'
-        - '1.8'
-        - '1.6'
-        - '1.4'
-        - 1.4.2
-        - '1.7'
-        - 1.4.1
-        - 1.6.4
-        - 1.6.6
-        - 1.4.3
       libxstream:
         versions:
         - 0.9.0
@@ -3399,36 +2817,19 @@ test-suite:
         - 1.0.3
       llvm:
         versions:
-        - 3.5.1
-        - 3.9.0
         - 4.0.0
-        - '3.0'
-        - 3.8.0
-        - trunk
-        - 3.6.2
-        - 3.8.1
-        - 3.7.1
-        - 3.9.1
-        - 3.7.0
       llvm-lld:
         versions:
         - '3.4'
       llvm-openmp-ompt:
         versions:
-        - 3.9.2b
         - 3.9.2b2
       lmdb:
         versions:
         - 0.9.16
       lmod:
         versions:
-        - '7.3'
-        - 6.4.1
-        - 6.4.5
         - 7.4.5
-        - 7.4.1
-        - 6.3.7
-        - 6.0.1
       lndir:
         versions:
         - 1.0.3
@@ -3437,32 +2838,13 @@ test-suite:
         - 0.10.0
       lrslib:
         versions:
-        - '5.1'
-        - '6.1'
         - '6.2'
-        - '6.0'
-        - '4.3'
       lrzip:
         versions:
         - '0.630'
-        - '0.616'
-        - '0.621'
-        - '0.615'
-        - master
       lua:
         versions:
-        - 5.3.1
         - 5.3.4
-        - 5.3.0
-        - 5.2.2
-        - 5.2.4
-        - 5.2.0
-        - 5.1.5
-        - 5.2.3
-        - 5.2.1
-        - 5.3.2
-        - 5.1.4
-        - 5.1.3
       lua-jit:
         versions:
         - 2.0.4
@@ -3487,31 +2869,23 @@ test-suite:
       lz4:
         versions:
         - 1.7.5
-        - 1.3.1
       lzma:
         versions:
         - 4.32.7
       lzo:
         versions:
-        - '2.07'
-        - '2.08'
-        - '2.05'
-        - '2.06'
         - '2.09'
       m4:
         versions:
-        - 1.4.17
         - 1.4.18
       mad-numdiff:
         versions:
         - develop
-        - '20150724'
       mafft:
         versions:
         - '7.221'
       magics:
         versions:
-        - 2.29.0
         - 2.29.4
       magma:
         versions:
@@ -3521,20 +2895,12 @@ test-suite:
         - 1.0.5
       mallocmc:
         versions:
-        - 2.1.0crp
-        - 2.0.0crp
-        - 2.0.1crp
         - 2.2.0crp
-        - 1.0.2crp
-        - dev
-        - master
       mariadb:
         versions:
         - 10.1.14
-        - 5.5.49
       matio:
         versions:
-        - 1.5.2
         - 1.5.9
       matlab:
         versions:
@@ -3547,44 +2913,28 @@ test-suite:
         - 1.3.4
       mbedtls:
         versions:
-        - 1.3.16
-        - 2.2.1
-        - 2.2.0
-        - 2.1.4
         - 2.3.0
-        - 2.1.3
       mdtest:
         versions:
         - 1.9.3
       meep:
         versions:
-        - 1.2.1
-        - 1.1.1
         - '1.3'
       memaxes:
         versions:
         - '0.5'
       mercurial:
         versions:
-        - 3.8.4
         - 4.1.2
-        - 3.8.1
-        - '3.9'
-        - 3.8.2
-        - 3.9.1
-        - 3.8.3
       mesa:
         versions:
         - 12.0.3
       metis:
         versions:
-        - 4.0.3
         - 5.1.0
-        - 5.0.2
       mfem:
         versions:
         - '3.2'
-        - '3.1'
       miniconda2:
         versions:
         - 4.3.11
@@ -3594,7 +2944,6 @@ test-suite:
       mitos:
         versions:
         - 0.9.2
-        - 0.9.1
       mkfontdir:
         versions:
         - 1.0.7
@@ -3603,43 +2952,28 @@ test-suite:
         - 1.1.2
       moab:
         versions:
-        - 4.8.2
         - 4.9.1
-        - 4.9.0
       mosh:
         versions:
         - 1.3.0
-        - 1.2.6
       mozjs:
         versions:
-        - 17.0.0
         - 24.2.0
-        - 1.8.5
       mpc:
         versions:
         - 1.0.3
-        - 1.0.2
       mpe2:
         versions:
         - 1.3.0
       mpfr:
         versions:
         - 3.1.5
-        - 3.1.2
-        - 3.1.3
-        - 3.1.4
       mpibash:
         versions:
         - '4.3'
       mpich:
         versions:
         - '3.2'
-        - 3.1.1
-        - '3.1'
-        - 3.0.4
-        - 3.1.4
-        - 3.1.3
-        - 3.1.2
       mpileaks:
         versions:
         - '1.0'
@@ -3648,15 +2982,10 @@ test-suite:
         - 3.4.1
       mpir:
         versions:
-        - 2.7.0
-        - 2.6.0
         - develop
       mrnet:
         versions:
         - 5.0.1-2
-        - 5.0.1
-        - 4.1.0
-        - 4.0.0
       msgpack-c:
         versions:
         - 1.4.1
@@ -3665,9 +2994,7 @@ test-suite:
         - '3.23'
       mumps:
         versions:
-        - 5.0.1
         - 5.1.1
-        - 5.0.2
       munge:
         versions:
         - 0.5.11
@@ -3676,53 +3003,34 @@ test-suite:
         - 2.2.5
       muster:
         versions:
-        - '1.0'
         - 1.0.1
       mvapich2:
         versions:
-        - '2.0'
         - 2.3a
-        - '1.9'
-        - '2.1'
-        - '2.2'
       mxml:
         versions:
-        - '2.7'
-        - '2.6'
-        - '2.9'
-        - '2.8'
         - '2.10'
-        - '2.5'
       nag:
         versions:
         - '6.1'
-        - '6.0'
       nano:
         versions:
-        - 2.6.2
         - 2.6.3
       nasm:
         versions:
         - 2.11.06
       nauty:
         versions:
-        - 2.6r5
-        - 2.5r9
         - 2.6r7
       nccl:
         versions:
-        - 1.3.0-1
         - 1.3.4-1
       nccmp:
         versions:
         - 1.8.2.0
       ncdu:
         versions:
-        - '1.10'
-        - '1.8'
         - '1.11'
-        - '1.9'
-        - '1.7'
       ncftp:
         versions:
         - 3.2.6
@@ -3731,15 +3039,9 @@ test-suite:
         - 6.4.0
       nco:
         versions:
-        - 4.6.3
-        - 4.6.2
         - 4.6.5
-        - 4.6.1
-        - 4.6.4
-        - 4.5.5
       ncurses:
         versions:
-        - '5.9'
         - '6.0'
       ncview:
         versions:
@@ -3747,13 +3049,8 @@ test-suite:
       ndiff:
         versions:
         - '2.00'
-        - '1.00'
       netcdf:
         versions:
-        - 4.4.0
-        - 4.4.1
-        - 4.3.3
-        - 4.3.3.1
         - 4.4.1.1
       netcdf-cxx:
         versions:
@@ -3761,10 +3058,8 @@ test-suite:
       netcdf-cxx4:
         versions:
         - 4.3.0
-        - 4.2.1
       netcdf-fortran:
         versions:
-        - 4.4.3
         - 4.4.4
       netgauge:
         versions:
@@ -3772,27 +3067,15 @@ test-suite:
       netlib-lapack:
         versions:
         - 3.6.1
-        - 3.5.0
-        - 3.4.2
-        - 3.4.0
-        - 3.3.1
-        - 3.4.1
-        - 3.6.0
       netlib-scalapack:
         versions:
         - 2.0.2
-        - 2.0.0
-        - 2.0.1
       nettle:
         versions:
-        - '2.7'
-        - 2.7.1
         - '3.2'
       nextflow:
         versions:
-        - 0.20.1
         - 0.24.1
-        - 0.23.3
       nfft:
         versions:
         - 3.3.2
@@ -3804,12 +3087,9 @@ test-suite:
         - 1.6.0
       nmap:
         versions:
-        - '7.30'
         - '7.31'
       node-js:
         versions:
-        - 6.3.0
-        - 6.2.2
         - 7.1.0
       notmuch:
         versions:
@@ -3819,14 +3099,12 @@ test-suite:
         - 3.3.1
       npm:
         versions:
-        - 3.10.5
         - 3.10.9
       nspr:
         versions:
         - 4.13.1
       numdiff:
         versions:
-        - 5.8.1
         - 5.9.0
       nwchem:
         versions:
@@ -3837,26 +3115,17 @@ test-suite:
       oce:
         versions:
         - '0.18'
-        - '0.17'
-        - 0.17.1
-        - '0.16'
-        - 0.17.2
-        - 0.16.1
       oclock:
         versions:
         - 1.0.3
       octave:
         versions:
-        - 4.0.2
-        - 4.2.0
         - 4.2.1
-        - 4.0.0
       octave-splines:
         versions:
         - 1.3.1
       octopus:
         versions:
-        - 5.0.1
         - '6.0'
       ompss:
         versions:
@@ -3869,37 +3138,19 @@ test-suite:
         - 6.1.3
       opari2:
         versions:
-        - '2.0'
-        - 1.1.4
         - 2.0.1
-        - 1.1.2
       openblas:
         versions:
-        - 0.2.17
-        - 0.2.15
         - develop
-        - 0.2.16
-        - 0.2.19
-        - 0.2.18
       opencoarrays:
         versions:
-        - 1.8.0
         - 1.8.4
-        - 1.7.4
-        - 1.6.2
       opencv:
         versions:
         - 3.1.0
       openexr:
         versions:
-        - 2.1.0
-        - 1.3.2
-        - 1.5.0
-        - 1.7.0
-        - 1.4.0a
-        - 2.0.1
         - 2.2.0
-        - 1.6.1
       openfoam-com:
         versions:
         - '1612'
@@ -3908,100 +3159,31 @@ test-suite:
         - '4.1'
       openfst:
         versions:
-        - 1.5.4
-        - 1.4.1
-        - 1.5.3
-        - 1.5.1
-        - 1.5.2
         - 1.6.1
-        - 1.6.0
-        - 1.4.0
-        - 1.4.1-patch
-        - 1.5.0
       openjpeg:
         versions:
-        - '2.0'
         - '2.1'
-        - 1.5.2
-        - 2.0.1
-        - 1.5.1
       openmpi:
         versions:
-        - 1.6.5
-        - 1.10.0
         - 2.1.0
-        - 1.10.5
-        - 1.8.8
-        - 1.10.1
-        - 2.0.2
-        - 1.10.6
-        - 1.10.2
-        - 2.0.1
-        - 1.10.3
-        - 2.0.0
-        - 1.10.4
       openscenegraph:
         versions:
-        - 3.1.5
         - 3.2.3
       openspeedshop:
         versions:
         - '2.3'
-        - '2.2'
       openssh:
         versions:
-        - 6.6p1
-        - 7.0p1
-        - 7.2p2
-        - 7.1p2
-        - 7.4p1
-        - 6.9p1
-        - 6.8p1
-        - 6.7p1
         - 7.5p1
-        - 7.3p1
       openssl:
         versions:
-        - 1.0.2g
-        - 1.0.1r
-        - 1.1.0c
         - 1.1.0e
-        - 1.0.2i
-        - 1.0.2f
-        - 1.0.1t
-        - 1.0.2h
-        - 1.0.2e
-        - 1.0.2k
-        - 1.0.1u
-        - 1.0.1h
-        - 1.0.2d
-        - 1.1.0d
-        - 1.0.2j
       opium:
         versions:
         - '3.8'
       opus:
         versions:
-        - 1.0.3
-        - 1.0.0
-        - 0.9.14
-        - 0.9.5
-        - 0.9.9
-        - 0.9.10
-        - 0.9.1
-        - 0.9.6
-        - '1.1'
         - 1.1.4
-        - 0.9.2
-        - 1.1.3
-        - 1.1.1
-        - 0.9.7
-        - 0.9.3
-        - 0.9.8
-        - 1.1.2
-        - 1.0.1
-        - 1.0.2
-        - 0.9.0
       osu-micro-benchmarks:
         versions:
         - '5.3'
@@ -4011,14 +3193,9 @@ test-suite:
       otf2:
         versions:
         - '2.0'
-        - 1.3.1
-        - 1.5.1
-        - '1.4'
-        - 1.2.1
       p4est:
         versions:
         - '2.0'
-        - '1.1'
       pagmo:
         versions:
         - 1.1.7
@@ -4028,44 +3205,26 @@ test-suite:
       pango:
         versions:
         - 1.40.3
-        - 1.36.8
-        - 1.40.1
       papi:
         versions:
-        - 5.4.3
-        - 5.5.0
         - 5.5.1
-        - 5.3.0
-        - 5.4.1
       paradiseo:
         versions:
-        - dev-safe
         - head
       parallel:
         versions:
-        - '20160322'
-        - '20160422'
-        - '20170122'
         - '20170322'
       parallel-netcdf:
         versions:
         - 1.8.0
-        - 1.6.1
-        - 1.7.0
       paraver:
         versions:
         - 4.6.3
-        - 4.6.2
       paraview:
         versions:
-        - 5.2.0
-        - 4.4.0
-        - 5.1.2
-        - 5.0.1
         - 5.3.0
       parmetis:
         versions:
-        - 4.0.2
         - 4.0.3
       parmgridgen:
         versions:
@@ -4079,12 +3238,9 @@ test-suite:
       patchelf:
         versions:
         - '0.9'
-        - '0.8'
       pcre:
         versions:
-        - '8.38'
         - '8.40'
-        - '8.39'
       pcre2:
         versions:
         - '10.20'
@@ -4093,24 +3249,13 @@ test-suite:
         - '2.31'
       pdt:
         versions:
-        - '3.22'
-        - '3.20'
-        - '3.21'
         - 3.22.1
-        - '3.19'
-        - 3.18.1
       pegtl:
         versions:
         - 1.3.1
       perl:
         versions:
-        - 5.18.4
-        - 5.16.3
-        - 5.20.3
-        - 5.24.1
         - 5.25.11
-        - 5.22.2
-        - 5.22.3
       perl-dbi:
         versions:
         - '1.636'
@@ -4125,36 +3270,19 @@ test-suite:
         - '2.44'
       petsc:
         versions:
-        - 3.6.4
-        - 3.5.1
-        - 3.7.2
-        - 3.7.5
         - develop
-        - 3.5.3
-        - 3.6.3
-        - xsdk-0.2.0
-        - 3.7.4
-        - for-pflotran-0.1.0
-        - 3.5.2
-        - 3.4.4
       pexsi:
         versions:
         - 0.9.2
-        - 0.9.0
       pfft:
         versions:
         - 1.0.8-alpha
       pflotran:
         versions:
-        - xsdk-0.2.0
-        - 0.1.0
         - develop
       pgi:
         versions:
-        - '16.3'
-        - '16.5'
         - '16.10'
-        - '15.7'
       pidx:
         versions:
         - '1.0'
@@ -4163,24 +3291,18 @@ test-suite:
         - 2.3.4
       piranha:
         versions:
-        - '0.5'
         - develop
       pixman:
         versions:
         - 0.34.0
-        - 0.32.6
       pkg-config:
         versions:
         - 0.29.2
-        - 0.29.1
-        - '0.28'
       planck-likelihood:
         versions:
         - '2.00'
       plumed:
         versions:
-        - 2.2.3
-        - 2.2.4
         - 2.3.0
       pmgr-collective:
         versions:
@@ -4190,21 +3312,12 @@ test-suite:
         - 1.0.7-alpha
       pngwriter:
         versions:
-        - 0.5.6
-        - master
         - 0.6.0
-        - dev
       pocl:
         versions:
         - '0.14'
-        - '0.13'
-        - '0.12'
-        - '0.11'
-        - '0.10'
-        - master
       polymake:
         versions:
-        - 3.0r1
         - 3.0r2
       porta:
         versions:
@@ -4212,7 +3325,6 @@ test-suite:
       postgresql:
         versions:
         - 9.5.3
-        - 9.3.4
       ppl:
         versions:
         - '1.1'
@@ -4227,17 +3339,10 @@ test-suite:
         - 1.0.5
       proj:
         versions:
-        - 4.7.0
-        - 4.6.1
         - 4.9.2
-        - 4.9.1
-        - 4.8.0
       protobuf:
         versions:
         - 3.2.0
-        - 3.0.2
-        - 3.1.0
-        - 2.5.0
       proxymngr:
         versions:
         - 1.0.4
@@ -4270,7 +3375,6 @@ test-suite:
         - 1.2.1
       py-appdirs:
         versions:
-        - 1.4.0
         - 1.4.3
       py-appnope:
         versions:
@@ -4278,7 +3382,6 @@ test-suite:
       py-apscheduler:
         versions:
         - 3.3.1
-        - 2.1.0
       py-argcomplete:
         versions:
         - 1.1.1
@@ -4287,21 +3390,15 @@ test-suite:
         - 1.4.0
       py-astroid:
         versions:
-        - 1.4.4
-        - 1.4.1
-        - 1.4.3
-        - 1.4.2
         - 1.4.5
       py-astropy:
         versions:
-        - 1.1.post1
         - 1.1.2
       py-attrs:
         versions:
         - 16.3.0
       py-autopep8:
         versions:
-        - 1.2.2
         - 1.2.4
       py-babel:
         versions:
@@ -4321,7 +3418,6 @@ test-suite:
       py-beautifulsoup4:
         versions:
         - 4.5.1
-        - 4.4.1
       py-biopython:
         versions:
         - '1.65'
@@ -4345,7 +3441,6 @@ test-suite:
         - 1.4.3
       py-brian2:
         versions:
-        - 2.0rc3
         - 2.0.1
       py-cclib:
         versions:
@@ -4356,11 +3451,9 @@ test-suite:
       py-certifi:
         versions:
         - 2017.1.23
-        - 2016.02.28
       py-cffi:
         versions:
         - 1.10.0
-        - 1.1.2
       py-chardet:
         versions:
         - 2.3.0
@@ -4376,7 +3469,6 @@ test-suite:
       py-coverage:
         versions:
         - 4.3.4
-        - 4.0a6
       py-cpuinfo:
         versions:
         - 0.2.3
@@ -4392,18 +3484,12 @@ test-suite:
       py-cython:
         versions:
         - 0.25.2
-        - 0.23.4
-        - 0.23.5
-        - 0.21.2
-        - '0.22'
       py-dask:
         versions:
         - 0.8.1
       py-dateutil:
         versions:
-        - 2.4.0
         - 2.5.2
-        - 2.4.2
       py-dbf:
         versions:
         - 0.96.005
@@ -4415,17 +3501,10 @@ test-suite:
         - 0.4.0
       py-dill:
         versions:
-        - 0.2.3
         - 0.2.6
-        - 0.2.2
-        - 0.2.4
-        - 0.2.5
-        - 0.2.1
-        - '0.2'
       py-docutils:
         versions:
         - 0.13.1
-        - '0.12'
       py-doxypy:
         versions:
         - '0.3'
@@ -4444,7 +3523,6 @@ test-suite:
       py-elasticsearch:
         versions:
         - 5.2.0
-        - 2.3.0
       py-elephant:
         versions:
         - 0.3.0
@@ -4469,10 +3547,8 @@ test-suite:
       py-fiscalyear:
         versions:
         - 0.1.0
-        - master
       py-flake8:
         versions:
-        - 2.5.4
         - 3.0.4
       py-flask:
         versions:
@@ -4489,7 +3565,6 @@ test-suite:
       py-future:
         versions:
         - 0.16.0
-        - 0.15.2
       py-futures:
         versions:
         - 3.0.5
@@ -4498,15 +3573,9 @@ test-suite:
         - '1.22'
       py-genshi:
         versions:
-        - '0.6'
         - '0.7'
-        - 0.6.1
       py-git-review:
         versions:
-        - '1.21'
-        - '1.24'
-        - '1.23'
-        - '1.22'
         - 1.25.0
       py-git2:
         versions:
@@ -4525,8 +3594,6 @@ test-suite:
         - 3.0.2
       py-h5py:
         versions:
-        - 2.5.0
-        - 2.4.0
         - 2.6.0
       py-html2text:
         versions:
@@ -4554,21 +3621,10 @@ test-suite:
         - 0.10.1
       py-ipykernel:
         versions:
-        - 4.2.2
-        - 4.4.1
-        - 4.4.0
-        - 4.2.1
         - 4.5.0
-        - 4.3.1
-        - 4.2.0
-        - 4.1.0
-        - 4.3.0
-        - 4.1.1
       py-ipython:
         versions:
-        - 3.1.0
         - 5.1.0
-        - 2.3.1
       py-ipython-genutils:
         versions:
         - 0.1.0
@@ -4580,29 +3636,19 @@ test-suite:
         - '0.24'
       py-jdcal:
         versions:
-        - '1.2'
         - '1.3'
       py-jedi:
         versions:
         - 0.10.0
-        - 0.9.0
       py-jinja2:
         versions:
-        - 2.7.2
         - '2.8'
-        - 2.7.3
-        - '2.7'
-        - 2.7.1
       py-joblib:
         versions:
         - 0.10.3
-        - 0.10.0
-        - 0.10.2
       py-jpype:
         versions:
         - 0.6.2
-        - 0.6.0
-        - 0.6.1
       py-jsonschema:
         versions:
         - 2.5.1
@@ -4611,54 +3657,19 @@ test-suite:
         - '1.7'
       py-jupyter-client:
         versions:
-        - 4.2.2
-        - 4.1.0
-        - 4.0.0
         - 4.4.0
-        - 4.2.1
-        - 4.2.0
-        - 4.3.0
-        - 4.1.1
       py-jupyter-console:
         versions:
-        - 4.0.2
-        - 4.0.3
         - 5.0.0
-        - 4.1.1
-        - 4.1.0
       py-jupyter-core:
         versions:
-        - 4.0.1
-        - 4.0.4
-        - 4.1.0
-        - 4.0.3
-        - 4.0.6
-        - 4.0.2
         - 4.2.0
-        - 4.0.5
-        - 4.1.1
-        - '4.0'
       py-jupyter-notebook:
         versions:
-        - 4.0.6
-        - 4.2.2
         - 4.2.3
-        - 4.1.0
-        - 4.0.3
-        - 4.0.4
-        - 4.2.1
-        - 4.0.2
-        - 4.0.5
-        - 4.2.0
       py-keras:
         versions:
-        - 1.2.1
         - 2.0.3
-        - 1.1.0
-        - 1.2.2
-        - 1.1.2
-        - 1.2.0
-        - 1.1.1
       py-lazy:
         versions:
         - '1.2'
@@ -4686,45 +3697,18 @@ test-suite:
       py-mako:
         versions:
         - 1.0.4
-        - 1.0.1
       py-markdown:
         versions:
         - 2.6.7
-        - '2.6'
-        - 2.6.2
-        - 2.6.6
-        - 2.6.1
-        - 2.5.1
-        - 2.6.5
-        - 2.6.4
-        - 2.5.2
-        - '2.5'
-        - 2.6.3
       py-markupsafe:
         versions:
-        - '0.22'
-        - '0.19'
-        - '0.21'
         - '0.23'
-        - '0.20'
       py-matplotlib:
         versions:
-        - 1.5.1
-        - 1.5.3
         - 2.0.0
-        - 1.4.2
-        - 1.4.3
       py-mccabe:
         versions:
-        - '0.1'
         - 0.5.2
-        - 0.5.1
-        - '0.3'
-        - 0.3.1
-        - 0.5.0
-        - 0.2.1
-        - 0.4.0
-        - '0.2'
       py-mdanalysis:
         versions:
         - 0.15.0
@@ -4733,14 +3717,9 @@ test-suite:
         - 1.4.2
       py-mistune:
         versions:
-        - '0.6'
         - 0.7.1
-        - '0.5'
-        - 0.5.1
-        - '0.7'
       py-mock:
         versions:
-        - 1.3.0
         - 2.0.0
       py-mongo:
         versions:
@@ -4753,14 +3732,12 @@ test-suite:
         - 0.9.6
       py-mpi4py:
         versions:
-        - 1.3.1
         - 2.0.0
       py-mpmath:
         versions:
         - '0.19'
       py-multiprocess:
         versions:
-        - 0.70.4
         - 0.70.5
       py-mx:
         versions:
@@ -4774,13 +3751,9 @@ test-suite:
       py-nbconvert:
         versions:
         - 4.2.0
-        - 4.1.0
-        - 4.0.0
       py-nbformat:
         versions:
-        - 4.0.1
         - 4.1.0
-        - 4.0.0
       py-neo:
         versions:
         - 0.4.1
@@ -4789,7 +3762,6 @@ test-suite:
         - 0.1.1
       py-netcdf4:
         versions:
-        - 1.2.3.1
         - 1.2.7
       py-netifaces:
         versions:
@@ -4799,27 +3771,16 @@ test-suite:
         - '1.11'
       py-nose:
         versions:
-        - 1.3.6
         - 1.3.7
-        - 1.3.4
       py-nosexcover:
         versions:
         - 1.0.11
       py-numexpr:
         versions:
-        - '2.5'
-        - 2.4.6
         - 2.6.1
       py-numpy:
         versions:
-        - 1.9.1
-        - 1.12.0
-        - 1.11.2
         - 1.12.1
-        - 1.11.1
-        - 1.9.2
-        - 1.11.0
-        - 1.10.4
       py-numpydoc:
         versions:
         - 0.6.0
@@ -4838,9 +3799,6 @@ test-suite:
       py-pandas:
         versions:
         - 0.19.0
-        - 0.18.0
-        - 0.16.0
-        - 0.16.1
       py-pathlib2:
         versions:
         - 2.1.0
@@ -4856,7 +3814,6 @@ test-suite:
       py-pbr:
         versions:
         - 1.10.0
-        - 1.8.1
       py-periodictable:
         versions:
         - 1.4.1
@@ -4865,7 +3822,6 @@ test-suite:
         - 3.7.0
       py-pexpect:
         versions:
-        - '3.3'
         - 4.2.1
       py-phonopy:
         versions:
@@ -4878,8 +3834,6 @@ test-suite:
         - 1.1.7
       py-pillow:
         versions:
-        - 3.2.0
-        - 3.0.0
         - 3.3.0.dev0
       py-pip:
         versions:
@@ -4896,12 +3850,8 @@ test-suite:
       py-pox:
         versions:
         - 0.2.3
-        - 0.2.1
-        - 0.2.2
       py-ppft:
         versions:
-        - 1.6.4.6
-        - 1.6.4.5
         - 1.6.4.7.1
       py-prettytable:
         versions:
@@ -4909,17 +3859,12 @@ test-suite:
       py-proj:
         versions:
         - 1.9.5.1.1
-        - 1.9.5.1
       py-prompt-toolkit:
         versions:
         - 1.0.9
       py-protobuf:
         versions:
-        - 2.5.0
         - 3.0.0b2
-        - 2.4.1
-        - 2.6.1
-        - 2.3.0
       py-psutil:
         versions:
         - 5.0.1
@@ -4929,42 +3874,26 @@ test-suite:
       py-pudb:
         versions:
         - 2017.1.1
-        - '2016.2'
       py-py:
         versions:
-        - 1.4.31
         - 1.4.33
       py-py2cairo:
         versions:
         - 1.10.0
       py-py2neo:
         versions:
-        - 2.0.7
-        - 2.0.4
-        - 2.0.5
         - 2.0.8
-        - 2.0.6
       py-py4j:
         versions:
-        - 0.10.3
         - 0.10.4
       py-pychecker:
         versions:
         - 0.8.19
       py-pycodestyle:
         versions:
-        - 1.5.4
-        - 1.6.2
-        - 1.5.7
-        - 1.6.1
-        - 1.5.6
-        - '1.6'
-        - 1.5.5
-        - 1.7.0
         - 2.0.0
       py-pycparser:
         versions:
-        - '2.13'
         - '2.17'
       py-pycurl:
         versions:
@@ -4977,7 +3906,6 @@ test-suite:
         - 2.0.5
       py-pydot:
         versions:
-        - 1.2.2
         - 1.2.3
       py-pyelftools:
         versions:
@@ -4987,60 +3915,36 @@ test-suite:
         - 0.10.4
       py-pyflakes:
         versions:
-        - 1.2.1
-        - 0.9.0
-        - 1.1.0
-        - 1.2.2
-        - 0.9.1
-        - 1.2.3
-        - 0.9.2
-        - 1.0.0
         - 1.3.0
-        - 1.2.0
       py-pygments:
         versions:
-        - 2.0.2
-        - 2.1.3
-        - 2.0.1
         - 2.2.0
       py-pygobject:
         versions:
-        - 2.28.3
         - 2.28.6
       py-pygtk:
         versions:
         - 2.24.0
       py-pylint:
         versions:
-        - 1.4.1
         - 1.4.3
       py-pymatgen:
         versions:
         - 4.7.2
-        - 4.6.2
       py-pyminifier:
         versions:
         - '2.1'
       py-pympler:
         versions:
-        - 0.4.1
-        - 0.4.2
         - 0.4.3
-        - '0.4'
-        - 0.3.1
       py-pynn:
         versions:
-        - 0.8.1
-        - 0.8beta
         - 0.8.3
-        - 0.7.5
       py-pypar:
         versions:
         - 2.1.5_108
       py-pyparsing:
         versions:
-        - 2.0.3
-        - 2.1.10
         - 2.2.0
       py-pyqt:
         versions:
@@ -5050,19 +3954,15 @@ test-suite:
         - 3.1.1
       py-pyside:
         versions:
-        - 1.2.2
         - 1.2.4
       py-pysocks:
         versions:
         - 1.6.6
-        - 1.5.7
       py-pytables:
         versions:
         - 3.3.0
-        - 3.2.2
       py-pytest:
         versions:
-        - 3.0.2
         - 3.0.7
       py-pytest-cov:
         versions:
@@ -5087,18 +3987,13 @@ test-suite:
         - 0.5.5
       py-pytz:
         versions:
-        - '2015.4'
-        - '2016.3'
-        - '2014.10'
         - '2016.10'
-        - 2016.6.1
       py-pyyaml:
         versions:
         - '3.11'
       py-qtawesome:
         versions:
         - 0.4.1
-        - 0.3.3
       py-qtconsole:
         versions:
         - 4.2.1
@@ -5110,7 +4005,6 @@ test-suite:
         - 0.11.1
       py-radical-utils:
         versions:
-        - 0.41.1
         - '0.45'
       py-ranger:
         versions:
@@ -5121,7 +4015,6 @@ test-suite:
       py-requests:
         versions:
         - 2.13.0
-        - 2.11.1
       py-restview:
         versions:
         - 2.6.1
@@ -5130,7 +4023,6 @@ test-suite:
         - 0.10.5
       py-rpy2:
         versions:
-        - 2.5.4
         - 2.5.6
       py-rtree:
         versions:
@@ -5146,60 +4038,36 @@ test-suite:
         - 0.12.3
       py-scikit-learn:
         versions:
-        - 0.17.1
         - 0.18.1
-        - 0.16.1
-        - 0.15.2
       py-scipy:
         versions:
         - 0.19.0
-        - 0.18.1
-        - 0.15.1
-        - 0.15.0
-        - 0.17.0
       py-seaborn:
         versions:
         - 0.7.1
       py-setuptools:
         versions:
-        - 25.2.0
-        - 11.3.1
-        - 20.6.7
-        - 34.2.0
-        - 20.7.0
-        - '19.2'
-        - '16.0'
-        - '20.5'
         - 34.4.1
-        - '18.1'
       py-sh:
         versions:
         - 1.12.9
-        - '1.11'
       py-shiboken:
         versions:
         - 1.2.2
       py-simplegeneric:
         versions:
-        - '0.8'
         - 0.8.1
       py-simplejson:
         versions:
         - 3.10.0
-        - 3.8.2
-        - 3.8.0
-        - 3.9.0
-        - 3.8.1
       py-singledispatch:
         versions:
         - 3.4.0.3
       py-sip:
         versions:
-        - 4.16.5
         - 4.16.7
       py-six:
         versions:
-        - 1.9.0
         - 1.10.0
       py-slepc4py:
         versions:
@@ -5216,8 +4084,6 @@ test-suite:
       py-sphinx:
         versions:
         - 1.5.5
-        - 1.3.1
-        - 1.4.5
       py-sphinx-bootstrap-theme:
         versions:
         - 0.4.13
@@ -5226,7 +4092,6 @@ test-suite:
         - 0.1.10a0
       py-spyder:
         versions:
-        - 2.3.9
         - 3.1.3
       py-spykeutils:
         versions:
@@ -5242,14 +4107,12 @@ test-suite:
         - '0.20'
       py-symengine:
         versions:
-        - 0.2.0
         - develop
       py-symfit:
         versions:
         - 0.3.5
       py-sympy:
         versions:
-        - 0.7.6
         - '1.0'
       py-tabulate:
         versions:
@@ -5271,21 +4134,13 @@ test-suite:
         - 4.8.4
       py-traitlets:
         versions:
-        - 4.2.1
         - 4.3.1
-        - 4.0.0
-        - 4.1.0
-        - 4.2.2
-        - 4.2.0
-        - 4.3.0
-        - '4.0'
       py-tuiview:
         versions:
         - 1.1.7
       py-twisted:
         versions:
         - 15.4.0
-        - 15.3.0
       py-tzlocal:
         versions:
         - '1.3'
@@ -5297,7 +4152,6 @@ test-suite:
         - 0.5.1
       py-urllib3:
         versions:
-        - '1.14'
         - '1.20'
       py-urwid:
         versions:
@@ -5307,9 +4161,6 @@ test-suite:
         - 2.16.0.0
       py-virtualenv:
         versions:
-        - 1.11.6
-        - 13.0.1
-        - 15.0.1
         - 15.1.0
       py-vsc-base:
         versions:
@@ -5325,11 +4176,9 @@ test-suite:
         - 0.1.7
       py-werkzeug:
         versions:
-        - 0.11.11
         - 0.11.15
       py-wheel:
         versions:
-        - 0.26.0
         - 0.29.0
       py-widgetsnbextension:
         versions:
@@ -5354,74 +4203,34 @@ test-suite:
         - 0.2.1
       py-yt:
         versions:
-        - 3.0.2
-        - development
-        - 3.1.0
         - 3.3.5
-        - 3.3.1
-        - 3.3.4
-        - 3.2.3
-        - 2.6.3
       py-zmq:
         versions:
         - 16.0.2
-        - 14.7.0
       python:
         versions:
-        - 3.5.1
-        - 2.7.8
-        - 3.4.3
-        - 2.7.13
-        - 3.5.0
-        - 3.1.5
-        - 2.7.9
-        - 3.2.6
-        - 2.7.10
-        - 3.3.6
-        - 2.7.11
-        - 3.5.2
         - 3.6.0
-        - 2.7.12
       qbank:
         versions:
         - 2.10.4
       qhull:
         versions:
-        - '2012.1'
         - '2015.2'
       qrupdate:
         versions:
         - 1.1.2
       qt:
         versions:
-        - 5.4.0
-        - 3.3.8b
         - 5.7.1
-        - 5.7.0
-        - 4.8.6
-        - 5.4.2
-        - 5.2.1
-        - 5.5.1
-        - 5.3.2
       qt-creator:
         versions:
         - 4.1.0
       qthreads:
         versions:
-        - '1.10'
-        - '1.11'
         - '1.12'
       r:
         versions:
-        - 3.2.0
         - 3.3.2
-        - 3.2.1
-        - 3.3.1
-        - 3.2.2
-        - 3.1.3
-        - 3.3.0
-        - 3.2.3
-        - 3.1.2
       r-abind:
         versions:
         - 1.4-3
@@ -5439,7 +4248,6 @@ test-suite:
         - 1.60.0-2
       r-biocgenerics:
         versions:
-        - '3.2'
         - '3.3'
       r-biocinstaller:
         versions:
@@ -5459,18 +4267,15 @@ test-suite:
       r-car:
         versions:
         - 2.1-4
-        - 2.1-2
       r-caret:
         versions:
         - 6.0-73
-        - 6.0-70
       r-catools:
         versions:
         - 1.17.1
       r-checkpoint:
         versions:
         - 0.3.18
-        - 0.3.15
       r-chron:
         versions:
         - 2.3-47
@@ -5479,18 +4284,15 @@ test-suite:
         - 7.3-14
       r-cluster:
         versions:
-        - 2.0.4
         - 2.0.5
       r-codetools:
         versions:
-        - 0.2-14
         - 0.2-15
       r-coin:
         versions:
         - 1.1-3
       r-colorspace:
         versions:
-        - 1.2-6
         - 1.3-2
       r-corrplot:
         versions:
@@ -5506,13 +4308,10 @@ test-suite:
         - 0.0.19
       r-curl:
         versions:
-        - '1.0'
-        - 0.9.7
         - '2.3'
       r-data-table:
         versions:
         - 1.10.0
-        - 1.9.6
       r-dbi:
         versions:
         - 0.4-1
@@ -5522,7 +4321,6 @@ test-suite:
       r-devtools:
         versions:
         - 1.12.0
-        - 1.11.1
       r-diagrammer:
         versions:
         - 0.8.4
@@ -5532,8 +4330,6 @@ test-suite:
       r-digest:
         versions:
         - 0.6.12
-        - 0.6.11
-        - 0.6.9
       r-domc:
         versions:
         - 1.3.4
@@ -5557,7 +4353,6 @@ test-suite:
         - 0.3-8
       r-evaluate:
         versions:
-        - '0.9'
         - '0.10'
       r-filehash:
         versions:
@@ -5586,7 +4381,6 @@ test-suite:
       r-ggplot2:
         versions:
         - 2.2.1
-        - 2.1.0
       r-ggvis:
         versions:
         - 0.4.2
@@ -5596,7 +4390,6 @@ test-suite:
       r-git2r:
         versions:
         - 0.18.0
-        - 0.15.0
       r-glmnet:
         versions:
         - 2.0-5
@@ -5633,7 +4426,6 @@ test-suite:
       r-httr:
         versions:
         - 1.2.1
-        - 1.1.0
       r-igraph:
         versions:
         - 1.0.1
@@ -5654,7 +4446,6 @@ test-suite:
         - master
       r-irlba:
         versions:
-        - 2.0.0
         - 2.1.2
       r-iterators:
         versions:
@@ -5665,8 +4456,6 @@ test-suite:
       r-jsonlite:
         versions:
         - '1.2'
-        - '1.0'
-        - 0.9.21
       r-kernlab:
         versions:
         - 0.9-25
@@ -5678,7 +4467,6 @@ test-suite:
         - 1.3.1
       r-knitr:
         versions:
-        - '0.6'
         - '1.14'
       r-labeling:
         versions:
@@ -5728,7 +4516,6 @@ test-suite:
       r-matrix:
         versions:
         - 1.2-8
-        - 1.2-6
       r-matrixmodels:
         versions:
         - 0.4-1
@@ -5741,11 +4528,9 @@ test-suite:
       r-mgcv:
         versions:
         - 1.8-16
-        - 1.8-13
       r-mime:
         versions:
         - '0.5'
-        - '0.4'
       r-minqa:
         versions:
         - 1.2.4
@@ -5775,7 +4560,6 @@ test-suite:
         - 0.2.12
       r-nlme:
         versions:
-        - 3.1-128
         - 3.1-130
       r-nloptr:
         versions:
@@ -5795,10 +4579,8 @@ test-suite:
       r-openssl:
         versions:
         - 0.9.6
-        - 0.9.4
       r-packrat:
         versions:
-        - 0.4.7-1
         - 0.4.8-1
       r-pacman:
         versions:
@@ -5814,7 +4596,6 @@ test-suite:
         - 0.2-4
       r-pbkrtest:
         versions:
-        - 0.4-4
         - 0.4-6
       r-pkgmaker:
         versions:
@@ -5822,7 +4603,6 @@ test-suite:
       r-plotrix:
         versions:
         - 3.6-4
-        - 3.6-3
       r-pls:
         versions:
         - 2.6-0
@@ -5849,11 +4629,9 @@ test-suite:
         - 0.4-5
       r-quantreg:
         versions:
-        - '5.26'
         - '5.29'
       r-r6:
         versions:
-        - 2.1.2
         - 2.2.0
       r-randomforest:
         versions:
@@ -5870,12 +4648,9 @@ test-suite:
       r-rcpp:
         versions:
         - 0.12.9
-        - 0.12.5
-        - 0.12.6
       r-rcppeigen:
         versions:
         - 0.3.2.9.0
-        - 0.3.2.8.1
       r-registry:
         versions:
         - '0.3'
@@ -5884,7 +4659,6 @@ test-suite:
         - '0.9'
       r-reshape2:
         versions:
-        - 1.4.1
         - 1.4.2
       r-rgooglemaps:
         versions:
@@ -5940,7 +4714,6 @@ test-suite:
       r-rstudioapi:
         versions:
         - '0.6'
-        - '0.5'
       r-rzmq:
         versions:
         - 0.7.7
@@ -5950,7 +4723,6 @@ test-suite:
       r-scales:
         versions:
         - 0.4.1
-        - 0.4.0
       r-shiny:
         versions:
         - 0.13.2
@@ -5960,17 +4732,14 @@ test-suite:
       r-sparsem:
         versions:
         - '1.74'
-        - '1.7'
       r-stanheaders:
         versions:
         - 2.10.0-2
       r-stringi:
         versions:
-        - 1.1.1
         - 1.1.2
       r-stringr:
         versions:
-        - 1.0.0
         - 1.1.0
       r-strucchange:
         versions:
@@ -5980,7 +4749,6 @@ test-suite:
         - 3.30-3
       r-survival:
         versions:
-        - 2.39-5
         - 2.40-1
       r-tarifx:
         versions:
@@ -5994,14 +4762,12 @@ test-suite:
       r-th-data:
         versions:
         - 1.0-8
-        - 1.0-7
       r-threejs:
         versions:
         - 0.2.2
       r-tibble:
         versions:
         - '1.2'
-        - '1.1'
       r-tidyr:
         versions:
         - 0.5.1
@@ -6023,18 +4789,14 @@ test-suite:
       r-withr:
         versions:
         - 1.0.2
-        - 1.0.1
       r-xgboost:
         versions:
         - 0.6-4
-        - 0.4-4
       r-xlconnect:
         versions:
-        - 0.2-11
         - 0.2-12
       r-xlconnectjars:
         versions:
-        - 0.2-9
         - 0.2-12
       r-xlsx:
         versions:
@@ -6045,7 +4807,6 @@ test-suite:
       r-xml:
         versions:
         - 3.98-1.5
-        - 3.98-1.4
       r-xtable:
         versions:
         - 1.8-2
@@ -6057,7 +4818,6 @@ test-suite:
         - 2.1.13
       r-zoo:
         versions:
-        - 1.7-13
         - 1.7-14
       raja:
         versions:
@@ -6073,7 +4833,6 @@ test-suite:
         - 1.0.0
       readline:
         versions:
-        - '6.3'
         - '7.0'
       recordproto:
         versions:
@@ -6098,23 +4857,18 @@ test-suite:
         - 1.0.6
       rockstar:
         versions:
-        - yt
         - develop
       root:
         versions:
-        - 6.06.02
-        - 6.06.04
         - 6.06.06
       rose:
         versions:
         - 0.9.7
-        - master
       rstart:
         versions:
         - 1.0.5
       rsync:
         versions:
-        - 3.1.1
         - 3.1.2
       ruby:
         versions:
@@ -6127,41 +4881,22 @@ test-suite:
         - 0.20.5
       samrai:
         versions:
-        - 3.7.2
-        - 3.3.3-beta
-        - 3.3.2-beta
-        - 3.8.0
-        - 3.5.2-beta
-        - 3.4.1-beta
-        - 3.5.0-beta
-        - 3.7.3
-        - 3.10.0
         - 3.11.2
-        - 3.9.1
-        - 2.4.4
-        - 3.6.3-beta
       samtools:
         versions:
-        - '1.2'
-        - 1.3.1
         - '1.4'
       sas:
         versions:
         - 0.2.0
-        - 0.1.4
-        - 0.1.3
       saws:
         versions:
-        - 0.1.0
         - develop
       sbt:
         versions:
         - 0.13.12
       scalasca:
         versions:
-        - 2.2.2
         - 2.3.1
-        - '2.1'
       scons:
         versions:
         - 2.5.0
@@ -6171,37 +4906,15 @@ test-suite:
       scorep:
         versions:
         - '3.0'
-        - 2.0.2
-        - 1.4.2
-        - '1.3'
       scotch:
         versions:
-        - 6.0.3
-        - 6.0.0
-        - 5.1.10b
         - 6.0.4
       scr:
         versions:
         - 1.1.8
-        - 1.1-7
       screen:
         versions:
         - 4.3.1
-        - 3.9.11
-        - 3.7.6
-        - 3.9.15
-        - 3.9.4
-        - 3.9.10
-        - 4.2.1
-        - 4.0.3
-        - 3.7.2
-        - 3.9.9
-        - 4.2.0
-        - 3.7.1
-        - 4.0.2
-        - 3.7.4
-        - 3.9.8
-        - 4.3.0
       scripts:
         versions:
         - 1.0.1
@@ -6210,10 +4923,7 @@ test-suite:
         - 1.2.2
       sctk:
         versions:
-        - 2.4.8
-        - 2.4.9
         - 2.4.10
-        - 2.4.0
       sdl2:
         versions:
         - 2.0.5
@@ -6226,7 +4936,6 @@ test-suite:
       seqtk:
         versions:
         - '1.2'
-        - '1.1'
       serf:
         versions:
         - 1.3.8
@@ -6238,15 +4947,7 @@ test-suite:
         - 1.3.1
       sga:
         versions:
-        - 0.10.8
         - 0.10.15
-        - 0.10.11
-        - 0.10.14
-        - 0.10.10
-        - 0.10.3
-        - 0.10.13
-        - 0.10.9
-        - 0.10.12
       shiny-server:
         versions:
         - 1.5.3.838
@@ -6256,25 +4957,15 @@ test-suite:
       silo:
         versions:
         - 4.10.2
-        - '4.9'
-        - '4.8'
       simul:
         versions:
-        - '1.13'
         - '1.16'
-        - '1.14'
-        - '1.15'
       simulationio:
         versions:
-        - 1.0.0
-        - 0.1.0
         - develop
       slepc:
         versions:
-        - 3.7.1
         - 3.7.3
-        - 3.6.3
-        - 3.6.2
       smproxy:
         versions:
         - 1.0.6
@@ -6293,20 +4984,12 @@ test-suite:
       spark:
         versions:
         - 2.1.0
-        - 2.0.2
-        - 1.6.2
-        - 2.0.0
-        - 1.6.1
       sparsehash:
         versions:
         - 2.0.3
       spdlog:
         versions:
         - 0.11.0
-        - 0.10.0
-        - 0.9.0
-      spectrum-mpi:
-        versions: []
       speex:
         versions:
         - 1.2.0
@@ -6325,15 +5008,12 @@ test-suite:
       sqlite:
         versions:
         - 3.18.0
-        - 3.8.5
       sst-dumpi:
         versions:
         - 6.1.0
-        - master
       sst-macro:
         versions:
         - 6.1.0
-        - master
       staden-io-lib:
         versions:
         - 1.14.8
@@ -6343,10 +5023,6 @@ test-suite:
       stat:
         versions:
         - 3.0.1
-        - 3.0.0
-        - 2.1.0
-        - 2.0.0
-        - 2.2.0
       stc:
         versions:
         - 0.7.3
@@ -6358,39 +5034,22 @@ test-suite:
         - 1.0.4
       sublime-text:
         versions:
-        - 2.0.2
         - 3_build_3126
       subversion:
         versions:
-        - 1.9.3
-        - 1.8.13
         - 1.9.5
-        - 1.8.17
       suite-sparse:
         versions:
-        - 4.5.1
         - 4.5.4
-        - 4.5.3
       sundials:
         versions:
         - 2.6.2
       superlu:
         versions:
         - 5.2.1
-        - '4.3'
       superlu-dist:
         versions:
-        - '3.3'
-        - '4.1'
-        - 5.1.1
         - develop
-        - 5.0.0
-        - 5.1.0
-        - '4.3'
-        - xsdk-0.2.0
-        - '4.2'
-        - 5.1.3
-        - '4.0'
       superlu-mt:
         versions:
         - '3.1'
@@ -6399,18 +5058,9 @@ test-suite:
         - 0.3.0
       swig:
         versions:
-        - 3.0.2
-        - 2.0.2
         - 3.0.12
-        - 2.0.12
-        - 3.0.8
-        - 1.3.40
-        - 3.0.10
-        - 3.0.11
       symengine:
         versions:
-        - 0.2.0
-        - 0.1.0
         - develop
       sympol:
         versions:
@@ -6418,7 +5068,6 @@ test-suite:
       sz:
         versions:
         - develop
-        - 1.4.9-beta
       szip:
         versions:
         - '2.1'
@@ -6428,7 +5077,6 @@ test-suite:
       tar:
         versions:
         - '1.29'
-        - '1.28'
       task:
         versions:
         - 2.4.4
@@ -6437,38 +5085,22 @@ test-suite:
         - 1.1.0
       tau:
         versions:
-        - '2.24'
         - '2.25'
-        - 2.24.1
-        - 2.23.1
       tbb:
         versions:
         - '2017.5'
-        - '2017.3'
-        - 4.4.3
-        - 4.4.4
       tcl:
         versions:
-        - 8.6.4
-        - 8.6.5
-        - 8.5.19
-        - 8.6.3
         - 8.6.6
       tetgen:
         versions:
         - 1.5.0
-        - 1.4.3
       tethex:
         versions:
-        - 0.0.7
         - develop
       texinfo:
         versions:
         - '6.3'
-        - '5.1'
-        - '5.2'
-        - '6.0'
-        - '5.0'
       texlive:
         versions:
         - live
@@ -6478,7 +5110,6 @@ test-suite:
       the-silver-searcher:
         versions:
         - 0.32.0
-        - 0.30.0
       thrift:
         versions:
         - 0.9.2
@@ -6488,22 +5119,12 @@ test-suite:
       tinyxml2:
         versions:
         - 4.0.1
-        - 2.1.0
-        - 4.0.0
-        - 2.0.2
-        - 2.2.0
-        - 3.0.0
       tk:
         versions:
-        - 8.6.5
-        - 8.6.3
         - 8.6.6
       tmux:
         versions:
-        - 1.9a
         - '2.3'
-        - '2.1'
-        - '2.2'
       tmuxinator:
         versions:
         - 0.6.11
@@ -6521,21 +5142,7 @@ test-suite:
         - '1.6'
       trilinos:
         versions:
-        - 12.8.1
-        - 11.14.1
-        - 12.2.1
-        - 12.6.1
-        - 12.6.4
-        - 11.14.2
         - develop
-        - 12.6.3
-        - master
-        - 12.10.1
-        - 11.14.3
-        - 12.0.1
-        - xsdk-0.2.0
-        - 12.6.2
-        - 12.4.2
       turbine:
         versions:
         - 1.0.0
@@ -6550,13 +5157,9 @@ test-suite:
         - 1.0.9
       uberftp:
         versions:
-        - '2_7'
         - '2_8'
-        - '2_6'
       udunits2:
         versions:
-        - 2.2.21
-        - 2.2.23
         - 2.2.24
       uncrustify:
         versions:
@@ -6575,49 +5178,33 @@ test-suite:
         - 2.3.4
       util-linux:
         versions:
-        - '2.25'
         - 2.29.1
       util-macros:
         versions:
-        - 1.19.0
         - 1.19.1
       uuid:
         versions:
         - 1.6.2
       valgrind:
         versions:
-        - 3.10.0
-        - 3.11.0
-        - 3.10.1
-        - 3.12.0
         - develop
       vampirtrace:
         versions:
         - 5.14.4
       vc:
         versions:
-        - 1.1.0
-        - 1.2.0
         - 1.3.0
       vcsh:
         versions:
-        - '1.20141026'
-        - '1.20151229'
-        - '1.20150502'
-        - '1.20141025'
         - 1.20151229-1
       vdt:
         versions:
-        - 0.3.8
-        - 0.3.7
-        - 0.3.6
         - 0.3.9
       vecgeom:
         versions:
         - 0.3.rc
       veclibfort:
         versions:
-        - 0.4.2
         - develop
       videoproto:
         versions:
@@ -6627,53 +5214,36 @@ test-suite:
         - 1.0.4
       vim:
         versions:
-        - 8.0.0454
         - 8.0.0503
-        - 7.4.2367
-        - 8.0.0134
       visit:
         versions:
-        - 2.10.1
-        - 2.10.2
         - 2.10.3
       vizglow:
         versions:
-        - 2.2alpha17
-        - 2.2alpha15
         - 2.2alpha20
       voropp:
         versions:
         - 0.4.6
       votca-csg:
         versions:
-        - '1.4'
         - develop
       votca-tools:
         versions:
-        - '1.4'
         - develop
       vtk:
         versions:
-        - 6.1.0
-        - 6.3.0
-        - 7.0.0
         - 7.1.0
       wannier90:
         versions:
         - 2.1.0
-        - 2.0.1
       wget:
         versions:
-        - '1.16'
         - '1.17'
       windowswmproto:
         versions:
         - 1.0.4
       wx:
         versions:
-        - 3.0.2
-        - 3.0.1
-        - 3.1.0
         - develop
       wxpropgrid:
         versions:
@@ -6704,7 +5274,6 @@ test-suite:
         - '0.1'
       xcb-proto:
         versions:
-        - '1.11'
         - '1.12'
       xcb-util:
         versions:
@@ -6946,10 +5515,6 @@ test-suite:
       xrootd:
         versions:
         - 4.6.0
-        - 4.5.0
-        - 4.4.0
-        - 4.4.1
-        - 4.3.0
       xrx:
         versions:
         - 1.0.4
@@ -6958,13 +5523,9 @@ test-suite:
         - 1.4.1
       xsdk:
         versions:
-        - xsdk-0.2.0
         - develop
       xsdktrilinos:
         versions:
-        - 12.8.1
-        - xsdk-0.2.0
-        - 12.6.4
         - develop
       xset:
         versions:
@@ -7014,8 +5575,6 @@ test-suite:
       xz:
         versions:
         - 5.2.3
-        - 5.2.2
-        - 5.2.0
       yaml-cpp:
         versions:
         - 0.5.3
@@ -7024,35 +5583,22 @@ test-suite:
         - 1.3.0
       yorick:
         versions:
-        - f90-plugin
         - 2.2.04
-        - master
       zeromq:
         versions:
-        - 4.1.2
-        - 4.0.7
         - 4.1.4
-        - 4.1.1
-        - 4.0.5
-        - 4.0.6
       zfp:
         versions:
         - 0.5.1
-        - 0.5.0
       zip:
         versions:
         - '3.0'
       zlib:
         versions:
-        - 1.2.8
         - 1.2.11
-        - 1.2.3
       zoltan:
         versions:
-        - '3.8'
         - '3.83'
-        - '3.6'
-        - '3.3'
       zsh:
         versions:
         - 5.1.1
@@ -7063,4 +5609,3 @@ test-suite:
       clang:
         versions:
         - 3.4.2
-
