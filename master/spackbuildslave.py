@@ -87,15 +87,15 @@ runurl $BB_URL/bb-bootstrap.sh"""
     @staticmethod
     def pass_generator(size=24, chars=string.ascii_uppercase + string.digits):
         return ''.join(random.choice(chars) for _ in range(size))
-'''
-# calfornia
+    '''
+    # calfornia
     def __init__(self, name, password=None, master='', url='', instance_type="m3.large",
                 identifier=ec2_default_access, secret_identifier=ec2_default_secret,
                 keypair_name=ec2_default_keypair_name, security_name='cdash_spackBuilder',
                 user_data=None, region="us-west-1", placement="a", max_builds=1,
                 build_wait_timeout=60*10, spot_instance=True, max_spot_price=.10,
                 price_multiplier=None, **kwargs):
-'''
+    '''
 
     def __init__(self, name, password=None, master='', url='', instance_type="m3.large",
                  identifier=ec2_default_access, secret_identifier=ec2_default_secret,
