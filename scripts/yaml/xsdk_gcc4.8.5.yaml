@@ -15,31 +15,31 @@ test-suite:
   - packages:
       alquimia:
         versions:
-        - develop
+        - xsdk-0.2.0
       hypre:
         versions:
-        - develop
+        - 2.11.2
       petsc:
         versions:
-        - develop
+        - 3.7.5
       superlu:
         versions:
         - 5.2.1
       superlu-dist:
         versions:
-        - develop
+        - 5.1.3
       superlu-mt:
         versions:
         - '3.1'
       trilinos:
         versions:
-        - develop
+        - 12.10.1
       xsdk:
         versions:
-        - develop
+        - xsdk-0.2.0
       xsdktrilinos:
         versions:
-        - develop
+        - 12.8.1
   - compilers:
       gcc:
         versions:
