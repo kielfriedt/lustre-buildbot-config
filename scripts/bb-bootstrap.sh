@@ -27,7 +27,7 @@ fi
 # calls us.  If they are not there, we set some defaults but they almost
 # certainly will not work.
 if test ! "$BB_MASTER"; then
-    BB_MASTER="35.167.244.38:9989"
+    BB_MASTER="34.210.130.225:9989"
 fi
 if test ! "$BB_NAME"; then
     BB_NAME=$(hostname)
