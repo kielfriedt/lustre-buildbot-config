@@ -158,7 +158,8 @@ The official Spack Buildbot can be accessed by everyone at
 http://Spack.io/. Developers are encouraged to use this infrastructure
 when working on a change. However, this code can be used as a basis for
 building a private build and test environment.  This may be useful when working
-on extending the testing infrastructure itself.
+on extending the testing infrastructure itself. We recommend using https://github.com/opensfs/buildbot 
+Building Buildbot via pip or some other package installer can cause compatibility issues.
 
 Generally speaking to do this you will need to create a `password.py` file
 with your credentials, then list your builders in the `master.cfg` file, and

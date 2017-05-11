@@ -11,3 +11,6 @@ master/twistd.pid
 master/password.py
 master/password.pyc
 master/public_html/*.rpm
+.DS_Store
+master/.DS_Store
+scripts/.DS_Store
