@@ -3,9 +3,8 @@ import os
 from twisted.application import service
 from buildbot.master import BuildMaster
 
-
-#basedir = '/home/buildbot/cdash_spack/master'
-basedir = '/home/ubuntu/spack-buildbot-config/master'
+basedir = '/home/centos/spack-buildbot-config/master'
+#basedir = '/home/ubuntu/spack-buildbot-config/master'
 rotateLength = 10000000
 maxRotatedFiles = 10
 configfile = 'master.cfg'

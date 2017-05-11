@@ -7,7 +7,7 @@ from buildbot.steps.shell import ShellCommand, Configure, SetPropertyFromCommand
 from buildbot.steps.master import SetProperty
 from buildbot.steps.transfer import FileUpload, FileDownload, DirectoryUpload
 from buildbot.steps.trigger import Trigger
-from buildbot.status.results import SUCCESS, FAILURE, SKIPPED, WARNINGS 
+from buildbot.status.results import SUCCESS, FAILURE, SKIPPED, WARNINGS
 from buildbot.steps.source.git import Git
 import random
 
@@ -19,14 +19,18 @@ def do_step_if_value(step, name, value):
     else:
         return False
 
+
 def do_step_if_not_ubuntu(step):
-    return  not do_step_if_value(step, 'distro', 'ubuntu')
+    return not do_step_if_value(step, 'distro', 'ubuntu')
+
 
 def hide_if_skipped(results, step):
     return results == SKIPPED
 
+
 def hide_except_error(results, step):
     return results in (SUCCESS, SKIPPED)
+
 
 @util.renderer
 def curlCommand(props):
@@ -35,6 +39,7 @@ def curlCommand(props):
     args.extend([bb_url + "bb-sendreport.sh"])
     return args
 
+
 @util.renderer
 def curlxsdkCommand(props):
     args = ["runurl"]
@@ -42,35 +47,46 @@ def curlxsdkCommand(props):
     args.extend([bb_url + "bb-sendreport-xsdk.sh"])
     return args
 
+
 @util.renderer
 def NightlyTestSuiteCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')
+    compiler = props.getProperty('compiler')
+    compiler_version = props.getProperty(compiler)
     distro = props.getProperty('distro')
     version = props.getProperty('distrover')
-    yaml = "day" + str(random.randint(1,7)) + ".yaml"
-    args.extend([bb_url + "bb-runspack.sh", yaml, distro + version + "AWS"])
+    yaml = "day" + str(random.randint(1, 7)) + "_" + \
+        compiler + compiler_version + ".yaml"
+    args.extend([bb_url + "bb-runspack.sh", 1, yaml, distro + version + "AWS"])
     return args
+
 
 @util.renderer
 def WeeklyTestSuiteCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')
+    compiler = props.getProperty('compiler')
+    compiler_version = props.getProperty(compiler)
     distro = props.getProperty('distro')
     version = props.getProperty('distrover')
-    yaml = "all.yaml"
-    args.extend([bb_url + "bb-runspack.sh", yaml, distro + version + "AWS"])
+    yaml = "all_" + compiler + compiler_version + ".yaml"
+    args.extend([bb_url + "bb-runspack.sh", 0, yaml, distro + version + "AWS"])
     return args
+
 
 @util.renderer
 def XSDKNightlyTestSuiteCommand(props):
     args = ["runurl"]
     bb_url = props.getProperty('bburl')
+    compiler = props.getProperty('compiler')
+    compiler_version = props.getProperty(compiler)
     distro = props.getProperty('distro')
     version = props.getProperty('distrover')
-    yaml = "xsdk.yaml"
-    args.extend([bb_url + "bb-runspack.sh", yaml, distro + version + "AWS"])
+    yaml = "xsdk_" + compiler + compiler_version + ".yaml"
+    args.extend([bb_url + "bb-runspack.sh", 1, yaml, distro + version + "AWS"])
     return args
+
 
 @util.renderer
 def dependencyCommand(props):
@@ -79,6 +95,10 @@ def dependencyCommand(props):
     args.extend([bb_url + "bb-dependencies.sh"])
     return args
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> os-cmplr-seperation
 def nightlyTestSuiteFactory(spack_repo):
     """ Generates a build factory for a tarball generating builder.
     Returns:
@@ -89,7 +109,7 @@ def nightlyTestSuiteFactory(spack_repo):
     # update dependencies
     bf.addStep(ShellCommand(
         command=dependencyCommand,
-        decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
+        decodeRC={0: SUCCESS, 1: FAILURE, 2: WARNINGS, 3: SKIPPED},
         haltOnFailure=True,
         logEnviron=False,
         doStepIf=do_step_if_not_ubuntu,
@@ -104,7 +124,7 @@ def nightlyTestSuiteFactory(spack_repo):
         workdir="build/spack",
         mode="full",
         method="fresh",
-        retry=[60,60],
+        retry=[60, 60],
         timeout=3600,
         logEnviron=False,
         getDescription=True,
@@ -114,7 +134,7 @@ def nightlyTestSuiteFactory(spack_repo):
 
     bf.addStep(ShellCommand(
         command=NightlyTestSuiteCommand,
-        decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
+        decodeRC={0: SUCCESS, 1: FAILURE, 2: WARNINGS, 3: SKIPPED},
         haltOnFailure=True,
         logEnviron=False,
         timeout=3600,
@@ -123,11 +143,80 @@ def nightlyTestSuiteFactory(spack_repo):
         descriptionDone=["running nightly test-suite"],
         workdir="build/spack"))
 
+    # send reports
+    bf.addStep(ShellCommand(
+        command=curlCommand,
+        decodeRC={0: SUCCESS, 1: FAILURE, 2: WARNINGS, 3: SKIPPED},
+        haltOnFailure=True,
+        logEnviron=False,
+        lazylogfiles=True,
+        alwaysRun=True,
+        description=["Sending output to cdash"],
+        descriptionDone=["Sending output to cdash"],
+        workdir="build/spack"))
+
+    # Cleanup
+    bf.addStep(ShellCommand(
+        workdir="build",
+        command=["sh", "-c", "rm -rvf *"],
+        haltOnFailure=True,
+        logEnviron=False,
+        lazylogfiles=True,
+        alwaysRun=True,
+        description=["cleaning up"],
+        descriptionDone=["clean up"]))
+
+    return bf
+
+
+def weeklyTestSuiteFactory(spack_repo):
+    """ Generates a build factory for a tarball generating builder.
+    Returns:
+        BuildFactory: Build factory with steps for generating tarballs.
+    """
+    bf = util.BuildFactory()
+
+    # update dependencies
+    bf.addStep(ShellCommand(
+        command=dependencyCommand,
+        decodeRC={0: SUCCESS, 1: FAILURE, 2: WARNINGS, 3: SKIPPED},
+        haltOnFailure=True,
+        logEnviron=False,
+        doStepIf=do_step_if_not_ubuntu,
+        hideStepIf=hide_if_skipped,
+        description=["installing dependencies"],
+        descriptionDone=["installed dependencies"],
+        workdir="build/spack"))
+
+    # Pull the patch from Gerrit
+    bf.addStep(Git(
+        repourl=spack_repo,
+        workdir="build/spack",
+        mode="full",
+        method="fresh",
+        retry=[60, 60],
+        timeout=3600,
+        logEnviron=False,
+        getDescription=True,
+        haltOnFailure=True,
+        description=["cloning"],
+        descriptionDone=["cloned"]))
+
+    bf.addStep(ShellCommand(
+        command=WeeklyTestSuiteCommand,
+        decodeRC={0: SUCCESS, 1: FAILURE, 2: WARNINGS, 3: SKIPPED},
+        haltOnFailure=True,
+        logEnviron=False,
+        timeout=3600,
+        hideStepIf=hide_if_skipped,
+        description=["running weekly test-suite"],
+        descriptionDone=["running weekly test-suite"],
+        workdir="build/spack"))
 
     # send reports
     bf.addStep(ShellCommand(
         command=curlCommand,
-        decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
+        decodeRC={0: SUCCESS, 1: FAILURE, 2: WARNINGS, 3: SKIPPED},
         haltOnFailure=True,
         logEnviron=False,
         lazylogfiles=True,
@@ -229,7 +318,7 @@ def xsdkTestSuiteFactory(spack_repo):
     # update dependencies
     bf.addStep(ShellCommand(
         command=dependencyCommand,
-        decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
+        decodeRC={0: SUCCESS, 1: FAILURE, 2: WARNINGS, 3: SKIPPED},
         haltOnFailure=True,
         logEnviron=False,
         doStepIf=do_step_if_not_ubuntu,
@@ -244,7 +333,7 @@ def xsdkTestSuiteFactory(spack_repo):
         workdir="build/spack",
         mode="full",
         method="fresh",
-        retry=[60,60],
+        retry=[60, 60],
         timeout=3600,
         logEnviron=False,
         getDescription=True,
@@ -254,7 +343,7 @@ def xsdkTestSuiteFactory(spack_repo):
 
     bf.addStep(ShellCommand(
         command=XSDKNightlyTestSuiteCommand,
-        decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
+        decodeRC={0: SUCCESS, 1: FAILURE, 2: WARNINGS, 3: SKIPPED},
         haltOnFailure=True,
         logEnviron=False,
         timeout=3600,
@@ -266,7 +355,7 @@ def xsdkTestSuiteFactory(spack_repo):
     # send reports
     bf.addStep(ShellCommand(
         command=curlxsdkCommand,
-        decodeRC={0 : SUCCESS, 1 : FAILURE, 2 : WARNINGS, 3 : SKIPPED },
+        decodeRC={0: SUCCESS, 1: FAILURE, 2: WARNINGS, 3: SKIPPED},
         haltOnFailure=True,
         logEnviron=False,
         lazylogfiles=True,

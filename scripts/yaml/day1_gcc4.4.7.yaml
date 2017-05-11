@@ -1,0 +1,810 @@
+test-suite:
+  cdash:
+  - https://spack.io/cdash
+  include:
+  - jemalloc
+  - libxcomposite
+  - xsetroot
+  - hdf
+  - libunwind
+  - root
+  - archer
+  - graphlib
+  - util-macros
+  - r-mvtnorm
+  - lammps
+  - libdrm
+  - f90cache
+  - wxpropgrid
+  - gource
+  - py-elephant
+  - py-pyqt
+  - r-coin
+  - raja
+  - py-pudb
+  - dri3proto
+  - py-pyside
+  - pexsi
+  - mpileaks
+  - r-roxygen2
+  - r-jpeg
+  - pfft
+  - sas
+  - libcap
+  - xmag
+  - py-pkgconfig
+  - font-arabic-misc
+  - r-withr
+  - xtrans
+  - libxft
+  - cnmem
+  - r-modeltools
+  - r-packrat
+  - netlib-lapack
+  - py-matplotlib
+  - bzip2
+  - likwid
+  - tcl
+  - tmuxinator
+  - libdmx
+  - py-csvkit
+  - apr
+  - jq
+  - py-sncosmo
+  - py-xpyb
+  - py-sphinx-bootstrap-theme
+  - wget
+  - ghostscript
+  - scalasca
+  - libxvmc
+  - libspatialindex
+  - armadillo
+  - py-griddataformats
+  - py-backports-abc
+  - makedepend
+  - r-raster
+  - go
+  - bamtools
+  - py-pandas
+  - r-labeling
+  - py-lxml
+  - py-pytz
+  - binutils
+  - gdal
+  - gcc
+  - applewmproto
+  - py-dateutil
+  - sdl2-image
+  - r-mgcv
+  - dmxproto
+  - xcursorgen
+  - libpng
+  - libarchive
+  - r-testthat
+  - mvapich2
+  - py-epydoc
+  - libxaw3d
+  - libffi
+  - py-xlrd
+  - nextflow
+  - nauty
+  - exmcutils
+  - serf
+  - exonerate
+  - dbus
+  - r-iterators
+  - r-pacman
+  - libxfont
+  - r-maps
+  - xcb-util-cursor
+  - openmpi
+  - superlu-mt
+  - py-wrapt
+  - mad-numdiff
+  - szip
+  - hdf5-blosc
+  - font-bitstream-speedo
+  - r-gdata
+  - fstobdf
+  - py-rope
+  - r-devtools
+  - py-click
+  - gasnet
+  - texlive
+  - ncdu
+  - py-sphinx-rtd-theme
+  - gl2ps
+  - gconf
+  - xwininfo
+  - libgpuarray
+  - libxrender
+  - r-sandwich
+  - hpctoolkit-externals
+  - libcerf
+  - httpie
+  - r-modelmetrics
+  - pstreams
+  - py-rpy2
+  - uncrustify
+  - libiconv
+  - r-foreign
+  - xrootd
+  - xfontsel
+  - libxext
+  - hpx5
+  - py-unittest2
+  - libuuid
+  - visit
+  - bertini
+  - py-six
+  - bowtie2
+  - pkg-config
+  - apr-util
+  - r-rbokeh
+  - py-pil
+  - py-autopep8
+  - libxau
+  - py-lazyarray
+  - r-sp
+  - mummer
+  - cgal
+  - otf
+  - libxxf86dga
+  - notmuch
+  - expat
+  - cereal
+  - tinyxml2
+  - fastqc
+  - r-ttr
+  - gnu-prolog
+  - liboldx
+  - c-blosc
+  - libxprintutil
+  - py-readme-renderer
+  - simul
+  - silo
+  - py-bleach
+  - curl
+  - cfitsio
+  - py-snowballstemmer
+  - mpc
+  - py-jdcal
+  - py-wcsaxes
+  - r-rsqlite
+  - scr
+  - py-prettytable
+  - py-neo
+  - r-digest
+  - fontsproto
+  - mafft
+  - scripts
+  - py-joblib
+  - dealii
+  - libxv
+  - ibmisc
+  - gdk-pixbuf
+  - libtermkey
+  - mozjs
+  - seqtk
+  - shiny-server
+  - xev
+  - mpe2
+  - saws
+  - allinea-reports
+  - osu-micro-benchmarks
+  - libpciaccess
+  - parallel
+  - qthreads
+  - r-randomforest
+  - compiz
+  - xrdb
+  - docbook-xml
+  - cbtf-argonavis
+  - libssh2
+  - qhull
+  matrix:
+  - packages:
+      allinea-reports:
+        versions:
+        - 6.0.4
+      applewmproto:
+        versions:
+        - 1.4.2
+      apr:
+        versions:
+        - 1.5.2
+      apr-util:
+        versions:
+        - 1.5.4
+      archer:
+        versions:
+        - 1.0.0
+      armadillo:
+        versions:
+        - 7.500.0
+      bamtools:
+        versions:
+        - 2.4.1
+      bertini:
+        versions:
+        - '1.5'
+      binutils:
+        versions:
+        - '2.28'
+      bowtie2:
+        versions:
+        - 2.3.1
+      bzip2:
+        versions:
+        - 1.0.6
+      c-blosc:
+        versions:
+        - 1.11.1
+      cbtf-argonavis:
+        versions:
+        - '1.8'
+      cereal:
+        versions:
+        - 1.2.2
+      cfitsio:
+        versions:
+        - '3.410'
+      cgal:
+        versions:
+        - '4.9'
+      cnmem:
+        versions:
+        - git
+      compiz:
+        versions:
+        - 0.7.8
+      curl:
+        versions:
+        - 7.53.1
+      dbus:
+        versions:
+        - 1.11.2
+      dealii:
+        versions:
+        - 8.5.0
+      dmxproto:
+        versions:
+        - 2.3.1
+      docbook-xml:
+        versions:
+        - '4.5'
+      dri3proto:
+        versions:
+        - '1.0'
+      exmcutils:
+        versions:
+        - 0.5.3
+      exonerate:
+        versions:
+        - 2.4.0
+      expat:
+        versions:
+        - 2.2.0
+      f90cache:
+        versions:
+        - '0.99'
+      fastqc:
+        versions:
+        - 0.11.5
+      font-arabic-misc:
+        versions:
+        - 1.0.3
+      font-bitstream-speedo:
+        versions:
+        - 1.0.2
+      fontsproto:
+        versions:
+        - 2.1.3
+      fstobdf:
+        versions:
+        - 1.0.6
+      gasnet:
+        versions:
+        - 1.28.2
+      gcc:
+        versions:
+        - 6.3.0
+      gconf:
+        versions:
+        - 3.2.6
+      gdal:
+        versions:
+        - 2.1.2
+      gdk-pixbuf:
+        versions:
+        - 2.31.2
+      ghostscript:
+        versions:
+        - '9.18'
+      gl2ps:
+        versions:
+        - 1.3.9
+      gnu-prolog:
+        versions:
+        - 1.4.4
+      go:
+        versions:
+        - 1.8.1
+      gource:
+        versions:
+        - '0.44'
+      graphlib:
+        versions:
+        - 3.0.0
+      hdf:
+        versions:
+        - 4.2.12
+      hdf5-blosc:
+        versions:
+        - master
+      hpctoolkit-externals:
+        versions:
+        - '5.4'
+      hpx5:
+        versions:
+        - 4.0.0
+      httpie:
+        versions:
+        - 0.9.8
+      ibmisc:
+        versions:
+        - 0.1.0
+      jemalloc:
+        versions:
+        - 4.5.0
+      jq:
+        versions:
+        - '1.5'
+      lammps:
+        versions:
+        - 2016.11.17
+      libarchive:
+        versions:
+        - 3.2.1
+      libcap:
+        versions:
+        - '2.25'
+      libcerf:
+        versions:
+        - '1.3'
+      libdmx:
+        versions:
+        - 1.1.3
+      libdrm:
+        versions:
+        - 2.4.70
+      libffi:
+        versions:
+        - 3.2.1
+      libgpuarray:
+        versions:
+        - 0.6.2
+      libiconv:
+        versions:
+        - '1.15'
+      liboldx:
+        versions:
+        - 1.0.1
+      libpciaccess:
+        versions:
+        - 0.13.4
+      libpng:
+        versions:
+        - 1.6.27
+      libspatialindex:
+        versions:
+        - 1.8.5
+      libssh2:
+        versions:
+        - 1.7.0
+      libtermkey:
+        versions:
+        - '0.18'
+      libunwind:
+        versions:
+        - '1.1'
+      libuuid:
+        versions:
+        - 1.0.3
+      libxau:
+        versions:
+        - 1.0.8
+      libxaw3d:
+        versions:
+        - 1.6.2
+      libxcomposite:
+        versions:
+        - 0.4.4
+      libxext:
+        versions:
+        - 1.3.3
+      libxfont:
+        versions:
+        - 1.5.2
+      libxft:
+        versions:
+        - 2.3.2
+      libxprintutil:
+        versions:
+        - 1.0.1
+      libxrender:
+        versions:
+        - 0.9.9
+      libxv:
+        versions:
+        - 1.0.10
+      libxvmc:
+        versions:
+        - 1.0.9
+      libxxf86dga:
+        versions:
+        - 1.1.4
+      likwid:
+        versions:
+        - 4.1.2
+      mad-numdiff:
+        versions:
+        - '20150724'
+      mafft:
+        versions:
+        - '7.221'
+      makedepend:
+        versions:
+        - 1.0.5
+      mozjs:
+        versions:
+        - 24.2.0
+      mpc:
+        versions:
+        - 1.0.3
+      mpe2:
+        versions:
+        - 1.3.0
+      mpileaks:
+        versions:
+        - '1.0'
+      mummer:
+        versions:
+        - '3.23'
+      mvapich2:
+        versions:
+        - 2.3a
+      nauty:
+        versions:
+        - 2.6r7
+      ncdu:
+        versions:
+        - '1.11'
+      netlib-lapack:
+        versions:
+        - 3.6.1
+      nextflow:
+        versions:
+        - 0.24.1
+      notmuch:
+        versions:
+        - 0.23.7
+      openmpi:
+        versions:
+        - 2.1.0
+      osu-micro-benchmarks:
+        versions:
+        - '5.3'
+      otf:
+        versions:
+        - 1.12.5salmon
+      parallel:
+        versions:
+        - '20170322'
+      pexsi:
+        versions:
+        - 0.9.2
+      pfft:
+        versions:
+        - 1.0.8-alpha
+      pkg-config:
+        versions:
+        - 0.29.2
+      pstreams:
+        versions:
+        - 1.0.1
+      py-autopep8:
+        versions:
+        - 1.2.4
+      py-backports-abc:
+        versions:
+        - '0.4'
+      py-bleach:
+        versions:
+        - 1.5.0
+      py-click:
+        versions:
+        - '6.6'
+      py-csvkit:
+        versions:
+        - 0.9.1
+      py-dateutil:
+        versions:
+        - 2.5.2
+      py-elephant:
+        versions:
+        - 0.3.0
+      py-epydoc:
+        versions:
+        - 3.0.1
+      py-griddataformats:
+        versions:
+        - 0.3.3
+      py-jdcal:
+        versions:
+        - '1.3'
+      py-joblib:
+        versions:
+        - 0.10.3
+      py-lazyarray:
+        versions:
+        - 0.2.8
+      py-lxml:
+        versions:
+        - '2.3'
+      py-matplotlib:
+        versions:
+        - 2.0.0
+      py-neo:
+        versions:
+        - 0.4.1
+      py-pandas:
+        versions:
+        - 0.19.0
+      py-pil:
+        versions:
+        - 1.1.7
+      py-pkgconfig:
+        versions:
+        - 1.2.2
+      py-prettytable:
+        versions:
+        - 0.7.2
+      py-pudb:
+        versions:
+        - 2017.1.1
+      py-pyqt:
+        versions:
+        - 4.11.3
+      py-pyside:
+        versions:
+        - 1.2.4
+      py-pytz:
+        versions:
+        - '2016.10'
+      py-readme-renderer:
+        versions:
+        - '16.0'
+      py-rope:
+        versions:
+        - 0.10.5
+      py-rpy2:
+        versions:
+        - 2.5.6
+      py-six:
+        versions:
+        - 1.10.0
+      py-sncosmo:
+        versions:
+        - 1.2.0
+      py-snowballstemmer:
+        versions:
+        - 1.2.1
+      py-sphinx-bootstrap-theme:
+        versions:
+        - 0.4.13
+      py-sphinx-rtd-theme:
+        versions:
+        - 0.1.10a0
+      py-unittest2:
+        versions:
+        - 1.1.0
+      py-wcsaxes:
+        versions:
+        - '0.8'
+      py-wrapt:
+        versions:
+        - 1.10.10
+      py-xlrd:
+        versions:
+        - 0.9.4
+      py-xpyb:
+        versions:
+        - 1.3.1
+      qhull:
+        versions:
+        - '2015.2'
+      qthreads:
+        versions:
+        - '1.12'
+      r-coin:
+        versions:
+        - 1.1-3
+      r-devtools:
+        versions:
+        - 1.12.0
+      r-digest:
+        versions:
+        - 0.6.12
+      r-foreign:
+        versions:
+        - 0.8-66
+      r-gdata:
+        versions:
+        - 2.17.0
+      r-iterators:
+        versions:
+        - 1.0.8
+      r-jpeg:
+        versions:
+        - 0.1-8
+      r-labeling:
+        versions:
+        - '0.3'
+      r-maps:
+        versions:
+        - 3.1.1
+      r-mgcv:
+        versions:
+        - 1.8-16
+      r-modelmetrics:
+        versions:
+        - 1.1.0
+      r-modeltools:
+        versions:
+        - 0.2-21
+      r-mvtnorm:
+        versions:
+        - 1.0-5
+      r-packrat:
+        versions:
+        - 0.4.8-1
+      r-pacman:
+        versions:
+        - 0.4.1
+      r-randomforest:
+        versions:
+        - 4.6-12
+      r-raster:
+        versions:
+        - 2.5-8
+      r-rbokeh:
+        versions:
+        - 0.5.0
+      r-roxygen2:
+        versions:
+        - 5.0.1
+      r-rsqlite:
+        versions:
+        - 1.0.0
+      r-sandwich:
+        versions:
+        - 2.3-4
+      r-sp:
+        versions:
+        - 1.2-3
+      r-testthat:
+        versions:
+        - 1.0.2
+      r-ttr:
+        versions:
+        - 0.23-1
+      r-withr:
+        versions:
+        - 1.0.2
+      raja:
+        versions:
+        - git
+      root:
+        versions:
+        - 6.06.06
+      sas:
+        versions:
+        - 0.2.0
+      saws:
+        versions:
+        - 0.1.0
+      scalasca:
+        versions:
+        - 2.3.1
+      scr:
+        versions:
+        - 1.1.8
+      scripts:
+        versions:
+        - 1.0.1
+      sdl2-image:
+        versions:
+        - 2.0.1
+      seqtk:
+        versions:
+        - '1.2'
+      serf:
+        versions:
+        - 1.3.8
+      shiny-server:
+        versions:
+        - 1.5.3.838
+      silo:
+        versions:
+        - 4.10.2
+      simul:
+        versions:
+        - '1.16'
+      superlu-mt:
+        versions:
+        - '3.1'
+      szip:
+        versions:
+        - '2.1'
+      tcl:
+        versions:
+        - 8.6.6
+      texlive:
+        versions:
+        - live
+      tinyxml2:
+        versions:
+        - 4.0.1
+      tmuxinator:
+        versions:
+        - 0.6.11
+      uncrustify:
+        versions:
+        - '0.61'
+      util-macros:
+        versions:
+        - 1.19.1
+      visit:
+        versions:
+        - 2.10.3
+      wget:
+        versions:
+        - '1.17'
+      wxpropgrid:
+        versions:
+        - 1.4.15
+      xcb-util-cursor:
+        versions:
+        - 0.1.3
+      xcursorgen:
+        versions:
+        - 1.0.6
+      xev:
+        versions:
+        - 1.2.2
+      xfontsel:
+        versions:
+        - 1.0.5
+      xmag:
+        versions:
+        - 1.0.6
+      xrdb:
+        versions:
+        - 1.1.0
+      xrootd:
+        versions:
+        - 4.6.0
+      xsetroot:
+        versions:
+        - 1.1.1
+      xtrans:
+        versions:
+        - 1.3.5
+      xwininfo:
+        versions:
+        - 1.1.3
+  - compilers:
+      gcc:
+        versions:
+        - 4.4.7

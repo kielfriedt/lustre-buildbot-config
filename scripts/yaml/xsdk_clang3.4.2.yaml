@@ -1,0 +1,46 @@
+test-suite:
+  cdash:
+  - https://spack.io/cdash
+  include:
+  - xsdk
+  - xsdktrilinos
+  - trilinos
+  - superlu-mt
+  - superlu-dist
+  - petsc
+  - superlu
+  - hypre
+  - alquimia
+  matrix:
+  - packages:
+      alquimia:
+        versions:
+        - xsdk-0.2.0
+      hypre:
+        versions:
+        - 2.11.2
+      petsc:
+        versions:
+        - 3.7.5
+      superlu:
+        versions:
+        - 5.2.1
+      superlu-dist:
+        versions:
+        - 5.1.3
+      superlu-mt:
+        versions:
+        - '3.1'
+      trilinos:
+        versions:
+        - 12.10.1
+      xsdk:
+        versions:
+        - xsdk-0.2.0
+      xsdktrilinos:
+        versions:
+        - 12.8.1
+  - compilers:
+      clang:
+        versions:
+        - 3.4.2
