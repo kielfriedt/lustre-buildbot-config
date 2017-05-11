@@ -36,7 +36,7 @@ if test ! "$BB_PASSWORD"; then
     BB_PASSWORD="password"
 fi
 if test ! "$BB_ADMIN"; then
-    BB_ADMIN="Automated spack BuildBot slave <buildbot-admin@lustre.org>"
+    BB_ADMIN="Automated spack BuildBot slave <EMAIL>"
 fi
 if test ! "$BB_DIR"; then
     BB_DIR="/var/lib/buildbot/slaves/cdash_spack"
@@ -45,7 +45,7 @@ if test ! "$BB_USE_PIP"; then
     BB_USE_PIP=1
 fi
 if test ! "$BB_URL"; then
-    BB_URL="https://raw.githubusercontent.com/kielfriedt/spack-buildbot-config/os-cmplr-seperation/scripts/"
+    BB_URL="https://raw.githubusercontent.com/kielfriedt/spack-buildbot-config/master/scripts/"
 fi
 if test ! "$SPACK_URL"; then
     SPACK_URL="https://spack.io/cdash/submit.php?project=spack"
