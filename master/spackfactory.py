@@ -95,10 +95,6 @@ def dependencyCommand(props):
     args.extend([bb_url + "bb-dependencies.sh"])
     return args
 
-<<<<<<< HEAD
-=======
-
->>>>>>> os-cmplr-seperation
 def nightlyTestSuiteFactory(spack_repo):
     """ Generates a build factory for a tarball generating builder.
     Returns:
