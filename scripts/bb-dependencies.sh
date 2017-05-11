@@ -119,8 +119,8 @@ SUSE*)
 Ubuntu*)
     # Required development tools.
     $SUDO apt-get --yes install build-essential autoconf libtool gdb
-    $SUDO apt-get --yes install gcc-5 gcc-4.9 #gcc-4.7 gcc-4.8 
-    $SUDO apt-get --yes install clang-3.8 #clang-3.7 clang-3.6 clang-3.5
+    $SUDO apt-get --yes install gcc-5 gcc-4.9 
+    $SUDO apt-get --yes install clang-3.8 
     # Required utilities.
     $SUDO apt-get --yes install git alien fakeroot wget curl bc fio acl \
         sysstat mdadm lsscsi parted gdebi attr dbench watchdog ksh \
