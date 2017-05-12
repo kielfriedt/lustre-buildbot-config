@@ -34,7 +34,7 @@ Amazon*)
 
 CentOS*)
     # Required development tools.
-    $SUDO yum -y install gcc clang make autoconf libtool gdb
+    $SUDO yum -y install gcc clang make autoconf libtool gdb hg
 
     # Required utilities.
     $SUDO yum -y install git rpm-build wget curl bc fio acl sysstat \
@@ -119,7 +119,7 @@ SUSE*)
 Ubuntu*)
     # Required development tools.
     $SUDO apt-get --yes install build-essential autoconf libtool gdb
-    $SUDO apt-get --yes install gcc-5 gcc-4.9 
+    $SUDO apt-get --yes install gcc-5 gcc-4.9 mercurial
     $SUDO apt-get --yes install clang-3.8 
     # Required utilities.
     $SUDO apt-get --yes install git alien fakeroot wget curl bc fio acl \
