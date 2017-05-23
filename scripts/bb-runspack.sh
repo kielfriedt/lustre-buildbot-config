@@ -32,8 +32,8 @@ done
 cat "$yaml" 
 if [ -n "$3" ]; then
 	site="$3"
-	./bin/spack test-suite  --site="$site" "$performance" "$yaml"
+	./bin/spack -k test-suite  --site="$site" "$performance" "$yaml"
 else
-	./bin/spack test-suite "$performance" "$yaml"
+	./bin/spack -k test-suite "$performance" "$yaml"
 fi
 echo "returning"
