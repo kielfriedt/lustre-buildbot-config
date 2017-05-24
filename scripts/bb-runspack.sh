@@ -23,6 +23,8 @@ if [ -n "$2" ]; then
 	yaml="$2"
 fi
 
+project="$4"
+
 while [ ! -f "$yaml" ]
 do
   echo "yaml file missing, trying again."
@@ -32,8 +34,8 @@ done
 cat "$yaml" 
 if [ -n "$3" ]; then
 	site="$3"
-	./bin/spack -k test-suite  --site="$site" "$performance" "$yaml"
+	./bin/spack -k test-suite --project="$project" --site="$site" "$performance" "$yaml"
 else
-	./bin/spack -k test-suite "$performance" "$yaml"
+	./bin/spack -k test-suite --project="$project" "$performance" "$yaml"
 fi
 echo "returning"

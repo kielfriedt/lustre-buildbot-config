@@ -42,7 +42,7 @@ def NightlyTestSuiteCommand(props):
     version = props.getProperty('distrover')
     yaml = "day" + str(random.randint(1, 7)) + "_" + \
         compiler + compiler_version + ".yaml"
-    args.extend([bb_url + "bb-runspack.sh", 1, yaml, distro + version + "AWS"])
+    args.extend([bb_url + "bb-runspack.sh", 1, yaml, distro + version + "AWS", "spack"])
     return args
 
 
@@ -55,7 +55,7 @@ def WeeklyTestSuiteCommand(props):
     distro = props.getProperty('distro')
     version = props.getProperty('distrover')
     yaml = "all_" + compiler + compiler_version + ".yaml"
-    args.extend([bb_url + "bb-runspack.sh", 0, yaml, distro + version + "AWS"])
+    args.extend([bb_url + "bb-runspack.sh", 0, yaml, distro + version + "AWS", "Weekly"])
     return args
 
 
@@ -68,7 +68,7 @@ def XSDKNightlyTestSuiteCommand(props):
     distro = props.getProperty('distro')
     version = props.getProperty('distrover')
     yaml = "xsdk_" + compiler + compiler_version + ".yaml"
-    args.extend([bb_url + "bb-runspack.sh", 1, yaml, distro + version + "AWS"])
+    args.extend([bb_url + "bb-runspack.sh", 1, yaml, distro + version + "AWS", "xsdk"])
     return args
 
 
