@@ -23,7 +23,9 @@ if [ -n "$2" ]; then
 	yaml="$2"
 fi
 
-project="$4"
+if [ -n "$4" ]; then
+	project="$4"
+fi
 
 while [ ! -f "$yaml" ]
 do
